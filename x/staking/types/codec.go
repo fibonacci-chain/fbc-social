@@ -6,16 +6,16 @@ import (
 
 // RegisterCodec registers concrete types for codec
 func RegisterCodec(cdc *codec.Codec) {
-	cdc.RegisterConcrete(MsgCreateValidator{}, "okexchain/staking/MsgCreateValidator", nil)
-	cdc.RegisterConcrete(MsgEditValidator{}, "okexchain/staking/MsgEditValidator", nil)
-	cdc.RegisterConcrete(MsgEditValidatorCommissionRate{}, "okexchain/staking/MsgEditValidatorCommissionRate", nil)
-	cdc.RegisterConcrete(MsgDestroyValidator{}, "okexchain/staking/MsgDestroyValidator", nil)
-	cdc.RegisterConcrete(MsgDeposit{}, "okexchain/staking/MsgDeposit", nil)
-	cdc.RegisterConcrete(MsgWithdraw{}, "okexchain/staking/MsgWithdraw", nil)
-	cdc.RegisterConcrete(MsgAddShares{}, "okexchain/staking/MsgAddShares", nil)
-	cdc.RegisterConcrete(MsgRegProxy{}, "okexchain/staking/MsgRegProxy", nil)
-	cdc.RegisterConcrete(MsgBindProxy{}, "okexchain/staking/MsgBindProxy", nil)
-	cdc.RegisterConcrete(MsgUnbindProxy{}, "okexchain/staking/MsgUnbindProxy", nil)
+	cdc.RegisterConcrete(MsgCreateValidator{}, "fbchain/staking/MsgCreateValidator", nil)
+	cdc.RegisterConcrete(MsgEditValidator{}, "fbchain/staking/MsgEditValidator", nil)
+	cdc.RegisterConcrete(MsgEditValidatorCommissionRate{}, "fbchain/staking/MsgEditValidatorCommissionRate", nil)
+	cdc.RegisterConcrete(MsgDestroyValidator{}, "fbchain/staking/MsgDestroyValidator", nil)
+	cdc.RegisterConcrete(MsgDeposit{}, "fbchain/staking/MsgDeposit", nil)
+	cdc.RegisterConcrete(MsgWithdraw{}, "fbchain/staking/MsgWithdraw", nil)
+	cdc.RegisterConcrete(MsgAddShares{}, "fbchain/staking/MsgAddShares", nil)
+	cdc.RegisterConcrete(MsgRegProxy{}, "fbchain/staking/MsgRegProxy", nil)
+	cdc.RegisterConcrete(MsgBindProxy{}, "fbchain/staking/MsgBindProxy", nil)
+	cdc.RegisterConcrete(MsgUnbindProxy{}, "fbchain/staking/MsgUnbindProxy", nil)
 	cdc.RegisterConcrete(CM45Validator{}, "cosmos-sdk/staking/validator", nil)
 }
 

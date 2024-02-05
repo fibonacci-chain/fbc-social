@@ -52,8 +52,8 @@ var (
 	defaultNodeKeyPath  = filepath.Join(defaultConfigDir, defaultNodeKeyName)
 	defaultAddrBookPath = filepath.Join(defaultConfigDir, defaultAddrBookName)
 
-	DefaultLogPath     = os.ExpandEnv("$HOME/.exchaind")
-	defaultLogFileName = "exchaind.log"
+	DefaultLogPath     = os.ExpandEnv("$HOME/.fbchaind")
+	defaultLogFileName = "fbchaind.log"
 	defaultLogFile     = filepath.Join(DefaultLogPath, defaultLogFileName)
 )
 

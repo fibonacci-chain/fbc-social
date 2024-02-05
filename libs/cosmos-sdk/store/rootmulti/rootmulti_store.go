@@ -471,7 +471,7 @@ func (rs *Store) loadVersion(ver int64, upgrades *types.StoreUpgrades) error {
 	if !IgPruneHeightsLen && len(rs.pruneHeights) > maxPruneHeightsLength {
 		return fmt.Errorf("Pruned heights length <%d> exceeds <%d>, "+
 			"need to prune them with command "+
-			"<exchaind data prune-compact state --home your_exchaind_home_directory> before running exchaind",
+			"<fbchaind data prune-compact state --home your_fbchaind_home_directory> before running fbchaind",
 			len(rs.pruneHeights), maxPruneHeightsLength)
 	}
 	return nil

@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 	"fmt"
 	ethcommon "github.com/ethereum/go-ethereum/common"
-	okexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	fbchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
 	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
 	"math/big"
 	"os"
@@ -471,7 +471,7 @@ func TestDeliverRealTx(t *testing.T) {
 	privKey, _ := ethsecp256k1.GenerateKey()
 	err := tx.Sign(big.NewInt(3), privKey.ToECDSA())
 	require.NoError(t, err)
-	codecProxy, _ := fbexchaincodec.MakeCodecSuit(module.NewBasicManager())
+	codecProxy, _ := fbchaincodec.MakeCodecSuit(module.NewBasicManager())
 	w.app.EvmKeeper.Watcher.RecordTxAndFailedReceipt(tx, nil, evm.TxDecoder(codecProxy))
 }
 

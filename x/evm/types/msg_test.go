@@ -15,7 +15,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/common/math"
-	okexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	fbchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
 
 	"github.com/stretchr/testify/require"
 
@@ -445,8 +445,8 @@ func newProxyDecoder() *codec.CodecProxy {
 		ibctransfer.AppModuleBasic{},
 		ibcfee.AppModuleBasic{},
 	)
-	cdc := okexchaincodec.MakeCodec(ModuleBasics)
-	interfaceReg := okexchaincodec.MakeIBC(ModuleBasics)
+	cdc := fbchaincodec.MakeCodec(ModuleBasics)
+	interfaceReg := fbchaincodec.MakeIBC(ModuleBasics)
 	protoCodec := codec.NewProtoCodec(interfaceReg)
 	codecProxy := codec.NewCodecProxy(protoCodec, cdc)
 	return codecProxy

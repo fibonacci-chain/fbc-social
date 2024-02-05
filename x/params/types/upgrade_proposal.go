@@ -29,7 +29,7 @@ var _ govtypes.Content = UpgradeProposal{}
 
 func init() {
 	govtypes.RegisterProposalType(ProposalTypeUpgrade)
-	govtypes.RegisterProposalTypeCodec(UpgradeProposal{}, "okexchain/params/UpgradeProposal")
+	govtypes.RegisterProposalTypeCodec(UpgradeProposal{}, "fbchain/params/UpgradeProposal")
 }
 
 // UpgradeProposal is the struct of param change proposal

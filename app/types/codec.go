@@ -9,7 +9,7 @@ import (
 
 const (
 	// EthAccountName is the amino encoding name for EthAccount
-	EthAccountName = "fbexchain/EthAccount"
+	EthAccountName = "fbchain/EthAccount"
 )
 
 // RegisterCodec registers the account interfaces and concrete types on the

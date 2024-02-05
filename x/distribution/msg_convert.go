@@ -21,7 +21,7 @@ func init() {
 
 func RegisterConvert() {
 	enableHeight := tmtypes.GetVenus3Height()
-	baseapp.RegisterCmHandle("fbexchain/distribution/MsgWithdrawDelegatorAllRewards", baseapp.NewCMHandle(ConvertWithdrawDelegatorAllRewardsMsg, enableHeight))
+	baseapp.RegisterCmHandle("fbchain/distribution/MsgWithdrawDelegatorAllRewards", baseapp.NewCMHandle(ConvertWithdrawDelegatorAllRewardsMsg, enableHeight))
 }
 
 func ConvertWithdrawDelegatorAllRewardsMsg(data []byte, signers []sdk.AccAddress) (sdk.Msg, error) {

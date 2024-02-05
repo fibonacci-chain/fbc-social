@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 
 	"github.com/fibonacci-chain/fbc-social/app/utils/appstatus"
-	"github.com/fibonacci-chain/fbc-social/cmd/exchaind/base"
+	"github.com/fibonacci-chain/fbc-social/cmd/fbchaind/base"
 	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 	"github.com/fibonacci-chain/fbc-social/libs/iavl"
 	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"

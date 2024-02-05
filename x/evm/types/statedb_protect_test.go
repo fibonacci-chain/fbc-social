@@ -20,7 +20,7 @@ type StateDB_ProtectTestSuite struct {
 	suite.Suite
 
 	ctx         sdk.Context
-	app         *app.OKExChainApp
+	app         *app.fbchainApp
 	stateDB     *types.CommitStateDB
 	address     ethcmn.Address
 	stateObject types.StateObject

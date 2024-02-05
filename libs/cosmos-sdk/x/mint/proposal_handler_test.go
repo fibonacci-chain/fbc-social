@@ -30,7 +30,7 @@ type MintTestSuite struct {
 	ctx        sdk.Context
 	govHandler govtypes.Handler
 	querier    sdk.Querier
-	app        *app.OKExChainApp
+	app        *app.fbchainApp
 	codec      *codec.Codec
 }
 

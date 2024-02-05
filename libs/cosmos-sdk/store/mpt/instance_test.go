@@ -25,8 +25,8 @@ func TestInstanceTestSuite(t *testing.T) {
 }
 
 func (suite *InstanceTestSuite) SetupTest() {
-	// set exchaind path
-	serverDir, err := ioutil.TempDir("", ".exchaind")
+	// set fbchaind path
+	serverDir, err := ioutil.TempDir("", ".fbchaind")
 	if err != nil {
 		panic(err)
 	}

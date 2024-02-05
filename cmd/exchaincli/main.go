@@ -59,7 +59,7 @@ func main() {
 
 	rootCmd := &cobra.Command{
 		Use:   "fbchaincli",
-		Short: "Command line interface for interacting with exchaind",
+		Short: "Command line interface for interacting with fbchaind",
 	}
 
 	// Add --chain-id to persistent flags and mark it required

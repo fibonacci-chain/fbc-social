@@ -18,7 +18,7 @@ import (
 	"github.com/gogo/protobuf/proto"
 
 	"github.com/fibonacci-chain/fbc-social/app"
-	"github.com/fibonacci-chain/fbc-social/cmd/exchaind/base"
+	"github.com/fibonacci-chain/fbc-social/cmd/fbchaind/base"
 	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
 	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
 	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"

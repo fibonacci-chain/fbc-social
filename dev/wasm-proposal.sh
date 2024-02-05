@@ -232,7 +232,7 @@ then
   exit 1
 fi;
 contractTempAddr=$(echo "$res" | jq '.logs[0].events[0].attributes[0].value' | sed 's/\"//g')
-res=$(exchaincli query wasm contract "$contractTempAddr" $QUERY_EXTRA | jq -r '.contract_info.admin')
+res=$(fbchaincli query wasm contract "$contractTempAddr" $QUERY_EXTRA | jq -r '.contract_info.admin')
 if [[ $res != $captain0x ]];
 then
   echo "unexpected cw20 admin: $res,$captain0x"
@@ -486,7 +486,7 @@ then
 fi
 
 
-res=$(exchaincli tx wasm set-contract-admin "$cw4contractAddr" "$admin17" --from admin18 $TX_EXTRA)
+res=$(fbchaincli tx wasm set-contract-admin "$cw4contractAddr" "$admin17" --from admin18 $TX_EXTRA)
 actionName=$(echo "$res" | jq '.logs[0].events[0].attributes[0].value' | sed 's/\"//g')
 if [[ "${actionName}" != "update-contract-admin" ]];
 then
@@ -750,7 +750,7 @@ proposal_id=$(echo "$res" | jq '.logs[0].events[1].attributes[1].value' | sed 's
 echo "unblock <transfer> proposal_id: $proposal_id"
 proposal_vote "$proposal_id"
 
-res=$(exchaincli tx wasm execute "$cw20contractAddr" '{"transfer":{"amount":"100","recipient":"'$admin180x'"}}' --from captain $TX_EXTRA)
+res=$(fbchaincli tx wasm execute "$cw20contractAddr" '{"transfer":{"amount":"100","recipient":"'$admin180x'"}}' --from captain $TX_EXTRA)
 tx_hash=$(echo "$res" | jq '.txhash' | sed 's/\"//g')
 echo "txhash: $tx_hash"
 event_type=$(echo $res | jq '.logs[0].events[0].type' | sed 's/\"//g')
@@ -759,7 +759,7 @@ then
   echo "transfer cw20 failed"
   exit 1
 fi;
-res=$(exchaincli tx wasm execute "$cw20contractAddr" '{"send":{"amount":"100","contract":"'$contractAddr'","msg":"eyJib25kIjp7fX0="}}' --from captain $TX_EXTRA)
+res=$(fbchaincli tx wasm execute "$cw20contractAddr" '{"send":{"amount":"100","contract":"'$contractAddr'","msg":"eyJib25kIjp7fX0="}}' --from captain $TX_EXTRA)
 tx_hash=$(echo "$res" | jq '.txhash' | sed 's/\"//g')
 echo "txhash: $tx_hash"
 raw_log=$(echo "$res" | jq '.raw_log' | sed 's/\"//g')
@@ -771,19 +771,19 @@ fi;
 
 #####
 echo "###################update-wasm-contract-method-blocked-list ex test ###########################"
-cw20contractAddrex=$(exchaincli addr convert ${cw20contractAddr} | grep Hex | awk '{print$6}')
+cw20contractAddrex=$(fbchaincli addr convert ${cw20contractAddr} | grep Hex | awk '{print$6}')
 echo "## block cw20 contract methods <transfer> and <send>"
-res=$(exchaincli tx gov submit-proposal update-wasm-contract-method-blocked-list "${cw20contractAddrex}" "transfer,send" --deposit ${proposal_deposit} --title "test title" --description "test description" --from captain $TX_EXTRA)
+res=$(fbchaincli tx gov submit-proposal update-wasm-contract-method-blocked-list "${cw20contractAddrex}" "transfer,send" --deposit ${proposal_deposit} --title "test title" --description "test description" --from captain $TX_EXTRA)
 proposal_id=$(echo "$res" | jq '.logs[0].events[1].attributes[1].value' | sed 's/\"//g')
 echo "block <transfer> and <send> proposal_id: $proposal_id"
 proposal_vote "$proposal_id"
-cw20admin=$(exchaincli query wasm contract "$cw20contractAddr" "$QUERY_EXTRA" | jq '.contract_info.admin' | sed 's/\"//g')
+cw20admin=$(fbchaincli query wasm contract "$cw20contractAddr" "$QUERY_EXTRA" | jq '.contract_info.admin' | sed 's/\"//g')
 if [[ $cw20admin != "" ]];
 then
   exit 1
 fi
 
-res=$(exchaincli tx wasm execute "$cw20contractAddr" '{"transfer":{"amount":"100","recipient":"'$admin18'"}}' --from captain $TX_EXTRA)
+res=$(fbchaincli tx wasm execute "$cw20contractAddr" '{"transfer":{"amount":"100","recipient":"'$admin18'"}}' --from captain $TX_EXTRA)
 tx_hash=$(echo "$res" | jq '.txhash' | sed 's/\"//g')
 echo "txhash: $tx_hash"
 raw_log=$(echo "$res" | jq '.raw_log' | sed 's/\"//g')
@@ -792,7 +792,7 @@ then
   exit 1
 fi;
 
-res=$(exchaincli tx wasm execute "$cw20contractAddr" '{"send":{"amount":"100","contract":"'$contractAddr'","msg":"eyJib25kIjp7fX0="}}' --from captain $TX_EXTRA)
+res=$(fbchaincli tx wasm execute "$cw20contractAddr" '{"send":{"amount":"100","contract":"'$contractAddr'","msg":"eyJib25kIjp7fX0="}}' --from captain $TX_EXTRA)
 tx_hash=$(echo "$res" | jq '.txhash' | sed 's/\"//g')
 echo "txhash: $tx_hash"
 raw_log=$(echo "$res" | jq '.raw_log' | sed 's/\"//g')
@@ -801,13 +801,13 @@ then
   exit 1
 fi;
 
-res=$(exchaincli tx gov submit-proposal update-wasm-contract-method-blocked-list "$cw20contractAddrex" "transfer" --delete=true --deposit ${proposal_deposit} --title "test title" --description "test description" --from captain $TX_EXTRA)
+res=$(fbchaincli tx gov submit-proposal update-wasm-contract-method-blocked-list "$cw20contractAddrex" "transfer" --delete=true --deposit ${proposal_deposit} --title "test title" --description "test description" --from captain $TX_EXTRA)
 echo $res
 proposal_id=$(echo "$res" | jq '.logs[0].events[1].attributes[1].value' | sed 's/\"//g')
 echo "unblock <transfer> proposal_id: $proposal_id"
 proposal_vote "$proposal_id"
 
-res=$(exchaincli tx wasm execute "$cw20contractAddr" '{"transfer":{"amount":"100","recipient":"'$admin180x'"}}' --from captain $TX_EXTRA)
+res=$(fbchaincli tx wasm execute "$cw20contractAddr" '{"transfer":{"amount":"100","recipient":"'$admin180x'"}}' --from captain $TX_EXTRA)
 tx_hash=$(echo "$res" | jq '.txhash' | sed 's/\"//g')
 echo "txhash: $tx_hash"
 event_type=$(echo $res | jq '.logs[0].events[0].type' | sed 's/\"//g')
@@ -816,7 +816,7 @@ then
   echo "transfer cw20 failed"
   exit 1
 fi;
-res=$(exchaincli tx wasm execute "$cw20contractAddr" '{"send":{"amount":"100","contract":"'$contractAddr'","msg":"eyJib25kIjp7fX0="}}' --from captain $TX_EXTRA)
+res=$(fbchaincli tx wasm execute "$cw20contractAddr" '{"send":{"amount":"100","contract":"'$contractAddr'","msg":"eyJib25kIjp7fX0="}}' --from captain $TX_EXTRA)
 tx_hash=$(echo "$res" | jq '.txhash' | sed 's/\"//g')
 echo "txhash: $tx_hash"
 raw_log=$(echo "$res" | jq '.raw_log' | sed 's/\"//g')
@@ -826,25 +826,25 @@ then
 fi;
 ######
 
-res=$(exchaincli tx wasm store wasm/test/burner.wasm --from captain $TX_EXTRA)
+res=$(fbchaincli tx wasm store wasm/test/burner.wasm --from captain $TX_EXTRA)
 burner_code_id=$(echo "$res" | jq '.logs[0].events[1].attributes[0].value' | sed 's/\"//g')
 echo "burner_code_id: $burner_code_id"
 
 # block contract to execute
 echo "## migrate cw20 contract to a new wasm code"
-res=$(exchaincli tx gov submit-proposal migrate-contract "$cw20contractAddr" "$burner_code_id" '{"payout": "'$captain0x'"}' --deposit ${proposal_deposit} --title "test title" --description "test description" --from captain $TX_EXTRA)
+res=$(fbchaincli tx gov submit-proposal migrate-contract "$cw20contractAddr" "$burner_code_id" '{"payout": "'$captain0x'"}' --deposit ${proposal_deposit} --title "test title" --description "test description" --from captain $TX_EXTRA)
 proposal_id=$(echo "$res" | jq '.logs[0].events[1].attributes[1].value' | sed 's/\"//g')
 echo "proposal_id: $proposal_id"
 proposal_vote "$proposal_id"
 
-code_id=$(exchaincli query wasm contract "$cw20contractAddr" "$QUERY_EXTRA" | jq '.contract_info.code_id' | sed 's/\"//g')
+code_id=$(fbchaincli query wasm contract "$cw20contractAddr" "$QUERY_EXTRA" | jq '.contract_info.code_id' | sed 's/\"//g')
 if [[ $code_id != $burner_code_id ]];
 then
   exit 1
 fi;
 
 echo "## call transfer method of cw20 contract after migrating which is expected to fail"
-res=$(exchaincli tx wasm execute "$cw20contractAddr" '{"transfer":{"amount":"100","recipient":"'$admin180x'"}}' --from captain $TX_EXTRA)
+res=$(fbchaincli tx wasm execute "$cw20contractAddr" '{"transfer":{"amount":"100","recipient":"'$admin180x'"}}' --from captain $TX_EXTRA)
 tx_hash=$(echo "$res" | jq '.txhash' | sed 's/\"//g')
 echo "txhash: $tx_hash"
 raw_log=$(echo "$res" | jq '.raw_log' | sed 's/\"//g')
@@ -854,12 +854,12 @@ then
 fi;
 
 echo "## gov set cw20 admin"
-res=$(exchaincli tx gov submit-proposal set-contract-admin $cw20contractAddr $captain --deposit ${proposal_deposit} --title "test title" --description "test description" --from captain $TX_EXTRA)
+res=$(fbchaincli tx gov submit-proposal set-contract-admin $cw20contractAddr $captain --deposit ${proposal_deposit} --title "test title" --description "test description" --from captain $TX_EXTRA)
 proposal_id=$(echo "$res" | jq '.logs[0].events[1].attributes[1].value' | sed 's/\"//g')
 echo "proposal_id: $proposal_id"
 proposal_vote "$proposal_id"
 
-cw20admin=$(exchaincli query wasm contract "$cw20contractAddr" "$QUERY_EXTRA" | jq '.contract_info.admin' | sed 's/\"//g')
+cw20admin=$(fbchaincli query wasm contract "$cw20contractAddr" "$QUERY_EXTRA" | jq '.contract_info.admin' | sed 's/\"//g')
 if [[ $cw20admin != $captain0x ]];
 then
   echo "unexpected cw20 admin: $cw20admin"

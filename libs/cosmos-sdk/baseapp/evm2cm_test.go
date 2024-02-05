@@ -333,30 +333,30 @@ func TestParseMsgWrapper(t *testing.T) {
 		fnCheck func(ret *MsgWrapper, err error)
 	}{
 		{
-			input: `{"type": "okexchain/staking/MsgDeposit","value": {"delegator_address": "0x4375D630687C83471829227b5C1Ea92217FD6265","quantity": {"denom": "okt","amount": "1"}}}`,
+			input: `{"type": "fbchain/staking/MsgDeposit","value": {"delegator_address": "0x4375D630687C83471829227b5C1Ea92217FD6265","quantity": {"denom": "okt","amount": "1"}}}`,
 			fnCheck: func(ret *MsgWrapper, err error) {
 				require.NoError(t, err)
-				require.Equal(t, "okexchain/staking/MsgDeposit", ret.Name)
+				require.Equal(t, "fbchain/staking/MsgDeposit", ret.Name)
 				require.Equal(t, "{\"delegator_address\": \"0x4375D630687C83471829227b5C1Ea92217FD6265\",\"quantity\": {\"denom\": \"okt\",\"amount\": \"1\"}}", string(ret.Data))
 			},
 		},
 		{
-			input: `{"type": "okexchain/staking/MsgWithdraw","value": {"delegator_address": "0x4375D630687C83471829227b5C1Ea92217FD6265","quantity": {"denom": "okt","amount": "1"}}}`,
+			input: `{"type": "fbchain/staking/MsgWithdraw","value": {"delegator_address": "0x4375D630687C83471829227b5C1Ea92217FD6265","quantity": {"denom": "okt","amount": "1"}}}`,
 			fnCheck: func(ret *MsgWrapper, err error) {
 				require.NoError(t, err)
-				require.Equal(t, "okexchain/staking/MsgWithdraw", ret.Name)
+				require.Equal(t, "fbchain/staking/MsgWithdraw", ret.Name)
 				require.Equal(t, "{\"delegator_address\": \"0x4375D630687C83471829227b5C1Ea92217FD6265\",\"quantity\": {\"denom\": \"okt\",\"amount\": \"1\"}}", string(ret.Data))
 			},
 		},
 		// error
 		{
-			input: `{"type1": "okexchain/staking/MsgWithdraw","value":""}`,
+			input: `{"type1": "fbchain/staking/MsgWithdraw","value":""}`,
 			fnCheck: func(ret *MsgWrapper, err error) {
 				require.NotNil(t, err)
 			},
 		},
 		{
-			input: `{"type": "okexchain/staking/MsgWithdraw","value1":"123"}`,
+			input: `{"type": "fbchain/staking/MsgWithdraw","value1":"123"}`,
 			fnCheck: func(ret *MsgWrapper, err error) {
 				require.NotNil(t, err)
 			},

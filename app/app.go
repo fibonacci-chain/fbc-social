@@ -41,7 +41,7 @@ import (
 	"github.com/fibonacci-chain/fbc-social/app/utils/appstatus"
 
 	"github.com/fibonacci-chain/fbc-social/app/ante"
-	fbexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	fbchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
 	appconfig "github.com/fibonacci-chain/fbc-social/app/config"
 	"github.com/fibonacci-chain/fbc-social/app/refund"
 	fbchain "github.com/fibonacci-chain/fbc-social/app/types"
@@ -317,7 +317,7 @@ func NewFBChainApp(
 		logStartingFlags(logger)
 	})
 
-	codecProxy, interfaceReg := fbexchaincodec.MakeCodecSuit(ModuleBasics)
+	codecProxy, interfaceReg := fbchaincodec.MakeCodecSuit(ModuleBasics)
 	vmbridge.RegisterInterface(interfaceReg)
 	// NOTE we use custom fbchaintransaction decoder that supports the sdk.Tx interface instead of sdk.StdTx
 	bApp := bam.NewBaseApp(appName, logger, db, evm.TxDecoder(codecProxy), baseAppOptions...)
@@ -799,7 +799,7 @@ func NewFBChainApp(
 	return app
 }
 
-func (app *OKExChainApp) InitUpgrade(ctx sdk.Context) {
+func (app *fbchainApp) InitUpgrade(ctx sdk.Context) {
 	// Claim before ApplyEffectiveUpgrade
 	app.ParamsKeeper.ClaimReadyForUpgrade(tmtypes.MILESTONE_VENUS6_NAME, func(info paramstypes.UpgradeInfo) {
 		tmtypes.InitMilestoneVenus6Height(int64(info.EffectiveHeight))

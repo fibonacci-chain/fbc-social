@@ -17,7 +17,7 @@ const (
 
 func init() {
 	govtypes.RegisterProposalType(proposalTypeFeeSplitShares)
-	govtypes.RegisterProposalTypeCodec(FeeSplitSharesProposal{}, "fbexchain/feesplit/SharesProposal")
+	govtypes.RegisterProposalTypeCodec(FeeSplitSharesProposal{}, "fbchain/feesplit/SharesProposal")
 }
 
 var (

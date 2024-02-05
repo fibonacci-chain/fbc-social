@@ -36,7 +36,7 @@ func GetCmdQueryParams(queryRoute string, cdc *codec.Codec) *cobra.Command {
 		Short: "Query parameters of params",
 		Long: strings.TrimSpace(`Query parameters of params:
 
-$ exchaincli query params params
+$ fbchaincli query params params
 `),
 		Args: cobra.NoArgs,
 		RunE: func(_ *cobra.Command, _ []string) error {
@@ -62,7 +62,7 @@ func GetCmdQueryGasConfig(queryRoute string, cdc *codec.Codec) *cobra.Command {
 		Short: "Query parameters of gasconfig",
 		Long: strings.TrimSpace(`Query parameters of gasconfig:
 
-$ exchaincli query params gasconfig
+$ fbchaincli query params gasconfig
 `),
 		Args: cobra.NoArgs,
 		RunE: func(_ *cobra.Command, _ []string) error {
@@ -88,7 +88,7 @@ func GetCmdQueryBlockConfig(queryRoute string, cdc *codec.Codec) *cobra.Command 
 		Short: "Query parameters of blockconfig",
 		Long: strings.TrimSpace(`Query parameters of blockconfig:
 
-$ exchaincli query params blockconfig
+$ fbchaincli query params blockconfig
 `),
 		Args: cobra.NoArgs,
 		RunE: func(_ *cobra.Command, _ []string) error {

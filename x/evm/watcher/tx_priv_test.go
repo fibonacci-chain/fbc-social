@@ -8,7 +8,7 @@ import (
 	ethcommon "github.com/ethereum/go-ethereum/common"
 	"github.com/stretchr/testify/suite"
 
-	okexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	fbchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
 	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
 	app "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
 	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
@@ -63,7 +63,7 @@ func TestWatcherTxPrivate(t *testing.T) {
 
 func (suite *TxTestSuite) TestGetRealTx() {
 	//Decoder Settings
-	codecProxy, _ := okexchaincodec.MakeCodecSuit(module.NewBasicManager())
+	codecProxy, _ := fbchaincodec.MakeCodecSuit(module.NewBasicManager())
 	suite.TxDecoder = etypes.TxDecoder(codecProxy)
 	suite.height = 10
 	tmtypes.UnittestOnlySetMilestoneVenusHeight(1)

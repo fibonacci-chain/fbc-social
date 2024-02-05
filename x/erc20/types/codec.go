@@ -8,10 +8,10 @@ import (
 var ModuleCdc = codec.New()
 
 const (
-	TokenMappingProposalName          = "fbexchain/erc20/TokenMappingProposal"
-	ProxyContractRedirectProposalName = "fbexchain/erc20/ProxyContractRedirectProposal"
-	ContractTemplateProposalName      = "fbexchain/erc20/ContractTemplateProposal"
-	CompiledContractProposalName      = "fbexchain/erc20/Contract"
+	TokenMappingProposalName          = "fbchain/erc20/TokenMappingProposal"
+	ProxyContractRedirectProposalName = "fbchain/erc20/ProxyContractRedirectProposal"
+	ContractTemplateProposalName      = "fbchain/erc20/ContractTemplateProposal"
+	CompiledContractProposalName      = "fbchain/erc20/Contract"
 )
 
 // RegisterCodec registers all the necessary types and interfaces for the

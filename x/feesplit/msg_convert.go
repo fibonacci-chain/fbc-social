@@ -21,9 +21,9 @@ func init() {
 
 func RegisterConvert() {
 	enableHeight := tmtypes.GetVenus3Height()
-	baseapp.RegisterCmHandle("fbexchain/MsgRegisterFeeSplit", baseapp.NewCMHandle(ConvertRegisterFeeSplitMsg, enableHeight))
-	baseapp.RegisterCmHandle("fbexchain/MsgUpdateFeeSplit", baseapp.NewCMHandle(ConvertUpdateFeeSplitMsg, enableHeight))
-	baseapp.RegisterCmHandle("fbexchain/MsgCancelFeeSplit", baseapp.NewCMHandle(ConvertCancelFeeSplitMsg, enableHeight))
+	baseapp.RegisterCmHandle("fbchain/MsgRegisterFeeSplit", baseapp.NewCMHandle(ConvertRegisterFeeSplitMsg, enableHeight))
+	baseapp.RegisterCmHandle("fbchain/MsgUpdateFeeSplit", baseapp.NewCMHandle(ConvertUpdateFeeSplitMsg, enableHeight))
+	baseapp.RegisterCmHandle("fbchain/MsgCancelFeeSplit", baseapp.NewCMHandle(ConvertCancelFeeSplitMsg, enableHeight))
 }
 
 func ConvertRegisterFeeSplitMsg(data []byte, signers []sdk.AccAddress) (sdk.Msg, error) {

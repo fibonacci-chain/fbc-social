@@ -8,8 +8,8 @@ import (
 	"strings"
 
 	"github.com/fibonacci-chain/fbc-social/app/logevents"
-	"github.com/fibonacci-chain/fbc-social/cmd/exchaind/fss"
-	"github.com/fibonacci-chain/fbc-social/cmd/exchaind/mpt"
+	"github.com/fibonacci-chain/fbc-social/cmd/fbchaind/fss"
+	"github.com/fibonacci-chain/fbc-social/cmd/fbchaind/mpt"
 
 	"github.com/fibonacci-chain/fbc-social/app/rpc"
 	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"

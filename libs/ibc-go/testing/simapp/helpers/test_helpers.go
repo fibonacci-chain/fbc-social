@@ -9,7 +9,7 @@ import (
 
 	ibcfee "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/29-fee"
 
-	okexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	fbchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
 	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client"
 	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
 	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/types"
@@ -133,8 +133,8 @@ func newProxyDecoder() *codec.CodecProxy {
 		ibcfee.AppModuleBasic{},
 		icamauth.AppModuleBasic{},
 	)
-	cdc := okexchaincodec.MakeCodec(ModuleBasics)
-	interfaceReg := okexchaincodec.MakeIBC(ModuleBasics)
+	cdc := fbchaincodec.MakeCodec(ModuleBasics)
+	interfaceReg := fbchaincodec.MakeIBC(ModuleBasics)
 	protoCodec := codec.NewProtoCodec(interfaceReg)
 	codecProxy := codec.NewCodecProxy(protoCodec, cdc)
 	return codecProxy

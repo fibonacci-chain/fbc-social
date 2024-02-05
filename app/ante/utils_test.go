@@ -26,7 +26,7 @@ import (
 	ante "github.com/fibonacci-chain/fbc-social/app/ante"
 	appconfig "github.com/fibonacci-chain/fbc-social/app/config"
 	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
-	okexchain "github.com/fibonacci-chain/fbc-social/app/types"
+	fbchain "github.com/fibonacci-chain/fbc-social/app/types"
 	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
 
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"

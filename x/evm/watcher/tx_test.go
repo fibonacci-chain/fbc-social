@@ -55,7 +55,7 @@ var (
 
 type TxTestSuite struct {
 	suite.Suite
-	app                *app.OKExChainApp
+	app                *app.fbchainApp
 	codec              *codec.Codec
 	Watcher            watcher.Watcher
 	evmSenderPrivKey   ethsecp256k1.PrivKey
@@ -67,7 +67,7 @@ type TxTestSuite struct {
 
 // For generating DeliverTxResponse with DeliverTx
 func (suite *TxTestSuite) SetupTest() {
-	// Initialize OKExChainApp with already existing function
+	// Initialize fbchainApp with already existing function
 	// to avoid the watcher being disabled.
 	w := setupTest()
 	suite.app = w.app

@@ -33,7 +33,7 @@ import (
 )
 
 const (
-	TestChainID = "okexchain"
+	TestChainID = "fbchain"
 )
 
 var (

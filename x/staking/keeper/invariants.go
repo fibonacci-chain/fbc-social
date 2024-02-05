@@ -9,7 +9,7 @@ import (
 	"github.com/fibonacci-chain/fbc-social/x/staking/types"
 )
 
-// RegisterInvariantsCustom registers all staking invariants for okexchain
+// RegisterInvariantsCustom registers all staking invariants for fbchain
 func RegisterInvariantsCustom(ir sdk.InvariantRegistry, k Keeper) {
 
 	ir.RegisterRoute(types.ModuleName, "module-accounts",

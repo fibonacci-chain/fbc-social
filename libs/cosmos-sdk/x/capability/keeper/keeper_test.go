@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	okexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	fbchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
 	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
@@ -28,7 +28,7 @@ func (suite *KeeperTestSuite) SetupTest() {
 	checkTx := false
 	app := simapp.Setup(checkTx)
 	//cdc := app.Codec()
-	codecProxy, _ := okexchaincodec.MakeCodecSuit(simapp.ModuleBasics)
+	codecProxy, _ := fbchaincodec.MakeCodecSuit(simapp.ModuleBasics)
 	// create new keeper so we can define custom scoping before init and seal
 	keeper := keeper.NewKeeper(codecProxy, app.GetKey(types.StoreKey), app.GetMemKey(types.MemStoreKey))
 

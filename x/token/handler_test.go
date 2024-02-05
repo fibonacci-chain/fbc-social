@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
-	okexchain "github.com/fibonacci-chain/fbc-social/app"
+	fbchain "github.com/fibonacci-chain/fbc-social/app"
 	app "github.com/fibonacci-chain/fbc-social/app/types"
 	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
 	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"

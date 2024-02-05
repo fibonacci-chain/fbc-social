@@ -1,7 +1,7 @@
 package baseapp_test
 
 import (
-	okexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	fbchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
 	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing/simapp"
 	"github.com/fibonacci-chain/fbc-social/x/evm"
 	"os"
@@ -21,7 +21,7 @@ func TestRegisterMsgService(t *testing.T) {
 	db := dbm.NewMemDB()
 
 	// Create an encoding config that doesn't register testdata Msg services.
-	codecProxy, interfaceRegistry := okexchaincodec.MakeCodecSuit(simapp.ModuleBasics)
+	codecProxy, interfaceRegistry := fbchaincodec.MakeCodecSuit(simapp.ModuleBasics)
 	app := baseapp.NewBaseApp("test", log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, evm.TxDecoder(codecProxy))
 	app.SetInterfaceRegistry(interfaceRegistry)
 	require.Panics(t, func() {
@@ -44,7 +44,7 @@ func TestRegisterMsgService(t *testing.T) {
 func TestRegisterMsgServiceTwice(t *testing.T) {
 	// Setup baseapp.
 	db := dbm.NewMemDB()
-	codecProxy, interfaceRegistry := okexchaincodec.MakeCodecSuit(simapp.ModuleBasics)
+	codecProxy, interfaceRegistry := fbchaincodec.MakeCodecSuit(simapp.ModuleBasics)
 	app := baseapp.NewBaseApp("test", log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, evm.TxDecoder(codecProxy))
 	app.SetInterfaceRegistry(interfaceRegistry)
 	testdata.RegisterInterfaces(interfaceRegistry)

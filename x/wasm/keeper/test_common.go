@@ -11,8 +11,8 @@ import (
 
 	"github.com/fibonacci-chain/fbc-social/x/wasm/keeper/testdata"
 
-	okexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
-	okexchain "github.com/fibonacci-chain/fbc-social/app/types"
+	fbchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	fbchain "github.com/fibonacci-chain/fbc-social/app/types"
 	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
 	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client"
 	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
@@ -117,7 +117,7 @@ func MakeTestCodec(t testing.TB) codec.CodecProxy {
 }
 
 func MakeEncodingConfig(_ testing.TB) EncodingConfig {
-	codecProxy, interfaceReg := fbexchaincodec.MakeCodecSuit(moduleBasics)
+	codecProxy, interfaceReg := fbchaincodec.MakeCodecSuit(moduleBasics)
 	txConfig := ibc_tx.NewTxConfig(codecProxy.GetProtocMarshal(), ibc_tx.DefaultSignModes)
 	encodingConfig := EncodingConfig{
 		InterfaceRegistry: interfaceReg,
@@ -313,7 +313,7 @@ func createTestInput(
 		erc20.ModuleName:            {authtypes.Minter, authtypes.Burner},
 		types.ModuleName:            nil,
 	}
-	accountKeeper := auth.NewAccountKeeper(legacyAmino, keys[authtypes.StoreKey], keys[mpt.StoreKey], subspace(authtypes.ModuleName), fbexchain.ProtoAccount)
+	accountKeeper := auth.NewAccountKeeper(legacyAmino, keys[authtypes.StoreKey], keys[mpt.StoreKey], subspace(authtypes.ModuleName), fbchain.ProtoAccount)
 	blockedAddrs := make(map[string]bool)
 	for acc := range maccPerms {
 		blockedAddrs[authtypes.NewModuleAddress(acc).String()] = true

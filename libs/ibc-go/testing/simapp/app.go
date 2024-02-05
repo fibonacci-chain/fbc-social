@@ -15,11 +15,11 @@ import (
 	"google.golang.org/grpc/encoding/proto"
 
 	"github.com/fibonacci-chain/fbc-social/app/ante"
-	okexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	fbchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
 	appconfig "github.com/fibonacci-chain/fbc-social/app/config"
 	"github.com/fibonacci-chain/fbc-social/app/refund"
 	ethermint "github.com/fibonacci-chain/fbc-social/app/types"
-	okexchain "github.com/fibonacci-chain/fbc-social/app/types"
+	fbchain "github.com/fibonacci-chain/fbc-social/app/types"
 	"github.com/fibonacci-chain/fbc-social/app/utils/sanity"
 	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
 	bam "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
@@ -117,12 +117,12 @@ func init() {
 	// set the address prefixes
 	config := sdk.GetConfig()
 	config.SetCoinType(60)
-	okexchain.SetBech32Prefixes(config)
-	okexchain.SetBip44CoinType(config)
+	fbchain.SetBech32Prefixes(config)
+	fbchain.SetBip44CoinType(config)
 }
 
 const (
-	appName = "OKExChain"
+	appName = "fbchain"
 )
 const (
 	MockFeePort string = mock.ModuleName + ibcfeetypes.ModuleName
@@ -130,10 +130,10 @@ const (
 
 var (
 	// DefaultCLIHome sets the default home directories for the application CLI
-	DefaultCLIHome = os.ExpandEnv("$HOME/.exchaincli")
+	DefaultCLIHome = os.ExpandEnv("$HOME/.fbchaincli")
 
 	// DefaultNodeHome sets the folder where the applcation data and configuration will be stored
-	DefaultNodeHome = os.ExpandEnv("$HOME/.exchaind")
+	DefaultNodeHome = os.ExpandEnv("$HOME/.fbchaind")
 
 	// ModuleBasics defines the module BasicManager is in charge of setting up basic,
 	// non-dependant module elements, such as codec registration
@@ -321,9 +321,9 @@ func NewSimApp(
 	//	logStartingFlags(logger)
 	//})
 
-	codecProxy, interfaceReg := okexchaincodec.MakeCodecSuit(ModuleBasics)
+	codecProxy, interfaceReg := fbchaincodec.MakeCodecSuit(ModuleBasics)
 
-	// NOTE we use custom OKExChain transaction decoder that supports the sdk.Tx interface instead of sdk.StdTx
+	// NOTE we use custom fbchain transaction decoder that supports the sdk.Tx interface instead of sdk.StdTx
 	bApp := bam.NewBaseApp(appName, logger, db, evm.TxDecoder(codecProxy), baseAppOptions...)
 
 	bApp.SetCommitMultiStoreTracer(traceStore)
@@ -388,9 +388,9 @@ func NewSimApp(
 
 	//proxy := codec.NewMarshalProxy(cc, cdc)
 	app.marshal = codecProxy
-	// use custom OKExChain account for contracts
+	// use custom fbchain account for contracts
 	app.AccountKeeper = auth.NewAccountKeeper(
-		codecProxy.GetCdc(), keys[auth.StoreKey], keys[mpt.StoreKey], app.subspaces[auth.ModuleName], okexchain.ProtoAccount,
+		codecProxy.GetCdc(), keys[auth.StoreKey], keys[mpt.StoreKey], app.subspaces[auth.ModuleName], fbchain.ProtoAccount,
 	)
 
 	bankKeeper := bank.NewBaseKeeperWithMarshal(
@@ -885,11 +885,11 @@ func isParaSupportedE2CMsg(payload []byte) bool {
 
 func (app *SimApp) SetOption(req abci.RequestSetOption) (res abci.ResponseSetOption) {
 	if req.Key == "CheckChainID" {
-		if err := okexchain.IsValidateChainIdWithGenesisHeight(req.Value); err != nil {
+		if err := fbchain.IsValidateChainIdWithGenesisHeight(req.Value); err != nil {
 			app.Logger().Error(err.Error())
 			panic(err)
 		}
-		err := okexchain.SetChainId(req.Value)
+		err := fbchain.SetChainId(req.Value)
 		if err != nil {
 			app.Logger().Error(err.Error())
 			panic(err)

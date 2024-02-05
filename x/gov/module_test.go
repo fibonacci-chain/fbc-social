@@ -1,7 +1,7 @@
 package gov
 
 import (
-	okexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	fbchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
 	interfacetypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
 	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
 	ibctransfer "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer"
@@ -47,8 +47,8 @@ func TestNewAppModuleBasic(t *testing.T) {
 		ibc.AppModuleBasic{},
 		ibctransfer.AppModuleBasic{},
 	)
-	//cdc := fbexchaincodec.MakeCodec(ModuleBasics)
-	interfaceReg := fbexchaincodec.MakeIBC(ModuleBasics)
+	//cdc := fbchaincodec.MakeCodec(ModuleBasics)
+	interfaceReg := fbchaincodec.MakeIBC(ModuleBasics)
 	protoCodec := codec.NewProtoCodec(interfaceReg)
 	codecProxy := codec.NewCodecProxy(protoCodec, cdc)
 

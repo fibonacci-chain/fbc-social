@@ -14,7 +14,7 @@ const (
 
 func init() {
 	govtypes.RegisterProposalType(proposalTypeDelist)
-	govtypes.RegisterProposalTypeCodec(DelistProposal{}, "fbexchain/dex/DelistProposal")
+	govtypes.RegisterProposalTypeCodec(DelistProposal{}, "fbchain/dex/DelistProposal")
 
 }
 

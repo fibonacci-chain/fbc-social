@@ -26,9 +26,9 @@ func init() {
 	govtypes.RegisterProposalType(proposalTypeTokenMapping)
 	govtypes.RegisterProposalType(proposalTypeProxyContractRedirect)
 	govtypes.RegisterProposalType(proposalTypeContractTemplate)
-	govtypes.RegisterProposalTypeCodec(TokenMappingProposal{}, "fbexchain/erc20/TokenMappingProposal")
-	govtypes.RegisterProposalTypeCodec(ProxyContractRedirectProposal{}, "fbexchain/erc20/ProxyContractRedirectProposal")
-	govtypes.RegisterProposalTypeCodec(ContractTemplateProposal{}, "fbexchain/erc20/ContractTemplateProposal")
+	govtypes.RegisterProposalTypeCodec(TokenMappingProposal{}, "fbchain/erc20/TokenMappingProposal")
+	govtypes.RegisterProposalTypeCodec(ProxyContractRedirectProposal{}, "fbchain/erc20/ProxyContractRedirectProposal")
+	govtypes.RegisterProposalTypeCodec(ContractTemplateProposal{}, "fbchain/erc20/ContractTemplateProposal")
 }
 
 var (

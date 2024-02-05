@@ -101,16 +101,16 @@ func commitBlock(suite *RPCPendingTestSuite) {
 	mck.CommitBlock()
 }
 func (suite *RPCPendingTestSuite) SetupTest() {
-	// set exchaincli path
-	cliDir, err := ioutil.TempDir("", ".exchaincli")
+	// set fbchaincli path
+	cliDir, err := ioutil.TempDir("", ".fbchaincli")
 	if err != nil {
 		panic(err)
 	}
 	defer os.RemoveAll(cliDir)
 	viper.Set(cmserver.FlagUlockKeyHome, cliDir)
 
-	// set exchaind path
-	serverDir, err := ioutil.TempDir("", ".exchaind")
+	// set fbchaind path
+	serverDir, err := ioutil.TempDir("", ".fbchaind")
 	if err != nil {
 		panic(err)
 	}

@@ -9,10 +9,10 @@ var ModuleCdc = codec.New()
 
 const (
 	// Amino names
-	registerFeeSplitName = "fbexchain/MsgRegisterFeeSplit"
-	updateFeeSplitName   = "fbexchain/MsgUpdateFeeSplit"
-	cancelFeeSplitName   = "fbexchain/MsgCancelFeeSplit"
-	sharesProposalName   = "fbexchain/feesplit/SharesProposal"
+	registerFeeSplitName = "fbchain/MsgRegisterFeeSplit"
+	updateFeeSplitName   = "fbchain/MsgUpdateFeeSplit"
+	cancelFeeSplitName   = "fbchain/MsgCancelFeeSplit"
+	sharesProposalName   = "fbchain/feesplit/SharesProposal"
 )
 
 // NOTE: This is required for the GetSignBytes function

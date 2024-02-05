@@ -47,7 +47,7 @@ type Env struct {
 }
 
 type Chain struct {
-	app          *app.OKExChainApp
+	app          *app.fbchainApp
 	codec        *codec.Codec
 	priv         []ethsecp256k1.PrivKey
 	addr         []sdk.AccAddress

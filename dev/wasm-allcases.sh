@@ -79,7 +79,7 @@ QUERY_EXTRA="--node=$NODE"
 TX_EXTRA_UNBLOCKED="--fees 0.01okt --gas 3000000 --chain-id=$CHAIN_ID --node $NODE -b async -y"
 TX_EXTRA="--fees 0.01okt --gas 3000000 --chain-id=$CHAIN_ID --node $NODE -b block -y"
 
-exchaincli keys add --recover captain -m "puzzle glide follow cruel say burst deliver wild tragic galaxy lumber offer" -y
+fbchaincli keys add --recover captain -m "puzzle glide follow cruel say burst deliver wild tragic galaxy lumber offer" -y
 fbchaincli keys add --recover admin17 -m "antique onion adult slot sad dizzy sure among cement demise submit scare" -y
 fbchaincli keys add --recover admin18 -m "lazy cause kite fence gravity regret visa fuel tone clerk motor rent" -y
 
@@ -720,7 +720,7 @@ then
   exit 1
 fi;
 
-res=$(exchaincli tx wasm store wasm/test/burner.wasm --from captain $TX_EXTRA)
+res=$(fbchaincli tx wasm store wasm/test/burner.wasm --from captain $TX_EXTRA)
 burner_code_id=$(echo "$res" | jq '.logs[0].events[1].attributes[0].value' | sed 's/\"//g')
 echo "burner_code_id: $burner_code_id"
 
