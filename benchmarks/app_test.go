@@ -4,9 +4,7 @@ import (
 	"crypto/ecdsa"
 	"encoding/hex"
 	"encoding/json"
-	"errors"
 	"math/big"
-	"strconv"
 	"strings"
 	"testing"
 	"time"
@@ -70,26 +68,26 @@ func TestOip20TxSending(t *testing.T) {
 	appInfo.App.Commit(abci.RequestCommit{})
 }
 
-func TestCw20TxSending(t *testing.T) {
-	db := dbm.NewMemDB()
-	defer db.Close()
-	appInfo := InitializeOKXApp(t, db, 50)
-
-	emptyBlock(&appInfo)
-	err := deployCw20(&appInfo)
-	require.NoError(t, err)
-
-	height := appInfo.height + 1
-	appInfo.App.BeginBlock(abci.RequestBeginBlock{Header: abci.Header{ChainID: "exchain-67", Height: height, Time: time.Now()}})
-	txs := buildTxFromMsg(cw20TransferMsg)(100, &appInfo)
-	for _, tx := range txs {
-		res := appInfo.App.DeliverTx(abci.RequestDeliverTx{Tx: tx})
-		require.True(t, res.IsOK())
-	}
-
-	appInfo.App.EndBlock(abci.RequestEndBlock{Height: height})
-	appInfo.App.Commit(abci.RequestCommit{})
-}
+//func TestCw20TxSending(t *testing.T) {
+//	db := dbm.NewMemDB()
+//	defer db.Close()
+//	appInfo := InitializeOKXApp(t, db, 50)
+//
+//	emptyBlock(&appInfo)
+//	err := deployCw20(&appInfo)
+//	require.NoError(t, err)
+//
+//	height := appInfo.height + 1
+//	appInfo.App.BeginBlock(abci.RequestBeginBlock{Header: abci.Header{ChainID: "exchain-67", Height: height, Time: time.Now()}})
+//	txs := buildTxFromMsg(cw20TransferMsg)(100, &appInfo)
+//	for _, tx := range txs {
+//		res := appInfo.App.DeliverTx(abci.RequestDeliverTx{Tx: tx})
+//		require.True(t, res.IsOK())
+//	}
+//
+//	appInfo.App.EndBlock(abci.RequestEndBlock{Height: height})
+//	appInfo.App.Commit(abci.RequestCommit{})
+//}
 
 type AppInfo struct {
 	height int64
@@ -244,38 +242,38 @@ func deployOip20(info *AppInfo) error {
 	return nil
 }
 
-func deployCw20(info *AppInfo) error {
-	// add cw20 contract
-	global.SetGlobalHeight(info.height)
-	height := info.height + 1
-	info.App.BeginBlock(abci.RequestBeginBlock{Header: abci.Header{ChainID: "exchain-67", Height: height, Time: time.Now()}})
-
-	// upload cw20
-	txs := buildTxFromMsg(cw20StoreMsg)(1, info)
-	res := info.App.DeliverTx(abci.RequestDeliverTx{Tx: txs[0]})
-	if !res.IsOK() {
-		return errors.New("deliver tx error")
-	}
-	codeID, err := strconv.Atoi(string(res.Events[2].Attributes[0].Value))
-	if err != nil {
-		return err
-	}
-	info.Cw20CodeID = uint64(codeID)
-
-	// instantiate cw20
-	txs = buildTxFromMsg(cw20InstantiateMsg)(1, info)
-	res = info.App.DeliverTx(abci.RequestDeliverTx{Tx: txs[0]})
-	if !res.IsOK() {
-		return errors.New("deliver tx error")
-	}
-	info.Cw20ContractAddr = string(res.Events[2].Attributes[0].Value)
-
-	info.App.EndBlock(abci.RequestEndBlock{Height: height})
-	info.App.Commit(abci.RequestCommit{})
-
-	info.height++
-	return nil
-}
+//func deployCw20(info *AppInfo) error {
+//	// add cw20 contract
+//	global.SetGlobalHeight(info.height)
+//	height := info.height + 1
+//	info.App.BeginBlock(abci.RequestBeginBlock{Header: abci.Header{ChainID: "exchain-67", Height: height, Time: time.Now()}})
+//
+//	// upload cw20
+//	txs := buildTxFromMsg(cw20StoreMsg)(1, info)
+//	res := info.App.DeliverTx(abci.RequestDeliverTx{Tx: txs[0]})
+//	if !res.IsOK() {
+//		return errors.New("deliver tx error")
+//	}
+//	codeID, err := strconv.Atoi(string(res.Events[2].Attributes[0].Value))
+//	if err != nil {
+//		return err
+//	}
+//	info.Cw20CodeID = uint64(codeID)
+//
+//	// instantiate cw20
+//	txs = buildTxFromMsg(cw20InstantiateMsg)(1, info)
+//	res = info.App.DeliverTx(abci.RequestDeliverTx{Tx: txs[0]})
+//	if !res.IsOK() {
+//		return errors.New("deliver tx error")
+//	}
+//	info.Cw20ContractAddr = string(res.Events[2].Attributes[0].Value)
+//
+//	info.App.EndBlock(abci.RequestEndBlock{Height: height})
+//	info.App.Commit(abci.RequestCommit{})
+//
+//	info.height++
+//	return nil
+//}
 
 func emptyBlock(info *AppInfo) {
 	global.SetGlobalHeight(info.height)

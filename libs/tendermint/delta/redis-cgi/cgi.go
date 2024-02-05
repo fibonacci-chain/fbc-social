@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	"github.com/go-redis/redis/v8"
 	"sync"
 	"time"
 )
