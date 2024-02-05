@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/mempool"
-	"github.com/okex/exchain/libs/tendermint/rpc/client/mock"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/mempool"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/client/mock"
+	ctypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/core/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
 )
 
 type MockClient struct {

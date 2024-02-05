@@ -1,9 +1,9 @@
 package keeper_test
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	icatypes "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/types"
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	icatypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/27-interchain-accounts/types"
+	ibctesting "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing"
 )
 
 func (suite *KeeperTestSuite) TestRegisterInterchainAccount() {

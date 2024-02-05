@@ -5,9 +5,9 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/rest"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
 )
 
 // EncodeResp defines a tx encoding response.

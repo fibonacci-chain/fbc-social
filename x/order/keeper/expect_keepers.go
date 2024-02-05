@@ -1,12 +1,12 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/exported"
 
-	dex "github.com/okex/exchain/x/dex/types"
-	"github.com/okex/exchain/x/order/types"
-	token "github.com/okex/exchain/x/token/types"
+	dex "github.com/fibonacci-chain/fbc-social/x/dex/types"
+	"github.com/fibonacci-chain/fbc-social/x/order/types"
+	token "github.com/fibonacci-chain/fbc-social/x/token/types"
 )
 
 // TokenKeeper : expected token keeper

@@ -1,20 +1,20 @@
 package baseapp_test
 
 import (
-	okexchaincodec "github.com/okex/exchain/app/codec"
-	"github.com/okex/exchain/libs/ibc-go/testing/simapp"
-	"github.com/okex/exchain/x/evm"
+	okexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing/simapp"
+	"github.com/fibonacci-chain/fbc-social/x/evm"
 	"os"
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
 
-	"github.com/okex/exchain/x/evm/types/testdata"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types/testdata"
 )
 
 func TestRegisterMsgService(t *testing.T) {

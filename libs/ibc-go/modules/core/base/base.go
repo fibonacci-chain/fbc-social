@@ -1,11 +1,11 @@
 package base
 
 import (
-	cosmost "github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/upgrade"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/libs/tendermint/types"
+	cosmost "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/upgrade"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 var (

@@ -13,8 +13,8 @@ import (
 
 	amino "github.com/tendermint/go-amino"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	types "github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	types "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/jsonrpc/types"
 )
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -183,8 +183,9 @@ func arrayParamsToArgs(
 // array.
 //
 // Example:
-//   rpcFunc.args = [rpctypes.Context string]
-//   rpcFunc.argNames = ["arg"]
+//
+//	rpcFunc.args = [rpctypes.Context string]
+//	rpcFunc.argNames = ["arg"]
 func jsonParamsToArgs(rpcFunc *RPCFunc, cdc *amino.Codec, raw []byte) ([]reflect.Value, error) {
 	const argsOffset = 1
 

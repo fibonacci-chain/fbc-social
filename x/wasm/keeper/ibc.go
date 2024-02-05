@@ -3,12 +3,12 @@ package keeper
 import (
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	capabilitytypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/types"
+	host "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/24-host"
 
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
 )
 
 // bindIbcPort will reserve the port.

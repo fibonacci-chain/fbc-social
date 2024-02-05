@@ -7,13 +7,13 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/okex/exchain/x/dex"
-	orderkeeper "github.com/okex/exchain/x/order/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/dex"
+	orderkeeper "github.com/fibonacci-chain/fbc-social/x/order/keeper"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/order/types"
+	"github.com/fibonacci-chain/fbc-social/x/order/types"
 )
 
 type BookItemTestData struct {

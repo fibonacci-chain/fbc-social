@@ -5,12 +5,12 @@ import (
 	"path/filepath"
 	"time"
 
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/privval"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	tmos "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/os"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/privval"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 // ExportGenesisFile creates and writes the genesis configuration to disk. An

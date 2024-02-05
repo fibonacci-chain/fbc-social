@@ -8,13 +8,13 @@ import (
 	ethcmn "github.com/ethereum/go-ethereum/common"
 	"github.com/gorilla/mux"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/query"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	comm "github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/feesplit/types"
-	govRest "github.com/okex/exchain/x/gov/client/rest"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/query"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/rest"
+	comm "github.com/fibonacci-chain/fbc-social/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/feesplit/types"
+	govRest "github.com/fibonacci-chain/fbc-social/x/gov/client/rest"
 )
 
 func RegisterRoutes(cliCtx context.CLIContext, r *mux.Router) {
@@ -41,7 +41,7 @@ func queryParamsHandlerFn(cliCtx context.CLIContext) http.HandlerFunc {
 		if !ok {
 			return
 		}
-		
+
 		res, height, err := cliCtx.QueryWithData(fmt.Sprintf("custom/%s/%s",
 			types.RouterKey, types.QueryParameters), nil)
 		if err != nil {

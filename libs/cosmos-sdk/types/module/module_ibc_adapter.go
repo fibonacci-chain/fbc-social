@@ -1,10 +1,10 @@
 package module
 
 import (
+	clientCtx "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	codectypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
 	"github.com/gorilla/mux"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
-	clientCtx "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
 )
 
 // RegisterInterfaces registers all module interface types

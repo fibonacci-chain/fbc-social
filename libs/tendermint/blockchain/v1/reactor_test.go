@@ -12,18 +12,18 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/mock"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/store"
-	"github.com/okex/exchain/libs/tendermint/types"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/mock"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/proxy"
+	sm "github.com/fibonacci-chain/fbc-social/libs/tendermint/state"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/store"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	tmtime "github.com/fibonacci-chain/fbc-social/libs/tendermint/types/time"
 )
 
 var config *cfg.Config

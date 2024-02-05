@@ -3,16 +3,16 @@ package simulation
 import (
 	"math/rand"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp/helpers"
-	simappparams "github.com/okex/exchain/libs/cosmos-sdk/simapp/params"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank/internal/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank/internal/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/simapp/helpers"
+	simappparams "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/simapp/params"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank/internal/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank/internal/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/simulation"
 )
 
 // Simulation operation weights constants

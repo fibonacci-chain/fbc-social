@@ -3,13 +3,13 @@ package keeper_test
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	channeltypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/types/query"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/types"
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/query"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/29-fee/types"
+	ibctesting "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/secp256k1"
 )
 
 func (suite *KeeperTestSuite) TestQueryIncentivizedPackets() {

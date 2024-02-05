@@ -3,8 +3,8 @@ package state
 import (
 	"bytes"
 	"fmt"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"time"
 )
 

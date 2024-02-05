@@ -3,12 +3,12 @@ package keeper
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	//"github.com/okex/exchain/x/common"
-	//dexTypes "github.com/okex/exchain/x/dex/types"
-	"github.com/okex/exchain/x/gov/types"
+	//"github.com/fibonacci-chain/fbc-social/x/common"
+	//dexTypes "github.com/fibonacci-chain/fbc-social/x/dex/types"
+	"github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 //func TestKeeper_SubmitProposal(t *testing.T) {

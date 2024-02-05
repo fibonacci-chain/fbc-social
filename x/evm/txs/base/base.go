@@ -5,12 +5,12 @@ import (
 
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	bam "github.com/okex/exchain/libs/system/trace"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/evm/keeper"
-	"github.com/okex/exchain/x/evm/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	authexported "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/exported"
+	bam "github.com/fibonacci-chain/fbc-social/libs/system/trace"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
 )
 
 // Keeper alias of keeper.Keeper, to solve import circle. also evm.Keeper is alias keeper.Keeper

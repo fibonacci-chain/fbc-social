@@ -1,8 +1,8 @@
 package wasmtesting
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 // MockMessageRouter mock for testing

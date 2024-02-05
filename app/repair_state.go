@@ -8,33 +8,33 @@ import (
 	"strings"
 	"time"
 
-	"github.com/okex/exchain/app/config"
-	"github.com/okex/exchain/app/utils/appstatus"
+	"github.com/fibonacci-chain/fbc-social/app/config"
+	"github.com/fibonacci-chain/fbc-social/app/utils/appstatus"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/flatkv"
-	mpttypes "github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/rootmulti"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/iavl"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/global"
-	tmlog "github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/mock"
-	"github.com/okex/exchain/libs/tendermint/node"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	blockindex "github.com/okex/exchain/libs/tendermint/state/indexer"
-	blockindexer "github.com/okex/exchain/libs/tendermint/state/indexer/block/kv"
-	bloxkindexnull "github.com/okex/exchain/libs/tendermint/state/indexer/block/null"
-	"github.com/okex/exchain/libs/tendermint/state/txindex"
-	"github.com/okex/exchain/libs/tendermint/state/txindex/kv"
-	"github.com/okex/exchain/libs/tendermint/state/txindex/null"
-	"github.com/okex/exchain/libs/tendermint/store"
-	"github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/flatkv"
+	mpttypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/mpt"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/rootmulti"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/iavl"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/global"
+	tmlog "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/mock"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/node"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/proxy"
+	sm "github.com/fibonacci-chain/fbc-social/libs/tendermint/state"
+	blockindex "github.com/fibonacci-chain/fbc-social/libs/tendermint/state/indexer"
+	blockindexer "github.com/fibonacci-chain/fbc-social/libs/tendermint/state/indexer/block/kv"
+	bloxkindexnull "github.com/fibonacci-chain/fbc-social/libs/tendermint/state/indexer/block/null"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/state/txindex"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/state/txindex/kv"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/state/txindex/null"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/store"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
+	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
 	"github.com/spf13/viper"
 )
 
@@ -51,7 +51,7 @@ const (
 
 type repairApp struct {
 	db dbm.DB
-	*OKExChainApp
+	*FBChainApp
 }
 
 func (app *repairApp) getLatestVersion() int64 {
@@ -169,7 +169,7 @@ func createRepairApp(ctx *server.Context) (proxy.AppConns, *repairApp, error) {
 }
 
 func newRepairApp(logger tmlog.Logger, db dbm.DB, traceStore io.Writer) *repairApp {
-	return &repairApp{db, NewOKExChainApp(
+	return &repairApp{db, NewFBChainApp(
 		logger,
 		db,
 		traceStore,

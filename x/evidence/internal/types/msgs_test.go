@@ -3,11 +3,11 @@ package types_test
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/evidence/exported"
-	"github.com/okex/exchain/x/evidence/internal/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/evidence/exported"
+	"github.com/fibonacci-chain/fbc-social/x/evidence/internal/types"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
 	"github.com/stretchr/testify/require"
 )
 

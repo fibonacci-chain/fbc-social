@@ -9,18 +9,18 @@ import (
 
 	"github.com/tendermint/go-amino"
 
-	tmcrypto "github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/crypto/sr25519"
+	tmcrypto "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/sr25519"
 
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/secp256k1"
 
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	authexported "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/exported"
+	authtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
 
 	"github.com/stretchr/testify/require"
 )

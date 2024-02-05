@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 	"github.com/stretchr/testify/require"
 )
 

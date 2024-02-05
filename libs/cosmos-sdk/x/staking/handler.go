@@ -3,13 +3,13 @@ package staking
 import (
 	"time"
 
-	tmstrings "github.com/okex/exchain/libs/tendermint/libs/strings"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	tmstrings "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/strings"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking/types"
 )
 
 func NewHandler(k keeper.Keeper) sdk.Handler {

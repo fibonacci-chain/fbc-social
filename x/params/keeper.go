@@ -3,12 +3,12 @@ package params
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	stypes "github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkparams "github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/x/params/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	stypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkparams "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/x/params/types"
 )
 
 // Keeper is the struct of params keeper

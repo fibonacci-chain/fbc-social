@@ -5,9 +5,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/abci/example/kvstore"
-	nm "github.com/okex/exchain/libs/tendermint/node"
-	rpctest "github.com/okex/exchain/libs/tendermint/rpc/test"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/example/kvstore"
+	nm "github.com/fibonacci-chain/fbc-social/libs/tendermint/node"
+	rpctest "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/test"
 )
 
 var node *nm.Node

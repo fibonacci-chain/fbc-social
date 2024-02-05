@@ -5,10 +5,10 @@ import (
 	"sync"
 
 	"github.com/ethereum/go-ethereum/common"
-	ethermint "github.com/okex/exchain/app/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/evm/types"
+	ethermint "github.com/fibonacci-chain/fbc-social/app/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
 )
 
 var commitStateDBPool = &sync.Pool{

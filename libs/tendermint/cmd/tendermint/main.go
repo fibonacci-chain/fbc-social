@@ -4,11 +4,11 @@ import (
 	"os"
 	"path/filepath"
 
-	cmd "github.com/okex/exchain/libs/tendermint/cmd/tendermint/commands"
-	"github.com/okex/exchain/libs/tendermint/cmd/tendermint/commands/debug"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
-	nm "github.com/okex/exchain/libs/tendermint/node"
+	cmd "github.com/fibonacci-chain/fbc-social/libs/tendermint/cmd/tendermint/commands"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/cmd/tendermint/commands/debug"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/cli"
+	nm "github.com/fibonacci-chain/fbc-social/libs/tendermint/node"
 )
 
 func main() {

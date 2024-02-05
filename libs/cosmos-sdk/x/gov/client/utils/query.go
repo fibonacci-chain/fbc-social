@@ -3,11 +3,11 @@ package utils
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/gov/types"
 )
 
 const (

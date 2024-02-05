@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/distribution/types"
-	govTypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/types"
+	govTypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 // withdraw rewards from a delegation

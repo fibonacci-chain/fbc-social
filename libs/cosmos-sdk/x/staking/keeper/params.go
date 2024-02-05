@@ -3,9 +3,9 @@ package keeper
 import (
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking/types"
 )
 
 // Default parameter namespace

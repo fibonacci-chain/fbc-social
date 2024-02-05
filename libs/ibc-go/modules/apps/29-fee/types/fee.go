@@ -3,10 +3,10 @@ package types
 import (
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
 
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
+	channeltypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel/types"
 )
 
 // NewPacketFee creates and returns a new PacketFee struct including the incentivization fees, refund addres and relayers

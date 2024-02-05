@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"testing"
 
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	tmrand "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/cachekv"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/dbadapter"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/cachekv"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/dbadapter"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
 )
 
 func newCacheKVStore() types.CacheKVStore {

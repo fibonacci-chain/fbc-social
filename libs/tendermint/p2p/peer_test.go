@@ -14,13 +14,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/libs/bytes"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bytes"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 
-	"github.com/okex/exchain/libs/tendermint/config"
-	tmconn "github.com/okex/exchain/libs/tendermint/p2p/conn"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	tmconn "github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p/conn"
 )
 
 func TestPeerBasic(t *testing.T) {

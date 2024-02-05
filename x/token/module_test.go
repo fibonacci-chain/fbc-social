@@ -1,15 +1,15 @@
 package token
 
 import (
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
 
-	cliLcd "github.com/okex/exchain/libs/cosmos-sdk/client/lcd"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/common/version"
-	"github.com/okex/exchain/x/token/types"
+	cliLcd "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/lcd"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/x/common/version"
+	"github.com/fibonacci-chain/fbc-social/x/token/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -41,7 +41,7 @@ func TestAppModule_InitGenesis(t *testing.T) {
 	module.GetQueryCmd(app.Cdc.GetCdc())
 	module.GetTxCmd(app.Cdc.GetCdc())
 	module.NewQuerierHandler()
-	rs := cliLcd.NewRestServer(app.Cdc, nil,nil)
+	rs := cliLcd.NewRestServer(app.Cdc, nil, nil)
 	module.RegisterRESTRoutes(rs.CliCtx, rs.Mux)
 	module.BeginBlock(ctx, abci.RequestBeginBlock{})
 	module.EndBlock(ctx, abci.RequestEndBlock{})

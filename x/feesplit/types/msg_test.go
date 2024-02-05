@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"

@@ -3,9 +3,9 @@ package params
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	govtypes "github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	govtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/gov/types"
 )
 
 // NewParamChangeProposalHandler creates a new governance Handler for a ParamChangeProposal

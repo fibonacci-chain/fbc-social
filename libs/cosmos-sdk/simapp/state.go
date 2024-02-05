@@ -8,14 +8,14 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/secp256k1"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	simapparams "github.com/okex/exchain/libs/cosmos-sdk/simapp/params"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	simapparams "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/simapp/params"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/simulation"
 )
 
 // AppStateFn returns the initial application state using a genesis or the simulation parameters.

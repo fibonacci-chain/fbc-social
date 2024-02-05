@@ -4,12 +4,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mint/internal/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	evm_types "github.com/okex/exchain/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/app"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/mint/internal/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	evm_types "github.com/fibonacci-chain/fbc-social/x/evm/types"
 	"github.com/stretchr/testify/suite"
 )
 

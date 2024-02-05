@@ -1,7 +1,7 @@
 package types
 
 import (
-	sdkerror "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	sdkerror "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
 	"testing"
 
 	"github.com/stretchr/testify/require"

@@ -3,15 +3,15 @@ package rest
 import (
 	"net/http"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/rest"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/client/utils"
 
-	comm "github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/distribution/types"
-	"github.com/okex/exchain/x/gov"
-	govrest "github.com/okex/exchain/x/gov/client/rest"
+	comm "github.com/fibonacci-chain/fbc-social/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/types"
+	"github.com/fibonacci-chain/fbc-social/x/gov"
+	govrest "github.com/fibonacci-chain/fbc-social/x/gov/client/rest"
 )
 
 // ChangeDistributionTypeProposalRESTHandler returns a ChangeDistributionTypeProposal that exposes the change distribution type REST handler with a given sub-route.
@@ -79,7 +79,7 @@ func postWithdrawRewardEnabledProposalHandlerFn(cliCtx context.CLIContext) http.
 }
 
 // RewardTruncatePrecisionProposalRESTHandler returns a RewardTruncatePrecisionProposal
-//that exposes the reward truncate precision proposal REST handler with a given sub-route.
+// that exposes the reward truncate precision proposal REST handler with a given sub-route.
 func RewardTruncatePrecisionProposalRESTHandler(cliCtx context.CLIContext) govrest.ProposalRESTHandler {
 	return govrest.ProposalRESTHandler{
 		SubRoute: "reward_truncate_precision",

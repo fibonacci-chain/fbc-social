@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mock"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/common"
-	ordertypes "github.com/okex/exchain/x/order/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/mock"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/exported"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	ordertypes "github.com/fibonacci-chain/fbc-social/x/order/types"
 )
 
 type mockTokenKeeper struct {

@@ -1,6 +1,6 @@
 package v0_10
 
-import sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+import sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
 const ModuleName = "token"
 
@@ -23,9 +23,9 @@ type (
 
 	Token struct {
 		Description         string         `json:"description" v2:"description"`                     // e.g. "OK Group Global Utility Token"
-		Symbol              string         `json:"symbol" v2:"symbol"`                               // e.g. "okt"
-		OriginalSymbol      string         `json:"original_symbol" v2:"original_symbol"`             // e.g. "OKT"
-		WholeName           string         `json:"whole_name" v2:"whole_name"`                       // e.g. "OKT"
+		Symbol              string         `json:"symbol" v2:"symbol"`                               // e.g. "fibo"
+		OriginalSymbol      string         `json:"original_symbol" v2:"original_symbol"`             // e.g. "fibo"
+		WholeName           string         `json:"whole_name" v2:"whole_name"`                       // e.g. "fibo"
 		OriginalTotalSupply sdk.Dec        `json:"original_total_supply" v2:"original_total_supply"` // e.g. 1000000000.00000000
 		TotalSupply         sdk.Dec        `json:"total_supply" v2:"total_supply"`                   // e.g. 1000000000.00000000
 		Owner               sdk.AccAddress `json:"owner" v2:"owner"`                                 // e.g. ex1rf9wr069pt64e58f2w3mjs9w72g8vemzw26658

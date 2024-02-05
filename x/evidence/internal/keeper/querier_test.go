@@ -3,10 +3,10 @@ package keeper_test
 import (
 	"strings"
 
-	"github.com/okex/exchain/x/evidence/exported"
-	"github.com/okex/exchain/x/evidence/internal/types"
+	"github.com/fibonacci-chain/fbc-social/x/evidence/exported"
+	"github.com/fibonacci-chain/fbc-social/x/evidence/internal/types"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 )
 
 const (

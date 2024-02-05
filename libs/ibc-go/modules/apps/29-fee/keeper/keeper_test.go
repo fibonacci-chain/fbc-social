@@ -4,16 +4,16 @@ import (
 	"fmt"
 	"testing"
 
-	types2 "github.com/okex/exchain/libs/tendermint/types"
+	types2 "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
-	ibcmock "github.com/okex/exchain/libs/ibc-go/testing/mock"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	ibctesting "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing"
+	ibcmock "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing/mock"
 
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/29-fee/types"
+	channeltypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel/types"
 	"github.com/stretchr/testify/suite"
 )
 

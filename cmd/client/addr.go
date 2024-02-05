@@ -3,16 +3,16 @@ package client
 import (
 	"fmt"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/okex/exchain/libs/system"
+	"github.com/fibonacci-chain/fbc-social/libs/system"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 	"github.com/spf13/cobra"
 )
 
 const (
-	okexPrefix = "okexchain"
-	exPrefix   = "ex"
+	fiboPrefix = "fbchain"
+	fbPrefix   = "fb"
 	rawPrefix  = "0x"
 )
 
@@ -36,36 +36,36 @@ func convertCommand() *cobra.Command {
 	return &cobra.Command{
 		Use:   "convert [sourceAddr]",
 		Short: "convert source address to all kind of address in the " + system.ChainName + " network",
-		Long: `sourceAddr must be begin with "okexchain","ex" or "0x".
+		Long: `sourceAddr must be begin with "fbchain","fb" or "0x".
 	
 	When input one of these address, we will convert to the other kinds.`,
 		Args: cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			addrList := make(map[string]string)
-			targetPrefix := []string{okexPrefix, exPrefix, rawPrefix}
+			targetPrefix := []string{fiboPrefix, fbPrefix, rawPrefix}
 			srcAddr := args[0]
 
 			// register func to encode account address to prefix address.
 			toPrefixFunc := map[string]accAddrToPrefixFunc{
-				okexPrefix: bech32FromAccAddr,
-				exPrefix:   bech32FromAccAddr,
+				fiboPrefix: bech32FromAccAddr,
+				fbPrefix:   bech32FromAccAddr,
 				rawPrefix:  hexFromAccAddr,
 			}
 
-			// prefix is "okexchain","ex" or "0x"
+			// prefix is "fbchain","fb" or "0x"
 			// convert srcAddr to accAddr
 			var accAddr sdk.AccAddress
 			var err error
 			switch {
-			case strings.HasPrefix(srcAddr, okexPrefix):
+			case strings.HasPrefix(srcAddr, fiboPrefix):
 				//source address parse to account address
-				addrList[okexPrefix] = srcAddr
-				accAddr, err = bech32ToAccAddr(okexPrefix, srcAddr)
+				addrList[fiboPrefix] = srcAddr
+				accAddr, err = bech32ToAccAddr(fiboPrefix, srcAddr)
 
-			case strings.HasPrefix(srcAddr, exPrefix):
+			case strings.HasPrefix(srcAddr, fbPrefix):
 				//source address parse to account address
-				addrList[exPrefix] = srcAddr
-				accAddr, err = bech32ToAccAddr(exPrefix, srcAddr)
+				addrList[fbPrefix] = srcAddr
+				accAddr, err = bech32ToAccAddr(fbPrefix, srcAddr)
 
 			case strings.HasPrefix(srcAddr, rawPrefix):
 				accAddr, err = hexToAccAddr(rawPrefix, srcAddr)

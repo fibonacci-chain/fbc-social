@@ -8,11 +8,11 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	sm "github.com/okex/exchain/libs/tendermint/state"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	sm "github.com/fibonacci-chain/fbc-social/libs/tendermint/state"
 )
 
 var (

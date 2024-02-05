@@ -5,9 +5,9 @@ package dex
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/dex/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/x/dex/types"
 	"github.com/stretchr/testify/require"
 )
 

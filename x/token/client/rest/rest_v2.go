@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/okex/exchain/x/token/types"
+	"github.com/fibonacci-chain/fbc-social/x/token/types"
 
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 	"github.com/gorilla/mux"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/common"
 )
 
 // RegisterRoutesV2, a central function to define routes

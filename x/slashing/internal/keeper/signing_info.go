@@ -3,8 +3,8 @@ package keeper
 import (
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/slashing/internal/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/slashing/internal/types"
 )
 
 // GetValidatorSigningInfo retruns the ValidatorSigningInfo for a specific validator

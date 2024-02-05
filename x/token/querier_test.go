@@ -3,12 +3,12 @@ package token
 import (
 	"testing"
 
-	"github.com/okex/exchain/x/token/types"
+	"github.com/fibonacci-chain/fbc-social/x/token/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mock"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/common"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/mock"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 	"github.com/stretchr/testify/require"
 )
 

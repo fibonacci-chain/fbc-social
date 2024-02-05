@@ -3,11 +3,11 @@ package wasm
 import (
 	"encoding/json"
 	"errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
 )
 
 var (

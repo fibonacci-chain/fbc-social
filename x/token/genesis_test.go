@@ -1,12 +1,12 @@
 package token
 
 import (
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/token/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/x/token/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -15,7 +15,7 @@ func TestDefault(t *testing.T) {
 	genesisState := defaultGenesisState()
 	err := validateGenesis(genesisState)
 	require.NoError(t, err)
-	defaultGenesisStateOKT()
+	defaultGenesisStatefibo()
 }
 
 func TestInitGenesis(t *testing.T) {
@@ -29,7 +29,7 @@ func TestInitGenesis(t *testing.T) {
 	params := keeper.GetParams(ctx)
 
 	var tokens []types.Token
-	tokens = append(tokens, defaultGenesisStateOKT())
+	tokens = append(tokens, defaultGenesisStatefibo())
 
 	var lockedCoins []types.AccCoins
 	decCoin := sdk.NewDecCoinFromDec(tokens[0].Symbol, sdk.NewDec(1234))

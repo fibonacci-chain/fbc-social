@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/libs/service"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/service"
 )
 
 // mockPeer for testing the PeerSet

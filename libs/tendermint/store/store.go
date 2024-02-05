@@ -11,10 +11,10 @@ import (
 
 	"github.com/pkg/errors"
 
-	db "github.com/okex/exchain/libs/tm-db"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	db "github.com/fibonacci-chain/fbc-social/libs/tm-db"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 /*

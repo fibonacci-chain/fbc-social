@@ -1,8 +1,8 @@
 package state
 
 import (
-	mempl "github.com/okex/exchain/libs/tendermint/mempool"
-	"github.com/okex/exchain/libs/tendermint/types"
+	mempl "github.com/fibonacci-chain/fbc-social/libs/tendermint/mempool"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 // TxPreCheck returns a function to filter transactions before processing.

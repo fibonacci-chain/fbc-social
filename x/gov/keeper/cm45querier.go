@@ -1,13 +1,13 @@
 package keeper
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/common"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/gov/types"
-	paramstypes "github.com/okex/exchain/x/params/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/x/gov/types"
+	paramstypes "github.com/fibonacci-chain/fbc-social/x/params/types"
 )
 
 func cm45QueryProposal(ctx sdk.Context, path []string, req abci.RequestQuery, keeper Keeper) ([]byte, sdk.Error) {

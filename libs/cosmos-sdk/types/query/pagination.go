@@ -3,7 +3,7 @@ package query
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

@@ -1,9 +1,9 @@
 package params
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdkparams "github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/x/params/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdkparams "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params"
+	"github.com/fibonacci-chain/fbc-social/x/params/types"
 )
 
 // ModuleCdc is the codec of module

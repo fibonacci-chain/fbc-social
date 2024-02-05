@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
-	simtypes "github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/simulation"
+	simtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/simulation"
 
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
 )
 
 func ParamChanges(r *rand.Rand, cdc codec.Codec) []simtypes.ParamChange {

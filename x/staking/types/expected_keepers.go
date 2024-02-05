@@ -1,10 +1,10 @@
 package types
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	supplyexported "github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
-	stakingexported "github.com/okex/exchain/x/staking/exported"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	authexported "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/exported"
+	supplyexported "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/exported"
+	stakingexported "github.com/fibonacci-chain/fbc-social/x/staking/exported"
 )
 
 // AccountKeeper defines the expected account keeper (noalias)
@@ -83,7 +83,7 @@ type StakingHooks interface {
 	// Must be called when a validator begins unbonding
 	AfterValidatorBeginUnbonding(ctx sdk.Context, consAddr sdk.ConsAddress, valAddr sdk.ValAddress)
 
-	// required by okexchain
+	// required by fbexchain
 	// Must be called when a validator is destroyed by tx
 	AfterValidatorDestroyed(ctx sdk.Context, consAddr sdk.ConsAddress, valAddr sdk.ValAddress)
 

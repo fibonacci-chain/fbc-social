@@ -11,10 +11,10 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
-	nm "github.com/okex/exchain/libs/tendermint/node"
-	"github.com/okex/exchain/libs/tendermint/types"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	tmos "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/os"
+	nm "github.com/fibonacci-chain/fbc-social/libs/tendermint/node"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 var (

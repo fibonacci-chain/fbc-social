@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 
-	"github.com/okex/exchain/libs/tendermint/libs/pubsub/query"
-	"github.com/okex/exchain/libs/tendermint/state/txindex"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/pubsub/query"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/state/txindex"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 var _ txindex.TxIndexer = (*TxIndex)(nil)

@@ -1,8 +1,8 @@
 package v018
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/evm/legacy/v0_16"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/legacy/v0_16"
 )
 
 type (

@@ -9,12 +9,12 @@ import (
 	"github.com/pkg/errors"
 	amino "github.com/tendermint/go-amino"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	cryptoenc "github.com/okex/exchain/libs/tendermint/crypto/encoding"
-	cryptoamino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
-	"github.com/okex/exchain/libs/tendermint/crypto/merkle"
-	"github.com/okex/exchain/libs/tendermint/crypto/tmhash"
-	tmproto "github.com/okex/exchain/libs/tendermint/proto/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	cryptoenc "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/encoding"
+	cryptoamino "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/encoding/amino"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/merkle"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/tmhash"
+	tmproto "github.com/fibonacci-chain/fbc-social/libs/tendermint/proto/types"
 )
 
 const (

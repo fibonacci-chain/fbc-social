@@ -3,12 +3,12 @@ package keeper
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/slashing/internal/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/slashing/internal/types"
 )
 
 // Keeper of the slashing store
@@ -29,7 +29,7 @@ func NewKeeper(cdc *codec.Codec, key sdk.StoreKey, sk types.StakingKeeper, param
 	}
 }
 
-//Get Staking keeper object
+// Get Staking keeper object
 func (k Keeper) GetStakingKeeper() types.StakingKeeper {
 	return k.sk
 }

@@ -2,17 +2,17 @@ package types
 
 import (
 	"fmt"
-	stypes "github.com/okex/exchain/libs/cosmos-sdk/store/types"
+	stypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
 	"reflect"
 	"strings"
 
 	wasmvmtypes "github.com/CosmWasm/wasmvm/types"
 	"github.com/gogo/protobuf/proto"
 
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/tendermint/types"
+	codectypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 const (

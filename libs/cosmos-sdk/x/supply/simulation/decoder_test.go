@@ -6,12 +6,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	tmkv "github.com/okex/exchain/libs/tendermint/libs/kv"
+	tmkv "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/kv"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/internal/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/internal/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/internal/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/internal/types"
 )
 
 func makeTestCodec() (cdc *codec.Codec) {

@@ -2,9 +2,9 @@ package keeper
 
 import (
 	"encoding/json"
-	ibcadapter "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	"github.com/okex/exchain/x/wasm/keeper/testdata"
+	ibcadapter "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/ibc-adapter"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/keeper/testdata"
 	"io/ioutil"
 	"strings"
 	"testing"
@@ -12,17 +12,17 @@ import (
 	"github.com/golang/protobuf/proto"
 
 	wasmvmtypes "github.com/CosmWasm/wasmvm/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	authkeeper "github.com/okex/exchain/libs/cosmos-sdk/x/auth/keeper"
-	//bankkeeper "github.com/okex/exchain/libs/cosmos-sdk/x/bank/keeper"
-	//banktypes "github.com/okex/exchain/libs/cosmos-sdk/x/bank/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	codectypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	authkeeper "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/keeper"
+	//bankkeeper "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank/keeper"
+	//banktypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
 )
 
 func buildReflectQuery(t *testing.T, query *testdata.ReflectQueryMsg) []byte {

@@ -3,11 +3,11 @@ package keeper_test
 import (
 	"math/big"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	authtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
 
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	ethermint "github.com/okex/exchain/app/types"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
+	ethermint "github.com/fibonacci-chain/fbc-social/app/types"
 
 	ethcmn "github.com/ethereum/go-ethereum/common"
 )

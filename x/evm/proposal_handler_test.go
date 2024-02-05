@@ -2,10 +2,10 @@ package evm_test
 
 import (
 	ethcmn "github.com/ethereum/go-ethereum/common"
-	ttypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/evm"
-	"github.com/okex/exchain/x/evm/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	ttypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 func (suite *EvmTestSuite) TestProposalHandler_ManageContractDeploymentWhitelistProposal() {

@@ -4,11 +4,11 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/global"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	keep "github.com/okex/exchain/x/staking/keeper"
-	"github.com/okex/exchain/x/staking/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/global"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	keep "github.com/fibonacci-chain/fbc-social/x/staking/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/staking/types"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 )

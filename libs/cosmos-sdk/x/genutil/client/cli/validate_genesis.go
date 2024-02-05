@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"os"
 
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"github.com/spf13/cobra"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
 )
 
 // Validate genesis command takes

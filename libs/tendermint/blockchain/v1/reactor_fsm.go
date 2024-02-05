@@ -6,9 +6,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 // Blockchain Reactor State

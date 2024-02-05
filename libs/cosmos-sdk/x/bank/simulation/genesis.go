@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank/internal/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank/internal/types"
 )
 
 // Simulation parameter constants

@@ -3,15 +3,15 @@ package fee
 import (
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	porttypes "github.com/okex/exchain/libs/ibc-go/modules/core/05-port/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	capabilitytypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/types"
+	channeltypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel/types"
+	porttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/05-port/types"
 
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/keeper"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/29-fee/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/29-fee/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
 )
 
 var _ porttypes.Middleware = &IBCMiddleware{}

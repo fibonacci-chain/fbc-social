@@ -1,10 +1,10 @@
 /*
 Package module contains application module patterns and associated "manager" functionality.
 The module pattern has been broken down by:
- - independent module functionality (AppModuleBasic)
- - inter-dependent module genesis functionality (AppModuleGenesis)
- - inter-dependent module simulation functionality (AppModuleSimulation)
- - inter-dependent module full functionality (AppModule)
+  - independent module functionality (AppModuleBasic)
+  - inter-dependent module genesis functionality (AppModuleGenesis)
+  - inter-dependent module simulation functionality (AppModuleSimulation)
+  - inter-dependent module full functionality (AppModule)
 
 inter-dependent module functionality is module functionality which somehow
 depends on other modules, typically through the module keeper.  Many of the
@@ -31,16 +31,16 @@ package module
 import (
 	"encoding/json"
 
-	interfacetypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
+	interfacetypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
 
 	"github.com/gorilla/mux"
 	"github.com/spf13/cobra"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 //__________________________________________________________________________________________

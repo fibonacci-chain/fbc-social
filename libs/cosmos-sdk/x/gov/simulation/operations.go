@@ -5,14 +5,14 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp/helpers"
-	simappparams "github.com/okex/exchain/libs/cosmos-sdk/simapp/params"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/gov/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/simapp/helpers"
+	simappparams "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/simapp/params"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/gov/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/simulation"
 )
 
 var initialProposalID = uint64(100000000000000)

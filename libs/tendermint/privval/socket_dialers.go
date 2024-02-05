@@ -6,9 +6,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	tmnet "github.com/okex/exchain/libs/tendermint/libs/net"
-	p2pconn "github.com/okex/exchain/libs/tendermint/p2p/conn"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	tmnet "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/net"
+	p2pconn "github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p/conn"
 )
 
 // Socket errors.

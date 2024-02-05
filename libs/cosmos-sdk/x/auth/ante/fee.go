@@ -3,12 +3,12 @@ package ante
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 var (

@@ -11,18 +11,18 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/rest"
 )
 
 // TODO these next two functions feel kinda hacky based on their placement
 
-//ValidatorCommand returns the validator set for a given height
+// ValidatorCommand returns the validator set for a given height
 func ValidatorCommand(cdc *codec.Codec) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "tendermint-validator-set [height]",

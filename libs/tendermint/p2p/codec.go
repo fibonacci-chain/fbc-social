@@ -3,7 +3,7 @@ package p2p
 import (
 	amino "github.com/tendermint/go-amino"
 
-	cryptoamino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
+	cryptoamino "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/encoding/amino"
 )
 
 var cdc = amino.NewCodec()

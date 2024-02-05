@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 const (
@@ -14,7 +14,7 @@ const (
 
 func init() {
 	govtypes.RegisterProposalType(proposalTypeDelist)
-	govtypes.RegisterProposalTypeCodec(DelistProposal{}, "okexchain/dex/DelistProposal")
+	govtypes.RegisterProposalTypeCodec(DelistProposal{}, "fbexchain/dex/DelistProposal")
 
 }
 

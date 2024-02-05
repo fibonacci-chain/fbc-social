@@ -19,11 +19,11 @@ import (
 
 	amino "github.com/tendermint/go-amino"
 
-	flow "github.com/okex/exchain/libs/tendermint/libs/flowrate"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmmath "github.com/okex/exchain/libs/tendermint/libs/math"
-	"github.com/okex/exchain/libs/tendermint/libs/service"
-	"github.com/okex/exchain/libs/tendermint/libs/timer"
+	flow "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/flowrate"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	tmmath "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/math"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/service"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/timer"
 )
 
 const (
@@ -82,6 +82,7 @@ The byte id and the relative priorities of each `Channel` are configured upon
 initialization of the connection.
 
 There are two methods for sending messages:
+
 	func (m MConnection) Send(chID byte, msgBytes []byte) bool {}
 	func (m MConnection) TrySend(chID byte, msgBytes []byte}) bool {}
 

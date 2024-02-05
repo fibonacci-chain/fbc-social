@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	cryptoamino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	cryptoamino "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/encoding/amino"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	amino "github.com/tendermint/go-amino"
 )
 

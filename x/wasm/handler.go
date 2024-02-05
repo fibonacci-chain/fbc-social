@@ -3,17 +3,17 @@ package wasm
 import (
 	"fmt"
 
+	bam "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	sdktypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/kv"
+	types2 "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/watcher"
 	"github.com/gogo/protobuf/proto"
-	bam "github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	sdktypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/kv"
-	types2 "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/wasm/keeper"
-	"github.com/okex/exchain/x/wasm/types"
-	"github.com/okex/exchain/x/wasm/watcher"
 )
 
 // NewHandler returns a handler for "wasm" type messages.

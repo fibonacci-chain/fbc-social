@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 )
 
 // PrintTree prints the whole tree in an indented form.

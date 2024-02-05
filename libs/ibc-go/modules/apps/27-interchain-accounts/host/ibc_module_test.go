@@ -4,24 +4,24 @@ import (
 	"fmt"
 	"testing"
 
-	types3 "github.com/okex/exchain/libs/tendermint/types"
+	types3 "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
-	types2 "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
+	types2 "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/ibc-adapter"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
-	banktypes "github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	banktypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank"
+	clienttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	channeltypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
 
+	capabilitytypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/27-interchain-accounts/host/types"
+	icatypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/27-interchain-accounts/types"
+	host "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/24-host"
+	ibctesting "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
 	"github.com/gogo/protobuf/proto"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/host/types"
-	icatypes "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
-	"github.com/okex/exchain/libs/tendermint/crypto"
 	"github.com/stretchr/testify/suite"
 )
 

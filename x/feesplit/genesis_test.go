@@ -5,11 +5,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/app"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/feesplit"
-	"github.com/okex/exchain/x/feesplit/types"
+	"github.com/fibonacci-chain/fbc-social/app"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/x/feesplit"
+	"github.com/fibonacci-chain/fbc-social/x/feesplit/types"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -17,7 +17,7 @@ type GenesisTestSuite struct {
 	suite.Suite
 
 	ctx     sdk.Context
-	app     *app.OKExChainApp
+	app     *app.FBChainApp
 	genesis types.GenesisState
 }
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source okc.profile
+source fbc.profile
 
 set -e
 set -o errexit
@@ -82,8 +82,8 @@ if [ -z ${IP} ]; then
     IP="127.0.0.1"
 fi
 
-if [ -d ${OKCHAIN_NET_CACHE}/node0/exchaind ]; then
-    seed_addr=$(${BIN_NAME} tendermint show-node-id --home ${OKCHAIN_NET_CACHE}/node0/exchaind)@${IP}:${seedp2pport}
+if [ -d ${FBCHAIN_NET_CACHE}/node0/fbchaind ]; then
+    seed_addr=$(${BIN_NAME} tendermint show-node-id --home ${FBCHAIN_NET_CACHE}/node0/fbchaind)@${IP}:${seedp2pport}
 fi
 
 if [ ! -z ${INPUT_SEEDNODE} ]; then
@@ -102,9 +102,9 @@ init() {
         exit
     fi
 
-    if [ -d ${OKCHAIN_NET_CACHE}/${NAME} ]; then
+    if [ -d ${FBCHAIN_NET_CACHE}/${NAME} ]; then
         echo "Invalid index!"
-        echo "<${OKCHAIN_NET_CACHE}/${NAME}> already exists. Use '-n' to try another index."
+        echo "<${FBCHAIN_NET_CACHE}/${NAME}> already exists. Use '-n' to try another index."
         echo "For example: ./addnewnode.sh -n 9 -s ${seed_addr}"
         exit
     fi
@@ -116,7 +116,7 @@ init() {
         exit
     fi
 
-    ${BIN_NAME} init ${NAME} -o --chain-id ${CHAIN_ID} --home ${OKCHAIN_NET_CACHE}/${NAME}/exchaind --node-index ${INPUT_INDEX}
+    ${BIN_NAME} init ${NAME} -o --chain-id ${CHAIN_ID} --home ${FBCHAIN_NET_CACHE}/${NAME}/fbchaind --node-index ${INPUT_INDEX}
 }
 
 
@@ -127,8 +127,8 @@ start() {
 
 
     echo "copy the genesis file..."
-    rm ${OKCHAIN_NET_CACHE}/${NAME}/exchaind/config/genesis.json
-    cp ${OKCHAIN_NET_CACHE}/node0/exchaind/config/genesis.json ${OKCHAIN_NET_CACHE}/${NAME}/exchaind/config/
+    rm ${FBCHAIN_NET_CACHE}/${NAME}/fbchaind/config/genesis.json
+    cp ${FBCHAIN_NET_CACHE}/node0/fbchaind/config/genesis.json ${FBCHAIN_NET_CACHE}/${NAME}/fbchaind/config/
     echo "copy the genesis file done"
 
     echo "start new node..."
@@ -137,7 +137,7 @@ start() {
     seednode=$3
     ((restport = INPUT_INDEX * 100 + REST_PORT)) # for evm tx
 
-#     echo "${BIN_NAME} --home ${OKCHAIN_NET_CACHE}/${NAME}/exchaind  start --p2p.laddr tcp://${IP}:${p2pport} --p2p.seeds ${seednode} --rpc.laddr tcp://${IP}:${rpcport}"
+#     echo "${BIN_NAME} --home ${FBCHAIN_NET_CACHE}/${NAME}/fbchaind  start --p2p.laddr tcp://${IP}:${p2pport} --p2p.seeds ${seednode} --rpc.laddr tcp://${IP}:${rpcport}"
 
 #    LOG_LEVEL=main:info,*:error
     LOG_LEVEL=main:info,*:error,state:info
@@ -145,7 +145,7 @@ start() {
 
     ${BIN_NAME} start \
     --chain-id ${CHAIN_ID} \
-    --home ${OKCHAIN_NET_CACHE}/${NAME}/exchaind \
+    --home ${FBCHAIN_NET_CACHE}/${NAME}/fbchaind \
     --p2p.laddr tcp://${IP}:${p2pport} \
     --p2p.seeds ${seednode} \
     --rest.laddr tcp://${IP}:${restport} \
@@ -157,7 +157,7 @@ start() {
     ${MULTI_CACHE} \
     --p2p.addr_book_strict=false \
     --enable-preruntx=${PRERUN} \
-    --rpc.laddr tcp://${IP}:${rpcport} > ${OKCHAIN_NET_CACHE}/rpc${INPUT_INDEX}.log 2>&1 &
+    --rpc.laddr tcp://${IP}:${rpcport} > ${FBCHAIN_NET_CACHE}/rpc${INPUT_INDEX}.log 2>&1 &
 
 #     echo "start new node done"
 #     --download-delta \

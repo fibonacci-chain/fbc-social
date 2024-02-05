@@ -1,18 +1,18 @@
 package keeper_test
 
 import (
-	"github.com/okex/exchain/x/wasm"
-	"github.com/okex/exchain/x/wasm/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/wasm"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/keeper"
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/fibonacci-chain/fbc-social/app"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -24,19 +24,19 @@ import (
 //	"io/ioutil"
 //	"testing"
 //
-//	"github.com/okex/exchain/libs/cosmos-sdk/x/params/client/utils"
+//	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params/client/utils"
 //
 //	wasmvm "github.com/CosmWasm/wasmvm"
 //
-//	"github.com/okex/exchain/x/wasm/keeper/wasmtesting"
+//	"github.com/fibonacci-chain/fbc-social/x/wasm/keeper/wasmtesting"
 //
-//	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-//	govtypes "github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
-//	"github.com/okex/exchain/libs/cosmos-sdk/x/params/types/proposal"
+//	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+//	govtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/gov/types"
+//	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params/types/proposal"
 //	"github.com/stretchr/testify/assert"
 //	"github.com/stretchr/testify/require"
 //
-//	"github.com/okex/exchain/x/wasm/types"
+//	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
 //)
 //
 //func TestStoreCodeProposal(t *testing.T) {

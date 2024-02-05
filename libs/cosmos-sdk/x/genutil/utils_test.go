@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/tests"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/tests"
 
 	"github.com/stretchr/testify/require"
 )

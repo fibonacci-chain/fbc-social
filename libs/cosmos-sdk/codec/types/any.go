@@ -1,8 +1,8 @@
 package types
 
 import (
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
 	"github.com/gogo/protobuf/proto"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
 )
 
 type Any struct {

@@ -8,10 +8,10 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	ethermint "github.com/okex/exchain/app/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
+	ethermint "github.com/fibonacci-chain/fbc-social/app/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
 )
 
 func (suite *KeeperTestSuite) TestBloomFilter() {

@@ -4,11 +4,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 	"github.com/stretchr/testify/require"
 )
 

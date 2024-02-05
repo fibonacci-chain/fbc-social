@@ -1,6 +1,6 @@
 package v0_18
 
-import "github.com/okex/exchain/x/staking/legacy/v0_11"
+import "github.com/fibonacci-chain/fbc-social/x/staking/legacy/v0_11"
 
 const (
 	ModuleName = "staking"

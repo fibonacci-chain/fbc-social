@@ -9,12 +9,12 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	v034auth "github.com/okex/exchain/libs/cosmos-sdk/x/auth/legacy/v0_34"
-	v038auth "github.com/okex/exchain/libs/cosmos-sdk/x/auth/legacy/v0_38"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	v034auth "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/legacy/v0_34"
+	v038auth "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/legacy/v0_38"
 )
 
 const (

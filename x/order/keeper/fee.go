@@ -3,11 +3,11 @@ package keeper
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
 	"strings"
 
-	"github.com/okex/exchain/x/order/types"
+	"github.com/fibonacci-chain/fbc-social/x/order/types"
 )
 
 const minFee = "0.00000001"

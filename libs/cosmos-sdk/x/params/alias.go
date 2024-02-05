@@ -3,8 +3,8 @@ package params
 // nolint
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params/subspace"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params/subspace"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params/types"
 )
 
 const (

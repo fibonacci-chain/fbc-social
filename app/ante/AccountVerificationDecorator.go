@@ -1,10 +1,10 @@
 package ante
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
 )
 
 // AccountVerificationDecorator validates an account balance checks

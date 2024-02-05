@@ -3,10 +3,10 @@ package keeper
 import (
 	"fmt"
 
-	ethermint "github.com/okex/exchain/app/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	"github.com/okex/exchain/x/evm/types"
+	ethermint "github.com/fibonacci-chain/fbc-social/app/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	authexported "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/exported"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
 )
 
 const (

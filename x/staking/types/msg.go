@@ -2,10 +2,10 @@ package types
 
 import (
 	"encoding/json"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 // ensure Msg interface compliance at compile time

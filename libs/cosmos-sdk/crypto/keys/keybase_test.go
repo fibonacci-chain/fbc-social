@@ -1,4 +1,4 @@
-//nolint: goconst
+// nolint: goconst
 package keys
 
 import (
@@ -8,13 +8,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/secp256k1"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys/hd"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys/mintkey"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/keys/hd"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/keys/mintkey"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 func init() {
@@ -317,7 +317,6 @@ func TestExportImport(t *testing.T) {
 	require.Equal(t, john, john2)
 }
 
-//
 func TestExportImportPubKey(t *testing.T) {
 	// make the storage with reasonable defaults
 	cstore := NewInMemory()

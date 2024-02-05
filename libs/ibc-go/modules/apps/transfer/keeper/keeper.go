@@ -1,20 +1,20 @@
 package keeper
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	types2 "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/prefix"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	capabilitykeeper "github.com/okex/exchain/libs/cosmos-sdk/x/capability/keeper"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	paramtypes "github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	tmbytes "github.com/okex/exchain/libs/tendermint/libs/bytes"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	types2 "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/prefix"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	capabilitykeeper "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/keeper"
+	capabilitytypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/types"
+	paramtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer/types"
+	channeltypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel/types"
+	host "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/24-host"
+	tmbytes "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bytes"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 )
 
 // Keeper defines the IBC fungible transfer keeper

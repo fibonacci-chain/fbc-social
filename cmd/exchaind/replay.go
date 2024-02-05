@@ -11,31 +11,31 @@ import (
 	"runtime/pprof"
 	"time"
 
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/evm/watcher"
+	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/watcher"
 
+	"github.com/fibonacci-chain/fbc-social/app/config"
+	fbchain "github.com/fibonacci-chain/fbc-social/app/types"
+	"github.com/fibonacci-chain/fbc-social/app/utils/appstatus"
+	"github.com/fibonacci-chain/fbc-social/app/utils/sanity"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/lcd"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/iavl"
+	"github.com/fibonacci-chain/fbc-social/libs/system/trace"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	tcmd "github.com/fibonacci-chain/fbc-social/libs/tendermint/cmd/tendermint/commands"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/global"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/mock"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/node"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/proxy"
+	sm "github.com/fibonacci-chain/fbc-social/libs/tendermint/state"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/store"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 	"github.com/gogo/protobuf/jsonpb"
-	"github.com/okex/exchain/app/config"
-	okexchain "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/app/utils/appstatus"
-	"github.com/okex/exchain/app/utils/sanity"
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/lcd"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/iavl"
-	"github.com/okex/exchain/libs/system/trace"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tcmd "github.com/okex/exchain/libs/tendermint/cmd/tendermint/commands"
-	"github.com/okex/exchain/libs/tendermint/global"
-	"github.com/okex/exchain/libs/tendermint/mock"
-	"github.com/okex/exchain/libs/tendermint/node"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/store"
-	"github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -165,7 +165,7 @@ func replayBlock(ctx *server.Context, originDataDir string, tmNode *node.Node) {
 		state = sm.LoadState(stateStoreDB)
 	}
 	//cache chain epoch
-	err = okexchain.SetChainId(genDoc.ChainID)
+	err = fbchain.SetChainId(genDoc.ChainID)
 	if err != nil {
 		panicError(err)
 	}
@@ -179,7 +179,7 @@ func replayBlock(ctx *server.Context, originDataDir string, tmNode *node.Node) {
 }
 
 func registerReplayFlags(cmd *cobra.Command) *cobra.Command {
-	cmd.Flags().StringP(replayedBlockDir, "d", ".exchaind/data", "Directory of block data to be replayed")
+	cmd.Flags().StringP(replayedBlockDir, "d", ".fbchaind/data", "Directory of block data to be replayed")
 	cmd.Flags().StringP(pprofAddrFlag, "p", "0.0.0.0:26661", "Address and port of pprof HTTP server listening")
 	cmd.Flags().BoolVarP(&sm.IgnoreSmbCheck, "ignore-smb", "i", false, "ignore state machine broken")
 	cmd.Flags().Bool(runWithPprofFlag, false, "Dump the pprof of the entire replay process")

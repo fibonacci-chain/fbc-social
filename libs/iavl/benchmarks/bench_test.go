@@ -9,8 +9,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/iavl"
-	db "github.com/okex/exchain/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/libs/iavl"
+	db "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 )
 
 const historySize = 20

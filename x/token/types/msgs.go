@@ -2,8 +2,8 @@
 package types
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/common"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 )
 
 const (
@@ -14,7 +14,6 @@ const (
 	TotalSupplyUpperbound = int64(9 * 1e10)
 )
 
-//
 type MsgTokenIssue struct {
 	Description    string         `json:"description"`
 	Symbol         string         `json:"symbol"`

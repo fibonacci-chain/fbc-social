@@ -17,13 +17,13 @@ want to directly call a tendermint node in process, you can use the
 import (
 	"reflect"
 
-	"github.com/okex/exchain/libs/tendermint/libs/bytes"
-	"github.com/okex/exchain/libs/tendermint/libs/service"
-	"github.com/okex/exchain/libs/tendermint/rpc/client"
-	"github.com/okex/exchain/libs/tendermint/rpc/core"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	rpctypes "github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/types"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bytes"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/service"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/client"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/core"
+	ctypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/core/types"
+	rpctypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/jsonrpc/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 // Client wraps arbitrary implementations of the various interfaces.
@@ -46,7 +46,6 @@ var _ client.Client = Client{}
 
 // Call is used by recorders to save a call and response.
 // It can also be used to configure mock responses.
-//
 type Call struct {
 	Name     string
 	Args     interface{}

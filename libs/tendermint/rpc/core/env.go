@@ -4,20 +4,20 @@ import (
 	"fmt"
 	"time"
 
-	blockindex "github.com/okex/exchain/libs/tendermint/state/indexer"
+	blockindex "github.com/fibonacci-chain/fbc-social/libs/tendermint/state/indexer"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/consensus"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	mempl "github.com/okex/exchain/libs/tendermint/mempool"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/state/txindex"
-	"github.com/okex/exchain/libs/tendermint/types"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/consensus"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	mempl "github.com/fibonacci-chain/fbc-social/libs/tendermint/mempool"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/proxy"
+	sm "github.com/fibonacci-chain/fbc-social/libs/tendermint/state"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/state/txindex"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 const (
@@ -64,7 +64,7 @@ type peers interface {
 	Peers() p2p.IPeerSet
 }
 
-//----------------------------------------------
+// ----------------------------------------------
 // Environment contains objects and interfaces used by the RPC. It is expected
 // to be setup once during startup.
 type Environment struct {

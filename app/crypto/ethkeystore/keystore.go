@@ -12,13 +12,13 @@ import (
 	"github.com/ethereum/go-ethereum/accounts/keystore"
 	"github.com/ethereum/go-ethereum/common"
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/hd"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/keys"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/keys/mintkey"
+	tmcrypto "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/secp256k1"
 	"github.com/google/uuid"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	"github.com/okex/exchain/app/crypto/hd"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys/mintkey"
-	tmcrypto "github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
 )
 
 // CreateKeystoreByTmKey  create a eth keystore by accountname from keybase
@@ -128,7 +128,7 @@ func newEthKeyFromECDSA(privateKeyECDSA *ecdsa.PrivateKey) (*keystore.Key, error
 	return key, nil
 }
 
-//keyFileName return the default keystore file name in the ethereum
+// keyFileName return the default keystore file name in the ethereum
 func keyFileName(keyAddr common.Address) string {
 	ts := time.Now().UTC()
 	return fmt.Sprintf("UTC--%s--%s", toISO8601(ts), hex.EncodeToString(keyAddr[:]))

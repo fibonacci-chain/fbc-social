@@ -4,9 +4,9 @@ import (
 	"strconv"
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
-	"github.com/okex/exchain/x/common"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/secp256k1"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 	"github.com/stretchr/testify/require"
 )
 
@@ -100,7 +100,7 @@ func TestNewMsgTokenBurn(t *testing.T) {
 	require.NoError(t, err)
 }
 
-//tokenMintMsg := NewMsgTokenMint("btc", mintNum, testAccounts[0].baseAccount.Address)
+// tokenMintMsg := NewMsgTokenMint("btc", mintNum, testAccounts[0].baseAccount.Address)
 func TestNewMsgTokenMint(t *testing.T) {
 	priKey := secp256k1.GenPrivKey()
 	pubKey := priKey.PubKey()
@@ -220,12 +220,12 @@ func TestNewTokenMultiSend(t *testing.T) {
 	fromAddr := sdk.AccAddress(fromPubKey.Address())
 
 	// correct message
-	coinStr := `[{"to":"ex1jedas2n0pq2c68pelztgel8ht8pz50rh7s7vfz","amount":"1` + common.NativeToken + `"}]`
+	coinStr := `[{"to":"fb18rrc500xu2haw7vyksqlj2lfp9xex2hczv3jkx","amount":"1` + common.NativeToken + `"}]`
 	transfers, err := StrToTransfers(coinStr)
 	require.Nil(t, err)
 
 	// coins not positive
-	toAddr0, err := sdk.AccAddressFromBech32("ex1jedas2n0pq2c68pelztgel8ht8pz50rh7s7vfz")
+	toAddr0, err := sdk.AccAddressFromBech32("fb18rrc500xu2haw7vyksqlj2lfp9xex2hczv3jkx")
 	require.Nil(t, err)
 	decCoin0 := sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(0))
 	transfers0 := []TransferUnit{
@@ -251,7 +251,7 @@ func TestNewTokenMultiSend(t *testing.T) {
 		{NewMsgMultiSend(fromAddr, transfers), nil},
 		{NewMsgMultiSend(sdk.AccAddress{}, transfers), ErrAddressIsRequired()},
 		{NewMsgMultiSend(fromAddr, make([]TransferUnit, MultiSendLimit+1)), ErrMsgTransfersAmountBiggerThanSendLimit()},
-		{NewMsgMultiSend(fromAddr, transfers0), ErrInvalidCoins("0.000000000000000000okt")},
+		{NewMsgMultiSend(fromAddr, transfers0), ErrInvalidCoins("0.000000000000000000fibo")},
 		{NewMsgMultiSend(fromAddr, transfers1), ErrAddressIsRequired()},
 	}
 	for _, msgCase := range testCase {

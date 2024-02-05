@@ -1,11 +1,11 @@
 package types
 
 import (
-	stakingtypes "github.com/okex/exchain/x/staking/types"
+	stakingtypes "github.com/fibonacci-chain/fbc-social/x/staking/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	authtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
 )
 
 // ModuleCdc defines a generic sealed codec to be used throughout this module

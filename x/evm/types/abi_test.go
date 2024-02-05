@@ -3,7 +3,7 @@ package types
 import (
 	"fmt"
 	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/okex/exchain/libs/tendermint/libs/rand"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
 	"github.com/stretchr/testify/require"
 	"testing"
 )

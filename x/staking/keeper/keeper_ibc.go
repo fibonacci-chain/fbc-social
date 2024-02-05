@@ -1,10 +1,10 @@
 package keeper
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/store/prefix"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/query"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/prefix"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/query"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking/types"
 )
 
 func (k Keeper) GetUnbondingDelegation(ctx sdk.Context,

@@ -1,14 +1,14 @@
 package types
 
 import (
-	"github.com/okex/exchain/libs/tendermint/global"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/global"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"math/rand"
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
-	exgovtypes "github.com/okex/exchain/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/gov/types"
+	exgovtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 )

@@ -1,6 +1,6 @@
 package token
 
-import "github.com/okex/exchain/x/token/types"
+import "github.com/fibonacci-chain/fbc-social/x/token/types"
 
 const (
 	// ModuleName is the module name constant used in many places

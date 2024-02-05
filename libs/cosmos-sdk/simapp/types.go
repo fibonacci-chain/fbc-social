@@ -3,12 +3,12 @@ package simapp
 import (
 	"encoding/json"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
 )
 
 // App implements the common methods for a Cosmos SDK-based application

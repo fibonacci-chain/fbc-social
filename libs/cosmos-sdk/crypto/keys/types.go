@@ -3,11 +3,11 @@ package keys
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/multisig"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys/hd"
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/keys/hd"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 // Keybase exposes operations on a generic keystore

@@ -3,15 +3,15 @@ package keeper_test
 import (
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
-	tmproto "github.com/okex/exchain/libs/tendermint/abci/types"
+	tmproto "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/05-port/keeper"
-	"github.com/okex/exchain/libs/ibc-go/testing/simapp"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/05-port/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing/simapp"
 )
 
 var (

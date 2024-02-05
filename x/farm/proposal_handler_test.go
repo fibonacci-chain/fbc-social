@@ -6,12 +6,12 @@ package farm
 import (
 	"testing"
 
-	swaptypes "github.com/okex/exchain/x/ammswap/types"
-	"github.com/okex/exchain/x/farm/keeper"
-	"github.com/okex/exchain/x/farm/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	swaptypes "github.com/fibonacci-chain/fbc-social/x/ammswap/types"
+	"github.com/fibonacci-chain/fbc-social/x/farm/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/farm/types"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 )
 

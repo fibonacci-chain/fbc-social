@@ -8,12 +8,12 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/ammswap/keeper"
-	"github.com/okex/exchain/x/ammswap/types"
-	"github.com/okex/exchain/x/token"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/x/ammswap/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/ammswap/types"
+	"github.com/fibonacci-chain/fbc-social/x/token"
 	"github.com/stretchr/testify/require"
 )
 

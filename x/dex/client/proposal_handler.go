@@ -1,9 +1,9 @@
 package client
 
 import (
-	"github.com/okex/exchain/x/dex/client/cli"
-	"github.com/okex/exchain/x/dex/client/rest"
-	govclient "github.com/okex/exchain/x/gov/client"
+	"github.com/fibonacci-chain/fbc-social/x/dex/client/cli"
+	"github.com/fibonacci-chain/fbc-social/x/dex/client/rest"
+	govclient "github.com/fibonacci-chain/fbc-social/x/gov/client"
 )
 
 // param change proposal handler

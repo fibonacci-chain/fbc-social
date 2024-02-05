@@ -5,18 +5,18 @@ import (
 	"sort"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	extypes "github.com/okex/exchain/libs/cosmos-sdk/x/genutil"
-	v036 "github.com/okex/exchain/libs/cosmos-sdk/x/genutil/legacy/v0_36"
-	v038 "github.com/okex/exchain/libs/cosmos-sdk/x/genutil/legacy/v0_38"
-	v039 "github.com/okex/exchain/libs/cosmos-sdk/x/genutil/legacy/v0_39"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/version"
+	extypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/genutil"
+	v036 "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/genutil/legacy/v0_36"
+	v038 "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/genutil/legacy/v0_38"
+	v039 "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/genutil/legacy/v0_39"
 )
 
 const (

@@ -3,8 +3,8 @@ package consensus
 import (
 	"bytes"
 	"fmt"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/libs/automation"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/automation"
 	"reflect"
 	"sync"
 	"time"
@@ -13,14 +13,14 @@ import (
 
 	amino "github.com/tendermint/go-amino"
 
-	cstypes "github.com/okex/exchain/libs/tendermint/consensus/types"
-	"github.com/okex/exchain/libs/tendermint/libs/bits"
-	tmevents "github.com/okex/exchain/libs/tendermint/libs/events"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/types"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	cstypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/consensus/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bits"
+	tmevents "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/events"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p"
+	sm "github.com/fibonacci-chain/fbc-social/libs/tendermint/state"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	tmtime "github.com/fibonacci-chain/fbc-social/libs/tendermint/types/time"
 )
 
 type bpType int

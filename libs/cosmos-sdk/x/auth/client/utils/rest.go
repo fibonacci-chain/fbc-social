@@ -4,11 +4,11 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/rest"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
 )
 
 // WriteGenerateStdTxResponse writes response for the generate only mode.

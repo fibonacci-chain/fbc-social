@@ -4,12 +4,12 @@ import (
 	gocontext "context"
 	"fmt"
 
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 	gogogrpc "github.com/gogo/protobuf/grpc"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
 	"google.golang.org/grpc"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 // QueryServiceTestHelper provides a helper for making grpc query service

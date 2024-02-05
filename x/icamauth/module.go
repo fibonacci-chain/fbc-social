@@ -4,20 +4,20 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/okex/exchain/x/icamauth/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/icamauth/keeper"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/x/icamauth/client/cli"
+	"github.com/fibonacci-chain/fbc-social/x/icamauth/client/cli"
 
+	clictx "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	interfacetypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
+	"github.com/fibonacci-chain/fbc-social/x/icamauth/types"
 	"github.com/gorilla/mux"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
-	clictx "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	interfacetypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	"github.com/okex/exchain/x/icamauth/types"
 	"github.com/spf13/cobra"
 )
 

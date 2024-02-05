@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	auto "github.com/okex/exchain/libs/tendermint/libs/autofile"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
+	auto "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/autofile"
+	tmos "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/os"
 )
 
 const Version = "0.0.1"

@@ -4,11 +4,11 @@ import (
 	"testing"
 	"time"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 //-------------------------------------------

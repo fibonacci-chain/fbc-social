@@ -3,11 +3,11 @@ package consensus
 import (
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/libs/bytes"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bytes"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	tmrand "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 //----------------------------------------------

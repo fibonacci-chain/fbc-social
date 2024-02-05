@@ -1,8 +1,8 @@
 package order
 
 import (
-	"github.com/okex/exchain/x/order/keeper"
-	"github.com/okex/exchain/x/order/types"
+	"github.com/fibonacci-chain/fbc-social/x/order/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/order/types"
 )
 
 // nolint

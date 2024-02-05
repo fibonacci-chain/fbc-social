@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"testing"
 
-	okexchaincodec "github.com/okex/exchain/app/codec"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	okexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/capability/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	stakingtypes "github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
-	"github.com/okex/exchain/libs/ibc-go/testing/simapp"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/types"
+	stakingtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing/simapp"
 	"github.com/stretchr/testify/suite"
 )
 

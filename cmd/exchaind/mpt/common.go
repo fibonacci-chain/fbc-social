@@ -4,21 +4,21 @@ import (
 	"fmt"
 	"path/filepath"
 
-	iavlstore "github.com/okex/exchain/libs/cosmos-sdk/store/iavl"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/rootmulti"
-	"github.com/okex/exchain/libs/iavl"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	iavlstore "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/iavl"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/mpt"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/rootmulti"
+	"github.com/fibonacci-chain/fbc-social/libs/iavl"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
 	ethcmn "github.com/ethereum/go-ethereum/common"
 	ethstate "github.com/ethereum/go-ethereum/core/state"
 	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	tmdb "github.com/okex/exchain/libs/tm-db"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/app"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	authtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
+	tmdb "github.com/fibonacci-chain/fbc-social/libs/tm-db"
+	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
 )
 
 const (
@@ -52,9 +52,9 @@ func checkValidKey(key string) error {
  * Common functions about cosmos-sdk
  */
 // newMigrationApp generates a new app with the given key and application.db
-func newMigrationApp(ctx *server.Context) *app.OKExChainApp {
+func newMigrationApp(ctx *server.Context) *app.FBChainApp {
 	appDb := openApplicationDb(ctx.Config.RootDir)
-	return app.NewOKExChainApp(
+	return app.NewFBChainApp(
 		ctx.Logger,
 		appDb,
 		nil,

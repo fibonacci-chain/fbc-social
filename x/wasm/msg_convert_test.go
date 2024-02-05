@@ -3,13 +3,13 @@ package wasm
 import (
 	"encoding/json"
 	"fmt"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/wasm/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
 )
 
 var (

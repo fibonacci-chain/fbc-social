@@ -5,16 +5,16 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	interfacetypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	evmutils "github.com/okex/exchain/x/evm/client/utils"
-	"github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/gov"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	interfacetypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/version"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/client/utils"
+	evmutils "github.com/fibonacci-chain/fbc-social/x/evm/client/utils"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/x/gov"
 	"github.com/spf13/cobra"
 )
 
@@ -38,8 +38,8 @@ Where proposal.json contains:
   "title": "update contract proposal whitelist with a distributor address list",
   "description": "add a distributor address list into the whitelist",
   "distributor_addresses": [
-    "ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02",
-    "ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc"
+    "fb1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02",
+    "fb1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc"
   ],
   "is_added": true,
   "deposit": [
@@ -100,8 +100,8 @@ Where proposal.json contains:
   "title": "update contract blocked list proposal with a contract address list",
   "description": "add a contract address list into the blocked list",
   "contract_addresses": [
-    "ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02",
-    "ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc"
+    "fb1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02",
+    "fb1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc"
   ],
   "is_added": true,
   "deposit": [
@@ -163,7 +163,7 @@ Where proposal.json contains:
     "description":"add a contract address list into the blocked list",
     "contract_addresses":[
         {
-            "address":"ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc",
+            "address":"fb1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc",
             "block_methods": [
                 {
                     "sign": "0x371303c0",
@@ -176,7 +176,7 @@ Where proposal.json contains:
             ]
         },
         {
-            "address":"ex1s0vrf96rrsknl64jj65lhf89ltwj7lksr7m3r9",
+            "address":"fb1s0vrf96rrsknl64jj65lhf89ltwj7lksr7m3r9",
             "block_methods": [
                 {
                     "sign": "0x371303c0",
@@ -307,7 +307,7 @@ Where proposal.json contains:
     "description":"add a contract method gu-factor list into chain",
     "contract_addresses":[
         {
-            "address":"ex1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc",
+            "address":"fb1k0wwsg7xf9tjt3rvxdewz42e74sp286agrf9qc",
             "block_methods": [
                 {
                     "sign": "0x371303c0",
@@ -320,7 +320,7 @@ Where proposal.json contains:
             ]
         },
         {
-            "address":"ex1s0vrf96rrsknl64jj65lhf89ltwj7lksr7m3r9",
+            "address":"fb1s0vrf96rrsknl64jj65lhf89ltwj7lksr7m3r9",
             "block_methods": [
                 {
                     "sign": "0x371303c0",

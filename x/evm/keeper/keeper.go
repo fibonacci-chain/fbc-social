@@ -13,17 +13,17 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	lru "github.com/hashicorp/golang-lru"
 
-	app "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/store"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/evm/watcher"
-	"github.com/okex/exchain/x/params"
+	app "github.com/fibonacci-chain/fbc-social/app/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/mpt"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/watcher"
+	"github.com/fibonacci-chain/fbc-social/x/params"
 )
 
 const (

@@ -3,9 +3,9 @@ package v0_11
 import (
 	"time"
 
-	"github.com/okex/exchain/x/staking/legacy/v0_10"
+	"github.com/fibonacci-chain/fbc-social/x/staking/legacy/v0_10"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 const ModuleName = "staking"

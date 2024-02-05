@@ -1,8 +1,8 @@
 package ibc_tx
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/ibc-tx/internal/adapter"
-	ibccodec "github.com/okex/exchain/libs/cosmos-sdk/x/auth/ibc-tx/internal/pb-codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/ibc-tx/internal/adapter"
+	ibccodec "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/ibc-tx/internal/pb-codec"
 )
 
 var (

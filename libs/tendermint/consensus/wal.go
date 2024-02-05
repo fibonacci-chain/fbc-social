@@ -12,12 +12,12 @@ import (
 
 	amino "github.com/tendermint/go-amino"
 
-	auto "github.com/okex/exchain/libs/tendermint/libs/autofile"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
-	"github.com/okex/exchain/libs/tendermint/libs/service"
-	"github.com/okex/exchain/libs/tendermint/types"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	auto "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/autofile"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	tmos "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/os"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/service"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	tmtime "github.com/fibonacci-chain/fbc-social/libs/tendermint/types/time"
 )
 
 const (

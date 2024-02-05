@@ -5,12 +5,12 @@ package order
 import (
 	"testing"
 
-	"github.com/okex/exchain/x/common/version"
+	"github.com/fibonacci-chain/fbc-social/x/common/version"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/order/keeper"
-	"github.com/okex/exchain/x/order/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/x/order/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/order/types"
 	"github.com/stretchr/testify/require"
 )
 

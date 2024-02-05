@@ -10,10 +10,10 @@ import (
 )
 
 const (
-	OECLogTopic      = "oeclog"
-	LogConsumerGroup = "oeclog-consumer-group"
+	FBCLogTopic      = "fbclog"
+	LogConsumerGroup = "fbclog-consumer-group"
 
-	HeartbeatTopic = "oeclog-subscriber-heartbeat"
+	HeartbeatTopic = "fbclog-subscriber-heartbeat"
 
 	HeartbeatInterval = 5 * time.Second
 	ExpiredInterval   = 6 * HeartbeatInterval

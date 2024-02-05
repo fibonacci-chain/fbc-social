@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mint/internal/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/mint/internal/types"
 
-	sdkGov "github.com/okex/exchain/x/gov"
-	govKeeper "github.com/okex/exchain/x/gov/keeper"
-	govTypes "github.com/okex/exchain/x/gov/types"
+	sdkGov "github.com/fibonacci-chain/fbc-social/x/gov"
+	govKeeper "github.com/fibonacci-chain/fbc-social/x/gov/keeper"
+	govTypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 var _ govKeeper.ProposalHandler = (*Keeper)(nil)

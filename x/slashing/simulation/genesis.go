@@ -7,12 +7,12 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
-	"github.com/okex/exchain/x/slashing/internal/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/simulation"
+	"github.com/fibonacci-chain/fbc-social/x/slashing/internal/types"
 )
 
 // Simulation parameter constants

@@ -3,7 +3,7 @@ package keeper
 import (
 	"testing"
 
-	"github.com/okex/exchain/x/distribution/types"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/types"
 	"github.com/stretchr/testify/require"
 )
 

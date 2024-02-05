@@ -3,9 +3,9 @@ package types
 import (
 	"testing"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 
-	"github.com/okex/exchain/x/params"
+	"github.com/fibonacci-chain/fbc-social/x/params"
 	"github.com/stretchr/testify/require"
 )
 

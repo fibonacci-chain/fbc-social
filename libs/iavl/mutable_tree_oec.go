@@ -6,10 +6,10 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/okex/exchain/libs/iavl/config"
+	"github.com/fibonacci-chain/fbc-social/libs/iavl/config"
 
-	"github.com/okex/exchain/libs/system/trace"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/libs/system/trace"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 )
 
 const (

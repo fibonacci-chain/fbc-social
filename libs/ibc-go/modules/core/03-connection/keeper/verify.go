@@ -3,10 +3,10 @@ package keeper
 import (
 	"math"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	clienttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
 )
 
 // VerifyClientState verifies a proof of a client state of the running machine

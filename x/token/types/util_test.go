@@ -3,11 +3,11 @@ package types
 import (
 	"testing"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/secp256k1"
 	"github.com/stretchr/testify/require"
 )
 
@@ -26,9 +26,9 @@ func TestStrToTransfers(t *testing.T) {
 	common.InitConfig()
 	//coinStr := `[{"to": "cosmos18ragjd23yv4ctjg3vadh43q5zf8z0hafm4qjrf", "amount": "1BNB,2BTC"},
 	//{"to": "cosmos18ragjd23yv4ctjg3vadh43q5zf8z0hafm4qjrf", "amount": "1OKB,2BTC"}]`
-	coinStr := `[{"to":"ex1jedas2n0pq2c68pelztgel8ht8pz50rh7s7vfz","amount":"1` + common.NativeToken + `"}]`
-	coinStrError := `[{"to":"xe1qwuag8gx408m9ej038vzx50ntt0x4yrq38yf06","amount":"1` + common.NativeToken + `"}]`
-	addr, err := sdk.AccAddressFromBech32("ex1jedas2n0pq2c68pelztgel8ht8pz50rh7s7vfz")
+	coinStr := `[{"to":"fb18rrc500xu2haw7vyksqlj2lfp9xex2hczv3jkx","amount":"1` + common.NativeToken + `"}]`
+	coinStrError := `[{"to":"fb1swvxs5tl2gnrqglkxg3g235cem746ushsg6zz0","amount":"1` + common.NativeToken + `"}]`
+	addr, err := sdk.AccAddressFromBech32("fb18rrc500xu2haw7vyksqlj2lfp9xex2hczv3jkx")
 	require.Nil(t, err)
 	_, err = StrToTransfers(coinStrError)
 	require.Error(t, err)

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	apptypes "github.com/okex/exchain/app/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	apptypes "github.com/fibonacci-chain/fbc-social/app/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -18,7 +18,7 @@ func initConfig() {
 
 func TestHasSufCoins(t *testing.T) {
 	initConfig()
-	addr, err := sdk.AccAddressFromBech32("ex1rf9wr069pt64e58f2w3mjs9w72g8vemzw26658")
+	addr, err := sdk.AccAddressFromBech32("fb1x75n67492zjfvlwnfp080lesh93ysj8xd3y9p2")
 	require.Nil(t, err)
 
 	availDecCoins, err := sdk.ParseDecCoins(fmt.Sprintf("%d%s,%d%s",
@@ -54,7 +54,7 @@ func TestBlackHoleAddress(t *testing.T) {
 	addr := BlackHoleAddress()
 	a := addr.String()
 	fmt.Println(a)
-	require.Equal(t, "ex1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm2k6w2", addr.String())
+	require.Equal(t, "fb1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpvmzvy", addr.String())
 }
 
 func TestGetFixedLengthRandomString(t *testing.T) {

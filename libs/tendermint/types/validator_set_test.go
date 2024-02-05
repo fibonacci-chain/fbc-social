@@ -13,10 +13,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	tmmath "github.com/okex/exchain/libs/tendermint/libs/math"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
+	tmmath "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/math"
+	tmrand "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
 )
 
 func TestValidatorSetBasic(t *testing.T) {
@@ -1534,7 +1534,7 @@ func TestValidatorSetProtoBuf(t *testing.T) {
 	}
 }
 
-//---------------------
+// ---------------------
 // Sort validators by priority and address
 type validatorsByPriority []*Validator
 
@@ -1558,7 +1558,7 @@ func (valz validatorsByPriority) Swap(i, j int) {
 	valz[j] = it
 }
 
-//-------------------------------------
+// -------------------------------------
 // Sort testVal-s by address.
 type testValsByAddress []testVal
 
@@ -1576,9 +1576,8 @@ func (tvals testValsByAddress) Swap(i, j int) {
 	tvals[j] = it
 }
 
-//-------------------------------------
+// -------------------------------------
 // Benchmark tests
-//
 func BenchmarkUpdates(b *testing.B) {
 	const (
 		n = 100

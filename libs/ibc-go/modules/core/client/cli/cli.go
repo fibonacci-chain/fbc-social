@@ -3,17 +3,17 @@ package cli
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	interfacetypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	ibcclient "github.com/okex/exchain/libs/ibc-go/modules/core/02-client"
-	connection "github.com/okex/exchain/libs/ibc-go/modules/core/03-connection"
-	channel "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	interfacetypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/version"
+	ibcclient "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client"
+	connection "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/03-connection"
+	channel "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel"
+	host "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/24-host"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/types"
 	"github.com/spf13/cobra"
 )
 

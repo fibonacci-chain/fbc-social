@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/tendermint/rpc/client"
-	"github.com/okex/exchain/libs/tendermint/rpc/client/mock"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/client"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/client/mock"
+	ctypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/core/types"
 )
 
 func TestWaitForHeight(t *testing.T) {

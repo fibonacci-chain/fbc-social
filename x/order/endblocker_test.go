@@ -8,17 +8,17 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/dex"
-	"github.com/okex/exchain/x/order/keeper"
-	"github.com/okex/exchain/x/order/types"
-	token "github.com/okex/exchain/x/token/types"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/dex"
+	"github.com/fibonacci-chain/fbc-social/x/order/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/order/types"
+	token "github.com/fibonacci-chain/fbc-social/x/token/types"
 )
 
 func TestEndBlockerPeriodicMatch(t *testing.T) {

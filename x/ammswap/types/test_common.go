@@ -3,11 +3,11 @@ package types
 import (
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/token"
-	tokentypes "github.com/okex/exchain/x/token/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/token"
+	tokentypes "github.com/fibonacci-chain/fbc-social/x/token/types"
 )
 
 // nolint

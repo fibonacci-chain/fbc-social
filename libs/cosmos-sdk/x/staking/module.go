@@ -9,20 +9,20 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	sim "github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/client/cli"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/client/rest"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/simulation"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
+	authtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
+	sim "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/simulation"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking/client/cli"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking/client/rest"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking/simulation"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking/types"
 )
 
 var (

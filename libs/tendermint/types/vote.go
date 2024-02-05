@@ -8,9 +8,9 @@ import (
 
 	"github.com/tendermint/go-amino"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	tmbytes "github.com/okex/exchain/libs/tendermint/libs/bytes"
-	tmproto "github.com/okex/exchain/libs/tendermint/proto/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	tmbytes "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bytes"
+	tmproto "github.com/fibonacci-chain/fbc-social/libs/tendermint/proto/types"
 )
 
 const (

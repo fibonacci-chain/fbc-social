@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"sync"
 
-	log "github.com/okex/exchain/libs/tendermint/libs/log"
-	lerr "github.com/okex/exchain/libs/tendermint/lite/errors"
-	"github.com/okex/exchain/libs/tendermint/types"
+	log "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	lerr "github.com/fibonacci-chain/fbc-social/libs/tendermint/lite/errors"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 const sizeOfPendingMap = 1024

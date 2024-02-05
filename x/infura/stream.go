@@ -5,10 +5,10 @@ import (
 
 	"github.com/spf13/viper"
 
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/x/infura/distrlock"
+	"github.com/fibonacci-chain/fbc-social/x/infura/types"
 	"github.com/google/uuid"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/x/infura/distrlock"
-	"github.com/okex/exchain/x/infura/types"
 )
 
 const (

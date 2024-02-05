@@ -3,18 +3,18 @@ package keeper
 import (
 	"encoding/json"
 	"fmt"
-	ibcadapter "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
-	bank "github.com/okex/exchain/libs/cosmos-sdk/x/bank"
+	ibcadapter "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/ibc-adapter"
+	bank "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank"
 
 	wasmvmtypes "github.com/CosmWasm/wasmvm/types"
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	ibctransfertypes "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	ibcclienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
+	codectypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	ibctransfertypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer/types"
+	ibcclienttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	channeltypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel/types"
 
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
 )
 
 type BankEncoder func(sender sdk.WasmAddress, msg *wasmvmtypes.BankMsg) ([]ibcadapter.Msg, error)

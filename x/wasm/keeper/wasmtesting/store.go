@@ -1,9 +1,9 @@
 package wasmtesting
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	storetypes "github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
+	storetypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 // MockCommitMultiStore mock with a CacheMultiStore to capture commits

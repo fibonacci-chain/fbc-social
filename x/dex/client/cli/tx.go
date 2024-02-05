@@ -3,24 +3,24 @@ package cli
 import (
 	"bufio"
 	"fmt"
-	interfacetypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
+	interfacetypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
 	"strings"
 
-	client "github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	"github.com/okex/exchain/x/gov"
+	client "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/version"
+	"github.com/fibonacci-chain/fbc-social/x/gov"
 
 	"github.com/pkg/errors"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	authTypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	"github.com/okex/exchain/x/common"
-	dexUtils "github.com/okex/exchain/x/dex/client/utils"
-	"github.com/okex/exchain/x/dex/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	authTypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	dexUtils "github.com/fibonacci-chain/fbc-social/x/dex/client/utils"
+	"github.com/fibonacci-chain/fbc-social/x/dex/types"
 	"github.com/spf13/cobra"
 )
 
@@ -64,7 +64,7 @@ func getCmdList(cdc *codec.Codec) *cobra.Command {
 		Args:  cobra.ExactArgs(0),
 		Long: strings.TrimSpace(`List a trading pair:
 
-$ exchaincli tx dex list --base-asset mytoken --quote-asset okt --from mykey
+$ fbchaincli tx dex list --base-asset mytoken --quote-asset fibo --from mykey
 `),
 		RunE: func(cmd *cobra.Command, _ []string) error {
 			cliCtx := context.NewCLIContext().WithCodec(cdc)
@@ -113,9 +113,9 @@ func getCmdDeposit(cdc *codec.Codec) *cobra.Command {
 		Short: "deposit an amount of token on a product",
 		Long: strings.TrimSpace(`Deposit an amount of token on a product:
 
-$ exchaincli tx dex deposit mytoken_okt 1000okt --from mykey
+$ fbchaincli tx dex deposit mytoken_fibo 1000fibo --from mykey
 
-The 'product' is a trading pair in full name of the tokens: ${base-asset-symbol}_${quote-asset-symbol}, for example 'mytoken_okt'.
+The 'product' is a trading pair in full name of the tokens: ${base-asset-symbol}_${quote-asset-symbol}, for example 'mytoken_fibo'.
 `),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			inBuf := bufio.NewReader(cmd.InOrStdin())
@@ -147,9 +147,9 @@ func getCmdWithdraw(cdc *codec.Codec) *cobra.Command {
 		Short: "withdraw an amount of token from a product",
 		Long: strings.TrimSpace(`Withdraw an amount of token from a product:
 
-$ exchaincli tx dex withdraw mytoken_okt 1000okt --from mykey
+$ fbchaincli tx dex withdraw mytoken_fibo 1000fibo --from mykey
 
-The 'product' is a trading pair in full name of the tokens: ${base-asset-symbol}_${quote-asset-symbol}, for example 'mytoken_okt'.
+The 'product' is a trading pair in full name of the tokens: ${base-asset-symbol}_${quote-asset-symbol}, for example 'mytoken_fibo'.
 `),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			inBuf := bufio.NewReader(cmd.InOrStdin())
@@ -300,7 +300,7 @@ func getCmdRegisterOperator(cdc *codec.Codec) *cobra.Command {
 		Args:  cobra.ExactArgs(0),
 		Long: strings.TrimSpace(`Register a dex operator:
 
-$ exchaincli tx dex register-operator --website http://xxx/operator.json --handling-fee-address addr --from mykey
+$ fbchaincli tx dex register-operator --website http://xxx/operator.json --handling-fee-address addr --from mykey
 `),
 		RunE: func(cmd *cobra.Command, _ []string) error {
 			cliCtx := context.NewCLIContext().WithCodec(cdc)
@@ -343,7 +343,7 @@ func getCmdEditOperator(cdc *codec.Codec) *cobra.Command {
 		Args:  cobra.ExactArgs(0),
 		Long: strings.TrimSpace(`Edit a dex operator:
 
-$ exchaincli tx dex edit-operator --website http://xxx/operator.json --handling-fee-address addr --from mykey
+$ fbchaincli tx dex edit-operator --website http://xxx/operator.json --handling-fee-address addr --from mykey
 `),
 		RunE: func(cmd *cobra.Command, _ []string) error {
 			cliCtx := context.NewCLIContext().WithCodec(cdc)

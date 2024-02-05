@@ -6,15 +6,15 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	stakingtypes "github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/staking/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	stakingtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/staking/types"
 )
 
 // NewQuerier creates a querier for staking REST endpoints
@@ -490,7 +490,7 @@ func delegationsToDelegationResponses(
 	return resp, nil
 }
 
-/////
+// ///
 // utils
 func delegationToDelegationResponse(ctx sdk.Context, k Keeper, del stakingtypes.Delegation) (stakingtypes.DelegationResponse, error) {
 	val, found := k.GetValidator(ctx, del.ValidatorAddress)

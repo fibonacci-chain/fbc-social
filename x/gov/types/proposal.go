@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 // Proposal defines a struct used by the governance module to allow for voting
@@ -78,7 +78,7 @@ type (
 	ProposalStatus byte
 )
 
-//nolint
+// nolint
 const (
 	StatusNil           ProposalStatus = 0x00
 	StatusDepositPeriod ProposalStatus = 0x01

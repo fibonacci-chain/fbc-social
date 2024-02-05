@@ -3,9 +3,9 @@ package rest
 import (
 	"net/http"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/rest"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer/types"
 )
 
 func queryDenomTraces(ctx context.CLIContext, endpoint string) http.HandlerFunc {

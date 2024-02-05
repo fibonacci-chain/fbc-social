@@ -9,16 +9,16 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/tendermint/abci/example/kvstore"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/crypto/merkle"
-	"github.com/okex/exchain/libs/tendermint/lite"
-	certclient "github.com/okex/exchain/libs/tendermint/lite/client"
-	nm "github.com/okex/exchain/libs/tendermint/node"
-	"github.com/okex/exchain/libs/tendermint/rpc/client"
-	rpclocal "github.com/okex/exchain/libs/tendermint/rpc/client/local"
-	rpctest "github.com/okex/exchain/libs/tendermint/rpc/test"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/example/kvstore"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/merkle"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/lite"
+	certclient "github.com/fibonacci-chain/fbc-social/libs/tendermint/lite/client"
+	nm "github.com/fibonacci-chain/fbc-social/libs/tendermint/node"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/client"
+	rpclocal "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/client/local"
+	rpctest "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/test"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 var node *nm.Node
@@ -44,6 +44,7 @@ func kvstoreTx(k, v []byte) []byte {
 
 // TODO: enable it after general proof format has been adapted
 // in abci/examples/kvstore.go
+//
 //nolint:unused,deadcode
 func _TestAppProofs(t *testing.T) {
 	assert, require := assert.New(t), require.New(t)

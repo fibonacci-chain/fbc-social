@@ -12,8 +12,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/mempool"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/mempool"
 	"github.com/tendermint/go-amino"
 )
 
@@ -21,7 +21,7 @@ const (
 	abiFile = "../client/contracts/counter/counter.abi"
 	binFile = "../client/contracts/counter/counter.bin"
 
-	ChainId  int64  = 67        //  okc
+	ChainId  int64  = 77777        //  okc
 	GasPrice int64  = 100000000 // 0.1 gwei
 	GasLimit uint64 = 3000000
 )
@@ -70,6 +70,7 @@ func init() {
 		}
 		privateKeys[i] = privateKey
 		address[i] = crypto.PubkeyToAddress(privateKey.PublicKey)
+		fmt.Println("address: ", address[i])
 	}
 }
 

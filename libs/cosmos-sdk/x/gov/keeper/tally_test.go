@@ -5,9 +5,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking"
 )
 
 func TestTallyNoOneVotes(t *testing.T) {

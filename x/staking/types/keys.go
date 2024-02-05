@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"time"
 
-	cryptoAmino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
+	cryptoAmino "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/encoding/amino"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/libs/bech32"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bech32"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 const (
@@ -30,7 +30,7 @@ const (
 	RouterKey = ModuleName
 )
 
-//nolint
+// nolint
 var (
 	// Keys for store prefixes
 	// Last* values are constant during a block.
@@ -91,7 +91,7 @@ func GetValidatorQueueTimeKey(timestamp time.Time) []byte {
 	return append(ValidatorQueueKey, bz...)
 }
 
-// getValidatorPowerRank gets the power ranking of a validator by okexchain's rule
+// getValidatorPowerRank gets the power ranking of a validator by fbexchain's rule
 // just according to the shares instead of tokens on a validator
 func getValidatorPowerRank(validator Validator) []byte {
 	// consensus power based on the shares on a validator

@@ -6,13 +6,15 @@ package types
 import (
 	"github.com/cosmos/gorocksdb"
 	"github.com/ethereum/go-ethereum/ethdb"
-	tmdb "github.com/okex/exchain/libs/tm-db"
+	tmdb "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 	"github.com/pkg/errors"
 )
 
-//------------------------------------------
+// ------------------------------------------
+//
 //	Register go-ethereum gorocksdb
-//------------------------------------------
+//
+// ------------------------------------------
 func init() {
 	dbCreator := func(name string, dir string) (ethdb.KeyValueStore, error) {
 		return NewWrapRocksDB(name, dir)

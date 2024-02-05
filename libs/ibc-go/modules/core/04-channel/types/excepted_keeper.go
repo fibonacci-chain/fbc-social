@@ -1,10 +1,10 @@
 package types
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	connectiontypes "github.com/okex/exchain/libs/ibc-go/modules/core/03-connection/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	capabilitytypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/types"
+	connectiontypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/03-connection/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
 )
 
 // ClientKeeper expected account IBC client keeper

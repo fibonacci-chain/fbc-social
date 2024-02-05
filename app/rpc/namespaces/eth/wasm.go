@@ -7,16 +7,16 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/okex/exchain/x/wasm/ioutils"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/ioutils"
 
-	clientcontext "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/x/evm"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	clientcontext "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/x/evm"
+	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
 
-	wasmtypes "github.com/okex/exchain/x/wasm/types"
+	wasmtypes "github.com/fibonacci-chain/fbc-social/x/wasm/types"
 
 	"github.com/ethereum/go-ethereum/common/hexutil"
-	rpctypes "github.com/okex/exchain/app/rpc/types"
+	rpctypes "github.com/fibonacci-chain/fbc-social/app/rpc/types"
 )
 
 const (

@@ -12,18 +12,18 @@ import (
 	ethcmn "github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	ethermint "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	auth "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/evm"
-	"github.com/okex/exchain/x/evm/keeper"
-	"github.com/okex/exchain/x/evm/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/app"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
+	ethermint "github.com/fibonacci-chain/fbc-social/app/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	auth "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm"
+	"github.com/fibonacci-chain/fbc-social/x/evm/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 	"github.com/status-im/keycard-go/hexutils"
 	"github.com/stretchr/testify/suite"
 )
@@ -40,7 +40,7 @@ type EvmTestSuite struct {
 	handler    sdk.Handler
 	govHandler govtypes.Handler
 	querier    sdk.Querier
-	app        *app.OKExChainApp
+	app        *app.FBChainApp
 	stateDB    *types.CommitStateDB
 	codec      *codec.Codec
 }
@@ -779,7 +779,7 @@ type EvmContractBlockedListTestSuite struct {
 
 	ctx     sdk.Context
 	handler sdk.Handler
-	app     *app.OKExChainApp
+	app     *app.FBChainApp
 	stateDB *types.CommitStateDB
 
 	// global data for test

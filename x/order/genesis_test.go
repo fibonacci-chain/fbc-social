@@ -6,12 +6,12 @@ import (
 	"fmt"
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/types/time"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/dex"
-	"github.com/okex/exchain/x/order/keeper"
-	"github.com/okex/exchain/x/order/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types/time"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/dex"
+	"github.com/fibonacci-chain/fbc-social/x/order/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/order/types"
 	"github.com/stretchr/testify/require"
 )
 

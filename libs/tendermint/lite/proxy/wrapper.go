@@ -3,12 +3,12 @@ package proxy
 import (
 	"context"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/merkle"
-	"github.com/okex/exchain/libs/tendermint/libs/bytes"
-	"github.com/okex/exchain/libs/tendermint/lite"
-	rpcclient "github.com/okex/exchain/libs/tendermint/rpc/client"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	rpctypes "github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/merkle"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bytes"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/lite"
+	rpcclient "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/client"
+	ctypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/core/types"
+	rpctypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/jsonrpc/types"
 )
 
 var _ rpcclient.Client = Wrapper{}

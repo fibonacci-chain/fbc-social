@@ -6,12 +6,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	keep "github.com/okex/exchain/libs/cosmos-sdk/x/bank/internal/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank/internal/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	authtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
+	keep "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank/internal/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank/internal/types"
 )
 
 func TestBalances(t *testing.T) {

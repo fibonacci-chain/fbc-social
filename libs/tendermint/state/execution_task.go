@@ -5,19 +5,19 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/okex/exchain/libs/system/trace"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/automation"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	"github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/libs/system/trace"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/automation"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/proxy"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 )
 
 type executionResult struct {
-	res *ABCIResponses
+	res      *ABCIResponses
 	duration time.Duration
-	err error
+	err      error
 }
 
 type executionTask struct {
@@ -87,7 +87,7 @@ func (t *executionTask) run() {
 
 	if !t.stopped {
 		t.result = &executionResult{
-			abciResponses, duration,err,
+			abciResponses, duration, err,
 		}
 		trace.GetElapsedInfo().AddInfo(trace.Prerun, fmt.Sprintf("%d", t.index))
 	}
@@ -96,7 +96,7 @@ func (t *executionTask) run() {
 	t.taskResultChan <- t
 }
 
-//========================================================
+// ========================================================
 func (blockExec *BlockExecutor) InitPrerun() {
 	if blockExec.deltaContext.downloadDelta {
 		panic("download delta is not allowed if prerun enabled")

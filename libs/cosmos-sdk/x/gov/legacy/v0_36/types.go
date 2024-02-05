@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	v034gov "github.com/okex/exchain/libs/cosmos-sdk/x/gov/legacy/v0_34"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	v034gov "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/gov/legacy/v0_34"
 )
 
 const (

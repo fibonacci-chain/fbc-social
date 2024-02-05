@@ -2,17 +2,17 @@ package cli
 
 import (
 	"encoding/json"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
 	"path/filepath"
 
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/cli"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	"github.com/okex/exchain/x/genutil"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	"github.com/fibonacci-chain/fbc-social/x/genutil"
 )
 
 const flagGenTxDir = "gentx-dir"

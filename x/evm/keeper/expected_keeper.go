@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 // GovKeeper defines the expected gov Keeper

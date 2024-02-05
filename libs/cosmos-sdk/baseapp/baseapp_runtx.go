@@ -6,12 +6,12 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/okex/exchain/libs/system/trace"
+	"github.com/fibonacci-chain/fbc-social/libs/system/trace"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	types2 "github.com/okex/exchain/libs/tendermint/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	types2 "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 type runTxInfo struct {

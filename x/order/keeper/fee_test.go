@@ -5,13 +5,13 @@ package keeper
 import (
 	"testing"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/tendermint/libs/cli/flags"
-	"github.com/okex/exchain/x/order/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/cli/flags"
+	"github.com/fibonacci-chain/fbc-social/x/order/types"
 )
 
 type MockGetFeeKeeper struct {

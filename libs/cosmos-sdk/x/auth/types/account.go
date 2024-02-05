@@ -7,12 +7,12 @@ import (
 
 	"github.com/tendermint/go-amino"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
 	"gopkg.in/yaml.v2"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	cryptoamino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/exported"
+	cryptoamino "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/encoding/amino"
 )
 
 //-----------------------------------------------------------------------------

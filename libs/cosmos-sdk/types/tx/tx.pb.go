@@ -5,12 +5,12 @@ package tx
 
 import (
 	fmt "fmt"
-	types "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	types1 "github.com/okex/exchain/libs/cosmos-sdk/crypto/types"
-	//github_com_cosmos_cosmos_sdk_types "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter/types"
-	github_com_cosmos_cosmos_sdk_types "github.com/okex/exchain/libs/cosmos-sdk/types"
-	types2 "github.com/okex/exchain/libs/cosmos-sdk/types"
-	signing "github.com/okex/exchain/libs/cosmos-sdk/types/tx/signing"
+	types "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	types1 "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/types"
+	//github_com_cosmos_cosmos_sdk_types "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/ibc-adapter/types"
+	github_com_cosmos_cosmos_sdk_types "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	types2 "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	signing "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/tx/signing"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	io "io"

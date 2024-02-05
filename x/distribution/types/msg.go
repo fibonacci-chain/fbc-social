@@ -1,8 +1,8 @@
-//nolint
+// nolint
 package types
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 // Verify interface at compile time

@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 
 	"github.com/stretchr/testify/require"
 )

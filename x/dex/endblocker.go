@@ -3,10 +3,10 @@ package dex
 import (
 	"fmt"
 
-	"github.com/okex/exchain/x/common/perf"
-	"github.com/okex/exchain/x/dex/types"
+	"github.com/fibonacci-chain/fbc-social/x/common/perf"
+	"github.com/fibonacci-chain/fbc-social/x/dex/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 // EndBlocker called every block

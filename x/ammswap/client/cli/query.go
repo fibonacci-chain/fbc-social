@@ -3,13 +3,13 @@ package cli
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	"github.com/okex/exchain/x/ammswap/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/version"
+	"github.com/fibonacci-chain/fbc-social/x/ammswap/types"
 	"github.com/spf13/cobra"
 	"strings"
 )
@@ -38,7 +38,7 @@ func GetQueryCmd(queryRoute string, cdc *codec.Codec) *cobra.Command {
 	return swapQueryCmd
 }
 
-//GetCmdSwapTokenPair query exchange with token name
+// GetCmdSwapTokenPair query exchange with token name
 func GetCmdSwapTokenPair(queryRoute string, cdc *codec.Codec) *cobra.Command {
 	return &cobra.Command{
 		Use:   "pool [base-token] [quote-token]",
@@ -47,7 +47,7 @@ func GetCmdSwapTokenPair(queryRoute string, cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`Query pool info by token name.
 
 Example:
-$ exchaincli query swap pool eth-355
+$ fbchaincli query swap pool eth-355
 
 `),
 		),
@@ -139,7 +139,7 @@ $ %s query swap params
 	}
 }
 
-//GetCmdAllSwapTokenPairs lists all info of pools
+// GetCmdAllSwapTokenPairs lists all info of pools
 func GetCmdAllSwapTokenPairs(queryRoute string, cdc *codec.Codec) *cobra.Command {
 	return &cobra.Command{
 		Use:   "pools",
@@ -147,7 +147,7 @@ func GetCmdAllSwapTokenPairs(queryRoute string, cdc *codec.Codec) *cobra.Command
 		Long: strings.TrimSpace(
 			fmt.Sprintf(`Query infomation of all pools.
 Example:
-$ exchaincli query swap pools
+$ fbchaincli query swap pools
 `),
 		),
 		Args: cobra.NoArgs,
@@ -169,7 +169,7 @@ $ exchaincli query swap pools
 	}
 }
 
-//GetCmdRedeemableAssets query redeemable assets by specifying the number of lpt
+// GetCmdRedeemableAssets query redeemable assets by specifying the number of lpt
 func GetCmdRedeemableAssets(queryRoute string, cdc *codec.Codec) *cobra.Command {
 	return &cobra.Command{
 		Use:   "redeemable-assets [base-token] [quote-token] [pool-token-amount]",
@@ -177,7 +177,7 @@ func GetCmdRedeemableAssets(queryRoute string, cdc *codec.Codec) *cobra.Command 
 		Long: strings.TrimSpace(
 			fmt.Sprintf(`Query redeemable assets by specifying pool token amount.
 Example:
-$ exchaincli query swap redeemable-assets eth xxb 1
+$ fbchaincli query swap redeemable-assets eth xxb 1
 `),
 		),
 		Args: cobra.ExactArgs(3),

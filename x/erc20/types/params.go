@@ -5,7 +5,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/okex/exchain/x/params"
+	"github.com/fibonacci-chain/fbc-social/x/params"
 )
 
 const (

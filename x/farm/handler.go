@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/x/common/perf"
-	"github.com/okex/exchain/x/farm/keeper"
-	"github.com/okex/exchain/x/farm/types"
+	"github.com/fibonacci-chain/fbc-social/x/common/perf"
+	"github.com/fibonacci-chain/fbc-social/x/farm/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/farm/types"
 )
 
 var destroyPoolHandler func(ctx sdk.Context, k keeper.Keeper, msg types.MsgDestroyPool) (*sdk.Result, error) = handleMsgDestroyPool

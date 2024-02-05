@@ -3,9 +3,9 @@ package common
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	"github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 // QueryParams actually queries gov params

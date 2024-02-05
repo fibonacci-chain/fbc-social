@@ -5,9 +5,9 @@ import (
 	"errors"
 	"fmt"
 
-	abcicli "github.com/okex/exchain/libs/tendermint/abci/client"
-	"github.com/okex/exchain/libs/tendermint/abci/types"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
+	abcicli "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/client"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	tmrand "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
 )
 
 func InitChain(client abcicli.Client) error {

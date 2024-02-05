@@ -1,7 +1,7 @@
 package types
 
 import (
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
 )
 
 // MaxSaltSize is the longest salt that can be used when instantiating a contract

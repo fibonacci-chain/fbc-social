@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/mpt"
 
 	"github.com/spf13/viper"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	tmiavl "github.com/okex/exchain/libs/iavl"
-	iavlcfg "github.com/okex/exchain/libs/iavl/config"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
+	tmiavl "github.com/fibonacci-chain/fbc-social/libs/iavl"
+	iavlcfg "github.com/fibonacci-chain/fbc-social/libs/iavl/config"
 )
 
 // GetPruningOptionsFromFlags parses command flags and returns the correct

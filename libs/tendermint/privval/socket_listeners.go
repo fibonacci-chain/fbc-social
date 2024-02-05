@@ -4,8 +4,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	p2pconn "github.com/okex/exchain/libs/tendermint/p2p/conn"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
+	p2pconn "github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p/conn"
 )
 
 const (

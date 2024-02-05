@@ -5,10 +5,10 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
 	"github.com/stretchr/testify/assert"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 var (

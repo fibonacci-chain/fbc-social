@@ -9,8 +9,8 @@ import (
 	"github.com/ethereum/go-ethereum/core"
 	"github.com/ethereum/go-ethereum/core/vm"
 	"github.com/ethereum/go-ethereum/eth/tracers"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 	json "github.com/json-iterator/go"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
 )
 
 type TraceConfig struct {

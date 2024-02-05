@@ -3,13 +3,13 @@ package types
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"strings"
 
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	paramtypes "github.com/fibonacci-chain/fbc-social/x/params"
 	"github.com/gogo/protobuf/jsonpb"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	paramtypes "github.com/okex/exchain/x/params"
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
 )

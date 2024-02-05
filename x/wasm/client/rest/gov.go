@@ -4,13 +4,13 @@ import (
 	"encoding/json"
 	"net/http"
 
-	clientCtx "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	govtypes "github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
-	govrest "github.com/okex/exchain/x/gov/client/rest"
-	"github.com/okex/exchain/x/wasm/client/utils"
-	"github.com/okex/exchain/x/wasm/types"
+	clientCtx "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/rest"
+	govtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/gov/types"
+	govrest "github.com/fibonacci-chain/fbc-social/x/gov/client/rest"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/client/utils"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
 )
 
 type StoreCodeProposalJSONReq struct {

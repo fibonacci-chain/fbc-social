@@ -6,11 +6,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	slashingkeeper "github.com/okex/exchain/libs/cosmos-sdk/x/slashing/internal/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	slashingkeeper "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/slashing/internal/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking"
 )
 
 func TestBeginBlocker(t *testing.T) {

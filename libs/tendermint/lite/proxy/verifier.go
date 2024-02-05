@@ -3,13 +3,13 @@ package proxy
 import (
 	"github.com/pkg/errors"
 
-	"github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
-	"github.com/okex/exchain/libs/tendermint/lite"
-	lclient "github.com/okex/exchain/libs/tendermint/lite/client"
-	"github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	tmos "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/os"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/lite"
+	lclient "github.com/fibonacci-chain/fbc-social/libs/tendermint/lite/client"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 )
 
 func NewVerifier(

@@ -2,10 +2,10 @@ package types
 
 import (
 	"bytes"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	clienttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	host "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/24-host"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
 )
 
 var _ exported.Misbehaviour = &Misbehaviour{}

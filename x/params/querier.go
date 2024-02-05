@@ -2,12 +2,12 @@ package params
 
 import (
 	"fmt"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/x/params/types"
+	"github.com/fibonacci-chain/fbc-social/x/params/types"
 )
 
 // NewQuerier returns all query handlers

@@ -5,14 +5,14 @@ import (
 	"reflect"
 	"strings"
 
-	tmcrypto "github.com/okex/exchain/libs/tendermint/crypto"
-	cryptoAmino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	tmcrypto "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	cryptoAmino "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/encoding/amino"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 	"github.com/pkg/errors"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys/keyerror"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys/mintkey"
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/keys/keyerror"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/keys/mintkey"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 var _ Keybase = dbKeybase{}
@@ -22,7 +22,7 @@ var _ Keybase = dbKeybase{}
 // Find a list of all supported languages in the BIP 39 spec (word lists).
 type Language int
 
-//noinspection ALL
+// noinspection ALL
 const (
 	// English is the default language to create a mnemonic.
 	// It is the only supported language by this package.

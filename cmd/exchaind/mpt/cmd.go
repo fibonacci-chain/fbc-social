@@ -1,10 +1,10 @@
 package mpt
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/mpt/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"github.com/spf13/cobra"
 )
 

@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/okex/exchain/x/common/monitor"
+	"github.com/fibonacci-chain/fbc-social/x/common/monitor"
 )
 
 var (

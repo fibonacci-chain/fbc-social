@@ -11,18 +11,18 @@ import (
 
 	"github.com/pkg/errors"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
-	"github.com/okex/exchain/libs/tendermint/libs/pubsub/query"
-	tmstring "github.com/okex/exchain/libs/tendermint/libs/strings"
-	"github.com/okex/exchain/libs/tendermint/state/txindex"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/pubsub/query"
+	tmstring "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/strings"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/state/txindex"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 const (
 	tagKeySeparator = "/"
-	defaultTimeOut = 5 * time.Second
-	maxQueryRange = 256
+	defaultTimeOut  = 5 * time.Second
+	maxQueryRange   = 256
 )
 
 var _ txindex.TxIndexer = (*TxIndex)(nil)

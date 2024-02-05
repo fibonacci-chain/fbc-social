@@ -5,8 +5,8 @@ import (
 	"math"
 	"testing"
 
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 	kitlog "github.com/go-kit/kit/log"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
 )
 
 //func TestTMFmtLogger(t *testing.T) {

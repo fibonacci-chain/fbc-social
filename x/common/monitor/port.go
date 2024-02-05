@@ -3,7 +3,7 @@ package monitor
 import (
 	"bytes"
 	"fmt"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
 	"github.com/spf13/viper"
 	"os/exec"
 	"strconv"
@@ -137,7 +137,7 @@ func (pm *PortMonitor) GetResultString() string {
 	return buffer.String()
 }
 
-//GetConnectingMap gets connectingMap
+// GetConnectingMap gets connectingMap
 func (pm *PortMonitor) GetConnectingMap() map[uint64]int {
 	return pm.connectingMap
 }

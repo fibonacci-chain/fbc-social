@@ -5,11 +5,11 @@ package keeper
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/dex"
-	"github.com/okex/exchain/x/order/types"
+	"github.com/fibonacci-chain/fbc-social/x/dex"
+	"github.com/fibonacci-chain/fbc-social/x/order/types"
 )
 
 func TestOrderIDsMapInsertAndRemove(t *testing.T) {

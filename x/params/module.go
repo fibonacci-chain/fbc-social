@@ -3,20 +3,20 @@ package params
 import (
 	"encoding/json"
 	"fmt"
-	sim "github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
+	sim "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/simulation"
 	"math/rand"
 
-	"github.com/okex/exchain/x/params/client/cli"
-	"github.com/okex/exchain/x/params/types"
+	"github.com/fibonacci-chain/fbc-social/x/params/client/cli"
+	"github.com/fibonacci-chain/fbc-social/x/params/types"
 
 	"github.com/gorilla/mux"
 	"github.com/spf13/cobra"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 )
 
 var (

@@ -4,15 +4,15 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/distribution/types"
-	"github.com/okex/exchain/x/staking"
-	stakingexported "github.com/okex/exchain/x/staking/exported"
-	stakingtypes "github.com/okex/exchain/x/staking/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/types"
+	"github.com/fibonacci-chain/fbc-social/x/staking"
+	stakingexported "github.com/fibonacci-chain/fbc-social/x/staking/exported"
+	stakingtypes "github.com/fibonacci-chain/fbc-social/x/staking/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
 
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"github.com/stretchr/testify/require"
 )
 

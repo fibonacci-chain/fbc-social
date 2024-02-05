@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"os"
 
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	interfacetypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
 	"github.com/gogo/protobuf/proto"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	interfacetypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
 	"gopkg.in/yaml.v2"
 )
 

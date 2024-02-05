@@ -1,9 +1,9 @@
 package ante
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/tendermint/mock"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/mock"
 	"github.com/stretchr/testify/assert"
 	"strings"
 	"testing"

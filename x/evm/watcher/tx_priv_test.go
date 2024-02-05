@@ -8,17 +8,17 @@ import (
 	ethcommon "github.com/ethereum/go-ethereum/common"
 	"github.com/stretchr/testify/suite"
 
-	okexchaincodec "github.com/okex/exchain/app/codec"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	app "github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	authclient "github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	tm "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/global"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	etypes "github.com/okex/exchain/x/evm/types"
+	okexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
+	app "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	authclient "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/client/utils"
+	tm "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/global"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	etypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
 )
 
 var (

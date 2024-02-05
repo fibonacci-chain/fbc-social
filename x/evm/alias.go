@@ -1,10 +1,10 @@
 package evm
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/evm/keeper"
-	"github.com/okex/exchain/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
 )
 
 // nolint
@@ -24,7 +24,7 @@ var (
 	NewMultiEvmHooks     = keeper.NewMultiEvmHooks
 )
 
-//nolint
+// nolint
 type (
 	Keeper        = keeper.Keeper
 	GenesisState  = types.GenesisState

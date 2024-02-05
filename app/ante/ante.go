@@ -1,20 +1,20 @@
 package ante
 
 import (
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	authante "github.com/okex/exchain/libs/cosmos-sdk/x/auth/ante"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	ibc "github.com/okex/exchain/libs/ibc-go/modules/core"
-	ibcante "github.com/okex/exchain/libs/ibc-go/modules/core/ante"
-	"github.com/okex/exchain/libs/system/trace"
-	tmcrypto "github.com/okex/exchain/libs/tendermint/crypto"
-	govante "github.com/okex/exchain/x/gov/ante"
-	"github.com/okex/exchain/x/params"
-	"github.com/okex/exchain/x/staking"
-	wasmkeeper "github.com/okex/exchain/x/wasm/keeper"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	authante "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/ante"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
+	ibc "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core"
+	ibcante "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/ante"
+	"github.com/fibonacci-chain/fbc-social/libs/system/trace"
+	tmcrypto "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	govante "github.com/fibonacci-chain/fbc-social/x/gov/ante"
+	"github.com/fibonacci-chain/fbc-social/x/params"
+	"github.com/fibonacci-chain/fbc-social/x/staking"
+	wasmkeeper "github.com/fibonacci-chain/fbc-social/x/wasm/keeper"
 )
 
 func init() {

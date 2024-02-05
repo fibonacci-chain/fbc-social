@@ -1,10 +1,10 @@
 package ante
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/evm/types"
-	wasmkeeper "github.com/okex/exchain/x/wasm/keeper"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
+	wasmkeeper "github.com/fibonacci-chain/fbc-social/x/wasm/keeper"
 )
 
 type WrapWasmCountTXDecorator struct {

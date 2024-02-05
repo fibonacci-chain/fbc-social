@@ -4,8 +4,8 @@ import (
 	"io"
 	"sync"
 
-	"github.com/okex/exchain/libs/tendermint/libs/service"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/service"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 // ValidationRequestHandlerFunc handles different remoteSigner requests

@@ -7,16 +7,16 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/okex/exchain/libs/tendermint/libs/bytes"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmpubsub "github.com/okex/exchain/libs/tendermint/libs/pubsub"
-	tmquery "github.com/okex/exchain/libs/tendermint/libs/pubsub/query"
-	nm "github.com/okex/exchain/libs/tendermint/node"
-	rpcclient "github.com/okex/exchain/libs/tendermint/rpc/client"
-	"github.com/okex/exchain/libs/tendermint/rpc/core"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	rpctypes "github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/types"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bytes"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	tmpubsub "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/pubsub"
+	tmquery "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/pubsub/query"
+	nm "github.com/fibonacci-chain/fbc-social/libs/tendermint/node"
+	rpcclient "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/client"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/core"
+	ctypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/core/types"
+	rpctypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/jsonrpc/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 /*

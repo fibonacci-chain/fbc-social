@@ -3,17 +3,17 @@ package types
 import (
 	"encoding/json"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 type Token struct {
 	Description         string         `json:"description" v2:"description"`                     // e.g. "OK Group Global Utility Token"
-	Symbol              string         `json:"symbol" v2:"symbol"`                               // e.g. "okt"
-	OriginalSymbol      string         `json:"original_symbol" v2:"original_symbol"`             // e.g. "OKT"
-	WholeName           string         `json:"whole_name" v2:"whole_name"`                       // e.g. "OKT"
+	Symbol              string         `json:"symbol" v2:"symbol"`                               // e.g. "fibo"
+	OriginalSymbol      string         `json:"original_symbol" v2:"original_symbol"`             // e.g. "fibo"
+	WholeName           string         `json:"whole_name" v2:"whole_name"`                       // e.g. "fibo"
 	OriginalTotalSupply sdk.Dec        `json:"original_total_supply" v2:"original_total_supply"` // e.g. 1000000000.00000000
 	Type                int            `json:"type"`                                             //e.g. 1 common token, 2 interest token
-	Owner               sdk.AccAddress `json:"owner" v2:"owner"`                                 // e.g. ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02
+	Owner               sdk.AccAddress `json:"owner" v2:"owner"`                                 // e.g. fb1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02
 	Mintable            bool           `json:"mintable" v2:"mintable"`                           // e.g. false
 }
 

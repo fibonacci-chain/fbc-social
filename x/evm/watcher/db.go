@@ -7,11 +7,11 @@ import (
 	"path/filepath"
 	"sync"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
+	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
 	"github.com/spf13/viper"
 )
 

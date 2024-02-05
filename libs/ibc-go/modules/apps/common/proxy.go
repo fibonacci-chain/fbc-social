@@ -3,18 +3,18 @@ package common
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	porttypes "github.com/okex/exchain/libs/ibc-go/modules/core/05-port/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	capabilitytypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/types"
+	channeltypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel/types"
+	porttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/05-port/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
 )
 
 var (
 	_ porttypes.Middleware = (*DisaleProxyMiddleware)(nil)
 )
 
-//////
+// ////
 type DisaleProxyMiddleware struct {
 }
 

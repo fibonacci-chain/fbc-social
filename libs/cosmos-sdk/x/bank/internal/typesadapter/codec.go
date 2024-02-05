@@ -1,11 +1,11 @@
 package typesadapter
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	interfacetypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
-	txmsg "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/msgservice"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	interfacetypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	txmsg "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/ibc-adapter"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/msgservice"
 )
 
 var (

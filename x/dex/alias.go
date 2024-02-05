@@ -1,14 +1,14 @@
 // nolint
 // aliases generated for the following subdirectories:
-// ALIASGEN: github.com/okex/exchain/x/dex/keeper
-// ALIASGEN: github.com/okex/exchain/x/dex/types
+// ALIASGEN: github.com/fibonacci-chain/fbc-social/x/dex/keeper
+// ALIASGEN: github.com/fibonacci-chain/fbc-social/x/dex/types
 package dex
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/x/common/version"
-	"github.com/okex/exchain/x/dex/keeper"
-	"github.com/okex/exchain/x/dex/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	"github.com/fibonacci-chain/fbc-social/x/common/version"
+	"github.com/fibonacci-chain/fbc-social/x/dex/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/dex/types"
 )
 
 const (

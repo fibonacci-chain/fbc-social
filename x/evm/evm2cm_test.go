@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/ethereum/go-ethereum/common"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	etypes "github.com/okex/exchain/x/evm/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	etypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
 	"github.com/stretchr/testify/require"
 )
 

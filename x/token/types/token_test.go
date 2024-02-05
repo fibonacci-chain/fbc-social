@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/secp256k1"
 	"github.com/stretchr/testify/require"
 )
 
@@ -58,7 +58,7 @@ func TestCurrency(t *testing.T) {
 func TestToken(t *testing.T) {
 
 	common.InitConfig()
-	addr, err := sdk.AccAddressFromBech32("ex1jedas2n0pq2c68pelztgel8ht8pz50rh7s7vfz")
+	addr, err := sdk.AccAddressFromBech32("fb18rrc500xu2haw7vyksqlj2lfp9xex2hczv3jkx")
 	require.Nil(t, err)
 
 	testCase := []struct {
@@ -76,15 +76,15 @@ func TestToken(t *testing.T) {
 			Mintable:            false,
 		}, `{"description":"my token","symbol":"` + common.NativeToken + `","original_symbol":"` + common.NativeToken + `","whole_name":"btc","original_total_supply":"1000000.000000000000000000","type":0,"owner":"","mintable":false}`},
 		{Token{
-			Description:         "okblockchain coin",
+			Description:         "fibchain coin",
 			Symbol:              common.NativeToken,
 			OriginalSymbol:      common.NativeToken,
-			WholeName:           "ok coin",
+			WholeName:           "fb coin",
 			OriginalTotalSupply: sdk.NewDec(1000000000),
 			Type:                0,
 			Owner:               addr,
 			Mintable:            true,
-		}, `{"description":"okblockchain coin","symbol":"` + common.NativeToken + `","original_symbol":"` + common.NativeToken + `","whole_name":"ok coin","original_total_supply":"1000000000.000000000000000000","type":0,"owner":"ex1jedas2n0pq2c68pelztgel8ht8pz50rh7s7vfz","mintable":true}`},
+		}, `{"description":"fibchain coin","symbol":"` + common.NativeToken + `","original_symbol":"` + common.NativeToken + `","whole_name":"fb coin","original_total_supply":"1000000000.000000000000000000","type":0,"owner":"fb18rrc500xu2haw7vyksqlj2lfp9xex2hczv3jkx","mintable":true}`},
 	}
 	for _, tokenCase := range testCase {
 		b, err := json.Marshal(tokenCase.token)

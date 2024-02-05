@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/libs/service"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/service"
 )
 
 // SignerListenerEndpointOption sets an optional parameter on the SignerListenerEndpoint.

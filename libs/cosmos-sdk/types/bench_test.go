@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 var coinStrs = []string{

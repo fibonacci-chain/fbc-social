@@ -2,11 +2,11 @@ package keeper
 
 import (
 	"fmt"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
-	"github.com/okex/exchain/x/distribution/types"
-	"github.com/okex/exchain/x/staking/exported"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/types"
+	"github.com/fibonacci-chain/fbc-social/x/staking/exported"
 )
 
 // RegisterInvariants registers all distribution invariants

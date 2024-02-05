@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"path/filepath"
 
+	"github.com/fibonacci-chain/fbc-social/libs/tm-db/common"
 	"github.com/jmhodges/levigo"
-	"github.com/okex/exchain/libs/tm-db/common"
 )
 
 func init() {

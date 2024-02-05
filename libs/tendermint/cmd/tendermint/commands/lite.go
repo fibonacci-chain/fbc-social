@@ -9,17 +9,17 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 	"github.com/tendermint/go-amino"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
-	lite "github.com/okex/exchain/libs/tendermint/lite2"
-	lproxy "github.com/okex/exchain/libs/tendermint/lite2/proxy"
-	lrpc "github.com/okex/exchain/libs/tendermint/lite2/rpc"
-	dbs "github.com/okex/exchain/libs/tendermint/lite2/store/db"
-	rpchttp "github.com/okex/exchain/libs/tendermint/rpc/client/http"
-	rpcserver "github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/server"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	tmos "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/os"
+	lite "github.com/fibonacci-chain/fbc-social/libs/tendermint/lite2"
+	lproxy "github.com/fibonacci-chain/fbc-social/libs/tendermint/lite2/proxy"
+	lrpc "github.com/fibonacci-chain/fbc-social/libs/tendermint/lite2/rpc"
+	dbs "github.com/fibonacci-chain/fbc-social/libs/tendermint/lite2/store/db"
+	rpchttp "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/client/http"
+	rpcserver "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/jsonrpc/server"
 )
 
 // LiteCmd represents the base command when called without any subcommands

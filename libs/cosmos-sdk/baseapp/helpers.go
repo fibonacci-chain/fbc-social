@@ -1,12 +1,12 @@
 package baseapp
 
 import (
-	cfg "github.com/okex/exchain/libs/tendermint/config"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
 	"regexp"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 var isAlphaNumeric = regexp.MustCompile(`^[a-zA-Z0-9]+$`).MatchString

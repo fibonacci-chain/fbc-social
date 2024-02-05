@@ -2,18 +2,18 @@ package state
 
 import (
 	"fmt"
-	"github.com/okex/exchain/libs/system/trace"
+	"github.com/fibonacci-chain/fbc-social/libs/system/trace"
 	"sync/atomic"
 	"time"
 
-	"github.com/okex/exchain/libs/iavl"
-	"github.com/okex/exchain/libs/system"
-	"github.com/okex/exchain/libs/tendermint/delta"
-	redis_cgi "github.com/okex/exchain/libs/tendermint/delta/redis-cgi"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/iavl"
+	"github.com/fibonacci-chain/fbc-social/libs/system"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/delta"
+	redis_cgi "github.com/fibonacci-chain/fbc-social/libs/tendermint/delta/redis-cgi"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 	"github.com/spf13/viper"
 
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 type identityMapType map[string]int64

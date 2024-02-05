@@ -4,18 +4,18 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	capabilitykeeper "github.com/okex/exchain/libs/cosmos-sdk/x/capability/keeper"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/host/types"
-	icatypes "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	paramtypes "github.com/okex/exchain/x/params"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	capabilitykeeper "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/keeper"
+	capabilitytypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/27-interchain-accounts/host/types"
+	icatypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/27-interchain-accounts/types"
+	channeltypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel/types"
+	host "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/24-host"
+	paramtypes "github.com/fibonacci-chain/fbc-social/x/params"
 )
 
 // Keeper defines the IBC interchain accounts host keeper

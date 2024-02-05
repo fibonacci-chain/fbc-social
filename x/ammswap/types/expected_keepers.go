@@ -1,9 +1,9 @@
 package types
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/params"
-	token "github.com/okex/exchain/x/token/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/params"
+	token "github.com/fibonacci-chain/fbc-social/x/token/types"
 )
 
 // ParamSubspace defines the expected Subspace interface

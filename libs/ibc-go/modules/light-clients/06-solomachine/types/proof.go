@@ -1,16 +1,16 @@
 package types
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	cryptotypes "github.com/okex/exchain/libs/cosmos-sdk/crypto/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/types/multisig"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/tx/signing"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	connectiontypes "github.com/okex/exchain/libs/ibc-go/modules/core/03-connection/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	commitmenttypes "github.com/okex/exchain/libs/ibc-go/modules/core/23-commitment/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	cryptotypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/types/multisig"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/tx/signing"
+	clienttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	connectiontypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/03-connection/types"
+	channeltypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel/types"
+	commitmenttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/23-commitment/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
 )
 
 // VerifySignature verifies if the the provided public key generated the signature

@@ -3,7 +3,7 @@ package types
 import (
 	"encoding/json"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
 )
 
 // DONTCOVER

@@ -1,10 +1,10 @@
 package feesplit
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/x/feesplit/keeper"
-	"github.com/okex/exchain/x/feesplit/types"
+	"github.com/fibonacci-chain/fbc-social/x/feesplit/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/feesplit/types"
 )
 
 // InitGenesis import module genesis

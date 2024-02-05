@@ -3,8 +3,8 @@ package mempool
 import (
 	"sync"
 
-	"github.com/okex/exchain/libs/tendermint/libs/clist"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/clist"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 type elementManager interface {

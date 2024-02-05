@@ -1,13 +1,13 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/staking"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/x/staking"
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/x/distribution/types"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/types"
 	"github.com/stretchr/testify/require"
 )
 

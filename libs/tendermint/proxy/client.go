@@ -3,10 +3,10 @@ package proxy
 import (
 	"sync"
 
-	abcicli "github.com/okex/exchain/libs/tendermint/abci/client"
-	"github.com/okex/exchain/libs/tendermint/abci/example/counter"
-	"github.com/okex/exchain/libs/tendermint/abci/example/kvstore"
-	"github.com/okex/exchain/libs/tendermint/abci/types"
+	abcicli "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/client"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/example/counter"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/example/kvstore"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 )
 
 // NewABCIClient returns newly connected client

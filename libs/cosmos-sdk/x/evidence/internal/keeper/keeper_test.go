@@ -4,17 +4,17 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/evidence"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/evidence/exported"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/evidence/internal/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/evidence/internal/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/simapp"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/evidence"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/evidence/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/evidence/internal/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/evidence/internal/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
 	"github.com/stretchr/testify/suite"
 )
 

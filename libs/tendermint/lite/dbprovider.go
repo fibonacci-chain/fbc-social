@@ -5,13 +5,13 @@ import (
 	"regexp"
 	"strconv"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 	amino "github.com/tendermint/go-amino"
 
-	cryptoamino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
-	log "github.com/okex/exchain/libs/tendermint/libs/log"
-	lerr "github.com/okex/exchain/libs/tendermint/lite/errors"
-	"github.com/okex/exchain/libs/tendermint/types"
+	cryptoamino "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/encoding/amino"
+	log "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	lerr "github.com/fibonacci-chain/fbc-social/libs/tendermint/lite/errors"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 var _ PersistentProvider = (*DBProvider)(nil)

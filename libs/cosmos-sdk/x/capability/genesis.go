@@ -1,9 +1,9 @@
 package capability
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/capability/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/types"
 )
 
 // InitGenesis initializes the capability module's state from a provided genesis

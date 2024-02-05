@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/global"
-	"github.com/okex/exchain/libs/tendermint/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/global"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 const (

@@ -1,7 +1,7 @@
 package transient
 
 import (
-	"github.com/okex/exchain/libs/iavl"
+	"github.com/fibonacci-chain/fbc-social/libs/iavl"
 	"testing"
 
 	"github.com/stretchr/testify/require"

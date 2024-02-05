@@ -3,12 +3,12 @@ package erc20
 import (
 	ethcmm "github.com/ethereum/go-ethereum/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/erc20/types"
-	govTypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/erc20/types"
+	govTypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 // NewProposalHandler handles "gov" type message in "erc20"
@@ -29,7 +29,7 @@ func NewProposalHandler(k *Keeper) govTypes.Handler {
 
 func handleTokenMappingProposal(ctx sdk.Context, k *Keeper, p types.TokenMappingProposal) sdk.Error {
 	if p.Denom == sdk.DefaultBondDenom || p.Denom == sdk.DefaultIbcWei {
-		return govTypes.ErrInvalidProposalContent("invalid denom, not support okt or wei denom")
+		return govTypes.ErrInvalidProposalContent("invalid denom, not support fibo or wei denom")
 	}
 
 	if len(p.Contract) == 0 {

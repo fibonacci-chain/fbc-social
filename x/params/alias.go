@@ -1,8 +1,8 @@
 package params
 
 import (
-	sdkparams "github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/x/params/types"
+	sdkparams "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params"
+	"github.com/fibonacci-chain/fbc-social/x/params/types"
 )
 
 // const

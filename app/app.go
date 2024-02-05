@@ -2,137 +2,137 @@ package app
 
 import (
 	"fmt"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
 	"io"
 	"os"
 	"runtime/debug"
 	"sync"
 
-	"github.com/okex/exchain/x/vmbridge"
+	"github.com/fibonacci-chain/fbc-social/x/vmbridge"
 
-	ica "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts"
-	icacontroller "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller"
-	icahost "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/host"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/common"
-	"github.com/okex/exchain/x/icamauth"
+	ica "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/27-interchain-accounts"
+	icacontroller "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/27-interchain-accounts/controller"
+	icahost "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/27-interchain-accounts/host"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/common"
+	"github.com/fibonacci-chain/fbc-social/x/icamauth"
 
-	ibccommon "github.com/okex/exchain/libs/ibc-go/modules/core/common"
+	ibccommon "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/common"
 
-	icacontrollertypes "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller/types"
-	icahosttypes "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/host/types"
-	icamauthtypes "github.com/okex/exchain/x/icamauth/types"
+	icacontrollertypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/27-interchain-accounts/controller/types"
+	icahosttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/27-interchain-accounts/host/types"
+	icamauthtypes "github.com/fibonacci-chain/fbc-social/x/icamauth/types"
 
-	icacontrollerkeeper "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller/keeper"
-	icahostkeeper "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/host/keeper"
-	icamauthkeeper "github.com/okex/exchain/x/icamauth/keeper"
+	icacontrollerkeeper "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/27-interchain-accounts/controller/keeper"
+	icahostkeeper "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/27-interchain-accounts/host/keeper"
+	icamauthkeeper "github.com/fibonacci-chain/fbc-social/x/icamauth/keeper"
 
-	ibcfeekeeper "github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/keeper"
+	ibcfeekeeper "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/29-fee/keeper"
 
-	icatypes "github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/types"
-	ibcfeetypes "github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/types"
+	icatypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/27-interchain-accounts/types"
+	ibcfeetypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/29-fee/types"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"google.golang.org/grpc/encoding"
 	"google.golang.org/grpc/encoding/proto"
 
-	ibcfee "github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee"
+	ibcfee "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/29-fee"
 
-	"github.com/okex/exchain/app/utils/appstatus"
+	"github.com/fibonacci-chain/fbc-social/app/utils/appstatus"
 
-	"github.com/okex/exchain/app/ante"
-	okexchaincodec "github.com/okex/exchain/app/codec"
-	appconfig "github.com/okex/exchain/app/config"
-	"github.com/okex/exchain/app/refund"
-	okexchain "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/app/utils/sanity"
-	bam "github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
-	stypes "github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	upgradetypes "github.com/okex/exchain/libs/cosmos-sdk/types/upgrade"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	capabilityModule "github.com/okex/exchain/libs/cosmos-sdk/x/capability"
-	capabilitykeeper "github.com/okex/exchain/libs/cosmos-sdk/x/capability/keeper"
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/crisis"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mint"
-	govclient "github.com/okex/exchain/libs/cosmos-sdk/x/mint/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/upgrade"
-	"github.com/okex/exchain/libs/iavl"
-	ibctransfer "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer"
-	ibctransferkeeper "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/keeper"
-	ibctransfertypes "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	ibc "github.com/okex/exchain/libs/ibc-go/modules/core"
-	ibcclient "github.com/okex/exchain/libs/ibc-go/modules/core/02-client"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/02-client/client"
-	ibcclienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	ibcporttypes "github.com/okex/exchain/libs/ibc-go/modules/core/05-port/types"
-	ibchost "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	"github.com/okex/exchain/libs/system"
-	"github.com/okex/exchain/libs/system/trace"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	"github.com/okex/exchain/x/ammswap"
-	commonversion "github.com/okex/exchain/x/common/version"
-	"github.com/okex/exchain/x/dex"
-	dexclient "github.com/okex/exchain/x/dex/client"
-	distr "github.com/okex/exchain/x/distribution"
-	"github.com/okex/exchain/x/erc20"
-	erc20client "github.com/okex/exchain/x/erc20/client"
-	"github.com/okex/exchain/x/evidence"
-	"github.com/okex/exchain/x/evm"
-	evmclient "github.com/okex/exchain/x/evm/client"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/farm"
-	farmclient "github.com/okex/exchain/x/farm/client"
-	"github.com/okex/exchain/x/feesplit"
-	fsclient "github.com/okex/exchain/x/feesplit/client"
-	"github.com/okex/exchain/x/genutil"
-	"github.com/okex/exchain/x/gov"
-	"github.com/okex/exchain/x/gov/keeper"
-	"github.com/okex/exchain/x/infura"
-	"github.com/okex/exchain/x/order"
-	"github.com/okex/exchain/x/params"
-	paramsclient "github.com/okex/exchain/x/params/client"
-	paramstypes "github.com/okex/exchain/x/params/types"
-	"github.com/okex/exchain/x/slashing"
-	"github.com/okex/exchain/x/staking"
-	"github.com/okex/exchain/x/token"
-	"github.com/okex/exchain/x/wasm"
-	wasmclient "github.com/okex/exchain/x/wasm/client"
-	wasmkeeper "github.com/okex/exchain/x/wasm/keeper"
+	"github.com/fibonacci-chain/fbc-social/app/ante"
+	fbexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	appconfig "github.com/fibonacci-chain/fbc-social/app/config"
+	"github.com/fibonacci-chain/fbc-social/app/refund"
+	fbchain "github.com/fibonacci-chain/fbc-social/app/types"
+	"github.com/fibonacci-chain/fbc-social/app/utils/sanity"
+	bam "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/simapp"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/mpt"
+	stypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
+	upgradetypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/upgrade"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/version"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	authtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank"
+	capabilityModule "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability"
+	capabilitykeeper "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/keeper"
+	capabilitytypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/crisis"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/mint"
+	govclient "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/mint/client"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/upgrade"
+	"github.com/fibonacci-chain/fbc-social/libs/iavl"
+	ibctransfer "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer"
+	ibctransferkeeper "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer/keeper"
+	ibctransfertypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer/types"
+	ibc "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core"
+	ibcclient "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/client"
+	ibcclienttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	ibcporttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/05-port/types"
+	ibchost "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/24-host"
+	"github.com/fibonacci-chain/fbc-social/libs/system"
+	"github.com/fibonacci-chain/fbc-social/libs/system/trace"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	tmos "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/os"
+	sm "github.com/fibonacci-chain/fbc-social/libs/tendermint/state"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/x/ammswap"
+	commonversion "github.com/fibonacci-chain/fbc-social/x/common/version"
+	"github.com/fibonacci-chain/fbc-social/x/dex"
+	dexclient "github.com/fibonacci-chain/fbc-social/x/dex/client"
+	distr "github.com/fibonacci-chain/fbc-social/x/distribution"
+	"github.com/fibonacci-chain/fbc-social/x/erc20"
+	erc20client "github.com/fibonacci-chain/fbc-social/x/erc20/client"
+	"github.com/fibonacci-chain/fbc-social/x/evidence"
+	"github.com/fibonacci-chain/fbc-social/x/evm"
+	evmclient "github.com/fibonacci-chain/fbc-social/x/evm/client"
+	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/x/farm"
+	farmclient "github.com/fibonacci-chain/fbc-social/x/farm/client"
+	"github.com/fibonacci-chain/fbc-social/x/feesplit"
+	fsclient "github.com/fibonacci-chain/fbc-social/x/feesplit/client"
+	"github.com/fibonacci-chain/fbc-social/x/genutil"
+	"github.com/fibonacci-chain/fbc-social/x/gov"
+	"github.com/fibonacci-chain/fbc-social/x/gov/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/infura"
+	"github.com/fibonacci-chain/fbc-social/x/order"
+	"github.com/fibonacci-chain/fbc-social/x/params"
+	paramsclient "github.com/fibonacci-chain/fbc-social/x/params/client"
+	paramstypes "github.com/fibonacci-chain/fbc-social/x/params/types"
+	"github.com/fibonacci-chain/fbc-social/x/slashing"
+	"github.com/fibonacci-chain/fbc-social/x/staking"
+	"github.com/fibonacci-chain/fbc-social/x/token"
+	"github.com/fibonacci-chain/fbc-social/x/wasm"
+	wasmclient "github.com/fibonacci-chain/fbc-social/x/wasm/client"
+	wasmkeeper "github.com/fibonacci-chain/fbc-social/x/wasm/keeper"
 )
 
 func init() {
 	// set the address prefixes
 	config := sdk.GetConfig()
-	okexchain.SetBech32Prefixes(config)
-	okexchain.SetBip44CoinType(config)
+	fbchain.SetBech32Prefixes(config)
+	fbchain.SetBip44CoinType(config)
 }
 
 const (
-	appName = "OKExChain"
+	appName = "FBChain"
 )
 
 var (
 	// DefaultCLIHome sets the default home directories for the application CLI
-	DefaultCLIHome = os.ExpandEnv("$HOME/.exchaincli")
+	DefaultCLIHome = os.ExpandEnv("$HOME/.fbchaincli")
 
 	// DefaultNodeHome sets the folder where the applcation data and configuration will be stored
-	DefaultNodeHome = os.ExpandEnv("$HOME/.exchaind")
+	DefaultNodeHome = os.ExpandEnv("$HOME/.fbchaind")
 
 	// ModuleBasics defines the module BasicManager is in charge of setting up basic,
 	// non-dependant module elements, such as codec registration
@@ -224,12 +224,12 @@ var (
 	FlagGolangMaxThreads string = "golang-max-threads"
 )
 
-var _ simapp.App = (*OKExChainApp)(nil)
+var _ simapp.App = (*FBChainApp)(nil)
 
-// OKExChainApp implements an extended ABCI application. It is an application
+// FBChainApp implements an extended ABCI application. It is an application
 // that may process transactions through Ethereum's EVM running atop of
 // Tendermint consensus.
-type OKExChainApp struct {
+type FBChainApp struct {
 	*bam.BaseApp
 
 	invCheckPeriod uint
@@ -291,8 +291,8 @@ type OKExChainApp struct {
 	WasmHandler wasmkeeper.HandlerOption
 }
 
-// NewOKExChainApp returns a reference to a new initialized OKExChain application.
-func NewOKExChainApp(
+// NewFBChainApp returns a reference to a new initialized FBChain application.
+func NewFBChainApp(
 	logger log.Logger,
 	db dbm.DB,
 	traceStore io.Writer,
@@ -300,7 +300,7 @@ func NewOKExChainApp(
 	skipUpgradeHeights map[int64]bool,
 	invCheckPeriod uint,
 	baseAppOptions ...func(*bam.BaseApp),
-) *OKExChainApp {
+) *FBChainApp {
 	logger.Info("Starting "+system.ChainName,
 		"GenesisHeight", tmtypes.GetStartBlockHeight(),
 		"MercuryHeight", tmtypes.GetMercuryHeight(),
@@ -317,9 +317,9 @@ func NewOKExChainApp(
 		logStartingFlags(logger)
 	})
 
-	codecProxy, interfaceReg := okexchaincodec.MakeCodecSuit(ModuleBasics)
+	codecProxy, interfaceReg := fbexchaincodec.MakeCodecSuit(ModuleBasics)
 	vmbridge.RegisterInterface(interfaceReg)
-	// NOTE we use custom OKExChain transaction decoder that supports the sdk.Tx interface instead of sdk.StdTx
+	// NOTE we use custom fbchaintransaction decoder that supports the sdk.Tx interface instead of sdk.StdTx
 	bApp := bam.NewBaseApp(appName, logger, db, evm.TxDecoder(codecProxy), baseAppOptions...)
 
 	bApp.SetCommitMultiStoreTracer(traceStore)
@@ -347,7 +347,7 @@ func NewOKExChainApp(
 	tkeys := sdk.NewTransientStoreKeys(params.TStoreKey)
 	memKeys := sdk.NewMemoryStoreKeys(capabilitytypes.MemStoreKey)
 
-	app := &OKExChainApp{
+	app := &FBChainApp{
 		BaseApp:        bApp,
 		invCheckPeriod: invCheckPeriod,
 		keys:           keys,
@@ -384,9 +384,9 @@ func NewOKExChainApp(
 
 	//proxy := codec.NewMarshalProxy(cc, cdc)
 	app.marshal = codecProxy
-	// use custom OKExChain account for contracts
+	// use custom FBchain account for contracts
 	app.AccountKeeper = auth.NewAccountKeeper(
-		codecProxy.GetCdc(), keys[auth.StoreKey], keys[mpt.StoreKey], app.subspaces[auth.ModuleName], okexchain.ProtoAccount,
+		codecProxy.GetCdc(), keys[auth.StoreKey], keys[mpt.StoreKey], app.subspaces[auth.ModuleName], fbchain.ProtoAccount,
 	)
 
 	bankKeeper := bank.NewBaseKeeperWithMarshal(
@@ -815,13 +815,13 @@ func (app *OKExChainApp) InitUpgrade(ctx sdk.Context) {
 	}
 }
 
-func (app *OKExChainApp) SetOption(req abci.RequestSetOption) (res abci.ResponseSetOption) {
+func (app *FBChainApp) SetOption(req abci.RequestSetOption) (res abci.ResponseSetOption) {
 	if req.Key == "CheckChainID" {
-		if err := okexchain.IsValidateChainIdWithGenesisHeight(req.Value); err != nil {
+		if err := fbchain.IsValidateChainIdWithGenesisHeight(req.Value); err != nil {
 			app.Logger().Error(err.Error())
 			panic(err)
 		}
-		err := okexchain.SetChainId(req.Value)
+		err := fbchain.SetChainId(req.Value)
 		if err != nil {
 			app.Logger().Error(err.Error())
 			panic(err)
@@ -830,25 +830,25 @@ func (app *OKExChainApp) SetOption(req abci.RequestSetOption) (res abci.Response
 	return app.BaseApp.SetOption(req)
 }
 
-func (app *OKExChainApp) LoadStartVersion(height int64) error {
+func (app *FBChainApp) LoadStartVersion(height int64) error {
 	return app.LoadVersion(height, app.keys[bam.MainStoreKey])
 }
 
 // Name returns the name of the App
-func (app *OKExChainApp) Name() string { return app.BaseApp.Name() }
+func (app *FBChainApp) Name() string { return app.BaseApp.Name() }
 
 // BeginBlocker updates every begin block
-func (app *OKExChainApp) BeginBlocker(ctx sdk.Context, req abci.RequestBeginBlock) abci.ResponseBeginBlock {
+func (app *FBChainApp) BeginBlocker(ctx sdk.Context, req abci.RequestBeginBlock) abci.ResponseBeginBlock {
 	return app.mm.BeginBlock(ctx, req)
 }
 
 // EndBlocker updates every end block
-func (app *OKExChainApp) EndBlocker(ctx sdk.Context, req abci.RequestEndBlock) abci.ResponseEndBlock {
+func (app *FBChainApp) EndBlocker(ctx sdk.Context, req abci.RequestEndBlock) abci.ResponseEndBlock {
 	return app.mm.EndBlock(ctx, req)
 }
 
 // InitChainer updates at chain initialization
-func (app *OKExChainApp) InitChainer(ctx sdk.Context, req abci.RequestInitChain) abci.ResponseInitChain {
+func (app *FBChainApp) InitChainer(ctx sdk.Context, req abci.RequestInitChain) abci.ResponseInitChain {
 
 	var genesisState simapp.GenesisState
 	app.marshal.GetCdc().MustUnmarshalJSON(req.AppStateBytes, &genesisState)
@@ -856,12 +856,12 @@ func (app *OKExChainApp) InitChainer(ctx sdk.Context, req abci.RequestInitChain)
 }
 
 // LoadHeight loads state at a particular height
-func (app *OKExChainApp) LoadHeight(height int64) error {
+func (app *FBChainApp) LoadHeight(height int64) error {
 	return app.LoadVersion(height, app.keys[bam.MainStoreKey])
 }
 
 // ModuleAccountAddrs returns all the app's module account addresses.
-func (app *OKExChainApp) ModuleAccountAddrs() map[string]bool {
+func (app *FBChainApp) ModuleAccountAddrs() map[string]bool {
 	modAccAddrs := make(map[string]bool)
 	for acc := range maccPerms {
 		modAccAddrs[supply.NewModuleAddress(acc).String()] = true
@@ -871,33 +871,33 @@ func (app *OKExChainApp) ModuleAccountAddrs() map[string]bool {
 }
 
 // SimulationManager implements the SimulationApp interface
-func (app *OKExChainApp) SimulationManager() *module.SimulationManager {
+func (app *FBChainApp) SimulationManager() *module.SimulationManager {
 	return app.sm
 }
 
 // GetKey returns the KVStoreKey for the provided store key.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *OKExChainApp) GetKey(storeKey string) *sdk.KVStoreKey {
+func (app *FBChainApp) GetKey(storeKey string) *sdk.KVStoreKey {
 	return app.keys[storeKey]
 }
 
-// Codec returns OKExChain's codec.
+// Codec returns FBChain's codec.
 //
 // NOTE: This is solely to be used for testing purposes as it may be desirable
 // for modules to register their own custom testing types.
-func (app *OKExChainApp) Codec() *codec.Codec {
+func (app *FBChainApp) Codec() *codec.Codec {
 	return app.marshal.GetCdc()
 }
 
-func (app *OKExChainApp) Marshal() *codec.CodecProxy {
+func (app *FBChainApp) Marshal() *codec.CodecProxy {
 	return app.marshal
 }
 
 // GetSubspace returns a param subspace for a given module name.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *OKExChainApp) GetSubspace(moduleName string) params.Subspace {
+func (app *FBChainApp) GetSubspace(moduleName string) params.Subspace {
 	return app.subspaces[moduleName]
 }
 

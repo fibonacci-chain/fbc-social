@@ -29,35 +29,35 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/okex/exchain/app/config"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	"github.com/okex/exchain/app/rpc/backend"
-	cosmos_context "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	cmserver "github.com/okex/exchain/libs/cosmos-sdk/server"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
-	cosmost "github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/evm/watcher"
+	"github.com/fibonacci-chain/fbc-social/app/config"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
+	"github.com/fibonacci-chain/fbc-social/app/rpc/backend"
+	cosmos_context "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
+	cmserver "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/mpt"
+	cosmost "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/watcher"
 
-	"github.com/okex/exchain/app/rpc"
-	"github.com/okex/exchain/app/rpc/types"
-	apptesting "github.com/okex/exchain/libs/ibc-go/testing"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmamino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/app/rpc"
+	"github.com/fibonacci-chain/fbc-social/app/rpc/types"
+	apptesting "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	tmamino "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/encoding/amino"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/multisig"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 )
 
 const (
 	addrAStoreKey          = 0
 	defaultProtocolVersion = 65
 	defaultChainID         = 65
-	defaultMinGasPrice     = "0.0000000001okt"
-	safeLowGP              = "0.0000000001okt"
-	avgGP                  = "0.0000000001okt"
-	fastestGP              = "0.00000000015okt"
+	defaultMinGasPrice     = "0.0000000001fibo"
+	safeLowGP              = "0.0000000001fibo"
+	avgGP                  = "0.0000000001fibo"
+	fastestGP              = "0.00000000015fibo"
 	latestBlockNumber      = "latest"
 	pendingBlockNumber     = "pending"
 )
@@ -96,16 +96,16 @@ func (suite *RPCTestSuite) SetupTest() {
 
 	viper.Set(rpc.FlagDebugAPI, true)
 	viper.Set(cmserver.FlagPruning, cosmost.PruningOptionNothing)
-	// set exchaincli path
-	cliDir, err := ioutil.TempDir("", ".exchaincli")
+	// set fbchaincli path
+	cliDir, err := ioutil.TempDir("", ".fbchaincli")
 	if err != nil {
 		panic(err)
 	}
 	defer os.RemoveAll(cliDir)
 	viper.Set(cmserver.FlagUlockKeyHome, cliDir)
 
-	// set exchaind path
-	serverDir, err := ioutil.TempDir("", ".exchaind")
+	// set fbchaind path
+	serverDir, err := ioutil.TempDir("", ".fbchaind")
 	if err != nil {
 		panic(err)
 	}
@@ -387,7 +387,7 @@ func (suite *RPCTestSuite) TestEth_GasPrice() {
 	var gasPrice hexutil.Big
 	suite.Require().NoError(json.Unmarshal(rpcRes.Result, &gasPrice))
 
-	// min gas price in test.sh is "0.000000001okt"
+	// min gas price in test.sh is "0.000000001fibo"
 	mgp, err := sdk.ParseDecCoin(defaultMinGasPrice)
 	suite.Require().NoError(err)
 
@@ -476,7 +476,7 @@ func (suite *RPCTestSuite) TestEth_SendTransaction_Transfer() {
 	receipt := WaitForReceipt(suite.T(), suite.addr, hash)
 	suite.Require().NotNil(receipt)
 	suite.Require().Equal("0x1", receipt["status"].(string))
-	//suite.T().Logf("%s transfers %sokt to %s successfully\n", hexAddr1.Hex(), value.String(), receiverAddr.Hex())
+	//suite.T().Logf("%s transfers %sfibo to %s successfully\n", hexAddr1.Hex(), value.String(), receiverAddr.Hex())
 
 	// TODO: logic bug, fix it later
 	// ignore gas price -> default 'ethermint.DefaultGasPrice' on node -> successfully
@@ -487,7 +487,7 @@ func (suite *RPCTestSuite) TestEth_SendTransaction_Transfer() {
 	//receipt = WaitForReceipt(suite.T(), hash)
 	//suite.Require().NotNil(receipt)
 	//suite.Require().Equal("0x1", receipt["status"].(string))
-	//suite.T().Logf("%s transfers %sokt to %s successfully with nil gas price \n", hexAddr1.Hex(), value.String(), receiverAddr.Hex())
+	//suite.T().Logf("%s transfers %sfibo to %s successfully with nil gas price \n", hexAddr1.Hex(), value.String(), receiverAddr.Hex())
 
 	// error check
 	// sender is not unlocked on the node
@@ -953,7 +953,7 @@ func (suite *RPCTestSuite) TestEth_GetBlockByHash() {
 	hash := sendTestTransaction(suite.T(), suite.addr, senderAddr, receiverAddr, 1024)
 	expectedBlockHash := getBlockHashFromTxHash(suite.T(), suite.addr, hash)
 
-	// TODO: OKExChain only supports the block query with txs' hash inside no matter what the second bool argument is.
+	// TODO: fbchainonly supports the block query with txs' hash inside no matter what the second bool argument is.
 	// 		eth rpc: 	false -> txs' hash inside
 	//				  	true  -> txs full content
 
@@ -989,7 +989,7 @@ func (suite *RPCTestSuite) TestEth_GetBlockByNumber() {
 
 	expectedHeight := getBlockHeightFromTxHash(suite.T(), suite.addr, hash)
 
-	// TODO: OKExChain only supports the block query with txs' hash inside no matter what the second bool argument is.
+	// TODO: fbchainonly supports the block query with txs' hash inside no matter what the second bool argument is.
 	// 		eth rpc: 	false -> txs' hash inside
 	rpcRes := Call(suite.T(), suite.addr, "eth_getBlockByNumber", []interface{}{expectedHeight, false})
 	var res map[string]interface{}

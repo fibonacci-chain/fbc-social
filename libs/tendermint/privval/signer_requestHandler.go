@@ -3,8 +3,8 @@ package privval
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 func DefaultValidationRequestHandler(

@@ -7,7 +7,7 @@ import (
 	"hash"
 	"testing"
 
-	"github.com/okex/exchain/libs/iavl"
+	"github.com/fibonacci-chain/fbc-social/libs/iavl"
 
 	_ "crypto/sha256"
 

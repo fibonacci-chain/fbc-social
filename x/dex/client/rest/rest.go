@@ -6,15 +6,15 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/okex/exchain/x/dex/types"
+	"github.com/fibonacci-chain/fbc-social/x/dex/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/x/common"
-	govRest "github.com/okex/exchain/x/gov/client/rest"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/rest"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	govRest "github.com/fibonacci-chain/fbc-social/x/gov/client/rest"
 
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
 	"github.com/gorilla/mux"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
 )
 
 // RegisterRoutes - Central function to define routes that get registered by the main application

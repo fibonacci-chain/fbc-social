@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"time"
 
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	commitmenttypes "github.com/okex/exchain/libs/ibc-go/modules/core/23-commitment/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	clienttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	commitmenttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/23-commitment/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 var _ exported.Header = &Header{}

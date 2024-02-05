@@ -13,17 +13,17 @@ import (
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 	"github.com/spf13/viper"
 
-	ethermint "github.com/okex/exchain/app/types"
-	clientCtx "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerror "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	"github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/token"
-	wasmkeeper "github.com/okex/exchain/x/wasm/keeper"
-	wasmtypes "github.com/okex/exchain/x/wasm/types"
+	ethermint "github.com/fibonacci-chain/fbc-social/app/types"
+	clientCtx "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerror "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	authexported "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/x/token"
+	wasmkeeper "github.com/fibonacci-chain/fbc-social/x/wasm/keeper"
+	wasmtypes "github.com/fibonacci-chain/fbc-social/x/wasm/types"
 )
 
 const (
@@ -40,7 +40,7 @@ const (
 	RPCNullData  = "null"
 )
 
-//gasPrice: to get "minimum-gas-prices" config or to get ethermint.DefaultGasPrice
+// gasPrice: to get "minimum-gas-prices" config or to get ethermint.DefaultGasPrice
 func ParseGasPrice() *hexutil.Big {
 	gasPrices, err := sdk.ParseDecCoins(viper.GetString(server.FlagMinGasPrices))
 	if err == nil && gasPrices != nil && len(gasPrices) > 0 {
@@ -179,9 +179,9 @@ func TransformDataError(err error, method string) error {
 	}
 }
 
-//Preprocess error string, the string of realErr.Log is most like:
-//`["execution reverted","message","HexData","0x00000000000"];some failed information`
-//we need marshalled json slice from realErr.Log and using segment tag `[` and `]` to cut it
+// Preprocess error string, the string of realErr.Log is most like:
+// `["execution reverted","message","HexData","0x00000000000"];some failed information`
+// we need marshalled json slice from realErr.Log and using segment tag `[` and `]` to cut it
 func preProcessError(realErr *cosmosError, origErrorMsg string) (map[string]string, error) {
 	var logs []string
 	lastSeg := strings.LastIndexAny(realErr.Log, "]")

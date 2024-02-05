@@ -2,12 +2,12 @@ package staking
 
 import (
 	"encoding/json"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	types2 "github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
-	"github.com/okex/exchain/libs/ibc-go/testing/simapp/adapter"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/staking"
-	"github.com/okex/exchain/x/staking/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	types2 "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing/simapp/adapter"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/x/staking"
+	"github.com/fibonacci-chain/fbc-social/x/staking/types"
 )
 
 type StakingModule struct {

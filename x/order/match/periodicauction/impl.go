@@ -1,9 +1,9 @@
 package periodicauction
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/x/order/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/order/keeper"
 )
 
 // PaEngine is the periodic auction match engine

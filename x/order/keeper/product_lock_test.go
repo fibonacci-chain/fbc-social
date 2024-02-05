@@ -5,8 +5,8 @@ package keeper
 import (
 	"testing"
 
-	"github.com/okex/exchain/x/dex"
-	"github.com/okex/exchain/x/order/types"
+	"github.com/fibonacci-chain/fbc-social/x/dex"
+	"github.com/fibonacci-chain/fbc-social/x/order/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -2,13 +2,13 @@ package types
 
 import (
 	"fmt"
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params/subspace"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params/subspace"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkparams "github.com/okex/exchain/libs/cosmos-sdk/x/params"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkparams "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params"
 )
 
 const (

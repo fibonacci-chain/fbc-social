@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	tmtime "github.com/fibonacci-chain/fbc-social/libs/tendermint/types/time"
 	"io"
 	"path/filepath"
 	"testing"
@@ -12,18 +12,18 @@ import (
 
 	"github.com/pkg/errors"
 
-	db "github.com/okex/exchain/libs/tm-db"
+	db "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
-	"github.com/okex/exchain/libs/tendermint/abci/example/kvstore"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	"github.com/okex/exchain/libs/tendermint/mock"
-	"github.com/okex/exchain/libs/tendermint/privval"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/store"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/example/kvstore"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	tmrand "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/mock"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/privval"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/proxy"
+	sm "github.com/fibonacci-chain/fbc-social/libs/tendermint/state"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/store"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 // WALGenerateNBlocks generates a consensus WAL. It does this by spinning up a
@@ -106,7 +106,7 @@ func WALGenerateNBlocks(t *testing.T, wr io.Writer, numBlocks int) (err error) {
 	}
 }
 
-//WALWithNBlocks returns a WAL content with numBlocks.
+// WALWithNBlocks returns a WAL content with numBlocks.
 func WALWithNBlocks(t *testing.T, numBlocks int) (data []byte, err error) {
 	var b bytes.Buffer
 	wr := bufio.NewWriter(&b)

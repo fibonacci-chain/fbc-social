@@ -2,9 +2,9 @@ package tracetxlog
 
 import (
 	"fmt"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/evm/txs/base"
-	"github.com/okex/exchain/x/evm/txs/check"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/txs/base"
+	"github.com/fibonacci-chain/fbc-social/x/evm/txs/check"
 )
 
 // tx trace tx log depends on check tx

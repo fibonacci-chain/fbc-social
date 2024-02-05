@@ -6,11 +6,11 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/rest"
+	"github.com/fibonacci-chain/fbc-social/x/ammswap/types"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 	"github.com/gorilla/mux"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/x/ammswap/types"
-	"github.com/okex/exchain/x/common"
 )
 
 func registerQueryRoutes(cliCtx context.CLIContext, r *mux.Router) {

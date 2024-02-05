@@ -4,18 +4,18 @@ import (
 	"testing"
 	"time"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmkv "github.com/okex/exchain/libs/tendermint/libs/kv"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	tmkv "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/kv"
+	tmtime "github.com/fibonacci-chain/fbc-social/libs/tendermint/types/time"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/vesting"
-	keep "github.com/okex/exchain/libs/cosmos-sdk/x/bank/internal/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank/internal/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/simapp"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/vesting"
+	keep "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank/internal/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank/internal/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply"
 )
 
 const (

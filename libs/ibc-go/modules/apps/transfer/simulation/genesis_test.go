@@ -11,11 +11,11 @@ import (
 	//	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	//	"github.com/cosmos/cosmos-sdk/types/module"
 	//	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	simtypes "github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/simulation"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
+	simtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/simulation"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer/simulation"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer/types"
 )
 
 // TestRandomizedGenState tests the normal scenario of applying RandomizedGenState.

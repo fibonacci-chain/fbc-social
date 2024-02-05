@@ -7,13 +7,13 @@ import (
 	"io/ioutil"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	tmbytes "github.com/okex/exchain/libs/tendermint/libs/bytes"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
-	"github.com/okex/exchain/libs/tendermint/libs/tempfile"
-	"github.com/okex/exchain/libs/tendermint/types"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
+	tmbytes "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bytes"
+	tmos "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/os"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/tempfile"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	tmtime "github.com/fibonacci-chain/fbc-social/libs/tendermint/types/time"
 )
 
 // TODO: type ?

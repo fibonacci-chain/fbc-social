@@ -2,26 +2,26 @@ package ante_test
 
 import (
 	"fmt"
-	"github.com/stretchr/testify/assert"
 	"github.com/spf13/viper"
+	"github.com/stretchr/testify/assert"
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/multisig"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/secp256k1"
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/tx/signing"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/ante"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/tx/signing"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/ante"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	"github.com/okex/exchain/libs/tendermint/crypto/etherhash"
-	types2 "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/etherhash"
+	types2 "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 func TestSetPubKey(t *testing.T) {

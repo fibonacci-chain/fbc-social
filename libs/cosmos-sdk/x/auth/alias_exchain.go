@@ -1,8 +1,8 @@
 package auth
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/keeper"
 )
 
 type (

@@ -6,11 +6,11 @@ import (
 	"sort"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	types2 "github.com/okex/exchain/libs/tendermint/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
-	"github.com/okex/exchain/x/wasm/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	types2 "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
 )
 
 // NewWasmProposalHandler creates a new governance Handler for wasm proposals

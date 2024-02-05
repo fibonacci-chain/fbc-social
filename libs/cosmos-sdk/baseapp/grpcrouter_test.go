@@ -2,22 +2,22 @@ package baseapp_test
 
 import (
 	"context"
-	okexchaincodec "github.com/okex/exchain/app/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp"
-	simapp2 "github.com/okex/exchain/libs/ibc-go/testing/simapp"
-	"github.com/okex/exchain/x/evm"
+	okexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/simapp"
+	simapp2 "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing/simapp"
+	"github.com/fibonacci-chain/fbc-social/x/evm"
 	"os"
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	//"github.com/okex/exchain/libs/cosmos-sdk/simapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/evm/types/testdata"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	//"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/simapp"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types/testdata"
 )
 
 func TestGRPCGatewayRouter(t *testing.T) {

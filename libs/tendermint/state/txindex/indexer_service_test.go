@@ -4,18 +4,18 @@ import (
 	"testing"
 	"time"
 
-	blockindexer "github.com/okex/exchain/libs/tendermint/state/indexer/block/kv"
+	blockindexer "github.com/fibonacci-chain/fbc-social/libs/tendermint/state/indexer/block/kv"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	db "github.com/okex/exchain/libs/tm-db"
+	db "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/state/txindex"
-	"github.com/okex/exchain/libs/tendermint/state/txindex/kv"
-	"github.com/okex/exchain/libs/tendermint/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/state/txindex"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/state/txindex/kv"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 func TestIndexerServiceIndexesBlocks(t *testing.T) {

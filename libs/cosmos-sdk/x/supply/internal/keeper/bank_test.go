@@ -3,13 +3,13 @@ package keeper_test
 import (
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply"
 
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	keep "github.com/okex/exchain/libs/cosmos-sdk/x/supply/internal/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/internal/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	keep "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/internal/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/internal/types"
 )
 
 const initialPower = int64(100)

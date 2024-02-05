@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/x/evidence/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/x/evidence/exported"
 )
 
 // ModuleCdc defines the evidence module's codec. The codec is not sealed as to

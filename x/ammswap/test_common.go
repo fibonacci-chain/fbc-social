@@ -1,9 +1,9 @@
 package ammswap
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	swapkeeper "github.com/okex/exchain/x/ammswap/keeper"
-	"github.com/okex/exchain/x/ammswap/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	swapkeeper "github.com/fibonacci-chain/fbc-social/x/ammswap/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/ammswap/types"
 	"github.com/stretchr/testify/require"
 	"testing"
 	"time"

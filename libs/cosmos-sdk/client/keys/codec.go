@@ -1,7 +1,7 @@
 package keys
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
 )
 
 // KeysCdc defines codec to be used with key operations

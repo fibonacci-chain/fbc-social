@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	paramtypes "github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	paramtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
 )
 
 var (

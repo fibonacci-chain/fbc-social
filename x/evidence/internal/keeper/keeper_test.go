@@ -5,21 +5,21 @@ import (
 	"os"
 	"testing"
 
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/app"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	"github.com/okex/exchain/x/evidence"
-	"github.com/okex/exchain/x/evidence/exported"
-	"github.com/okex/exchain/x/evidence/internal/keeper"
-	"github.com/okex/exchain/x/evidence/internal/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply"
+	"github.com/fibonacci-chain/fbc-social/x/evidence"
+	"github.com/fibonacci-chain/fbc-social/x/evidence/exported"
+	"github.com/fibonacci-chain/fbc-social/x/evidence/internal/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/evidence/internal/types"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -58,31 +58,31 @@ type KeeperTestSuite struct {
 	ctx     sdk.Context
 	querier sdk.Querier
 	keeper  keeper.Keeper
-	app     *app.OKExChainApp
+	app     *app.FBChainApp
 }
 
-func MakeOKEXApp() *app.OKExChainApp {
+func MakeFBChainApp() *app.FBChainApp {
 	genesisState := app.NewDefaultGenesisState()
 	db := dbm.NewMemDB()
-	okexapp := app.NewOKExChainApp(log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, nil, true, map[int64]bool{}, 0)
+	fbapp := app.NewFBChainApp(log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, nil, true, map[int64]bool{}, 0)
 
-	stateBytes, err := codec.MarshalJSONIndent(okexapp.Codec(), genesisState)
+	stateBytes, err := codec.MarshalJSONIndent(fbapp.Codec(), genesisState)
 	if err != nil {
 		panic(err)
 	}
-	okexapp.InitChain(
+	fbapp.InitChain(
 		abci.RequestInitChain{
 			Validators:    []abci.ValidatorUpdate{},
 			AppStateBytes: stateBytes,
 		},
 	)
-	return okexapp
+	return fbapp
 }
 
 func (suite *KeeperTestSuite) SetupTest() {
 	checkTx := false
 
-	app := MakeOKEXApp()
+	app := MakeFBChainApp()
 	// get the app's codec and register custom testing types
 	cdc := app.Codec()
 	cdc.RegisterConcrete(types.TestEquivocationEvidence{}, "test/TestEquivocationEvidence", nil)

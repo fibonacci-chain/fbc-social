@@ -1,8 +1,8 @@
 package simulation
 
 import (
-	simappparams "github.com/okex/exchain/libs/cosmos-sdk/simapp/params"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
+	simappparams "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/simapp/params"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/simulation"
 )
 
 // OpWeightSubmitParamChangeProposal app params key for param change proposal

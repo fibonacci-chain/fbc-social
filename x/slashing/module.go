@@ -8,18 +8,18 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/spf13/cobra"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	sim "github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
-	"github.com/okex/exchain/x/slashing/client/cli"
-	"github.com/okex/exchain/x/slashing/client/rest"
-	"github.com/okex/exchain/x/slashing/internal/types"
-	"github.com/okex/exchain/x/slashing/simulation"
-	stakingkeeper "github.com/okex/exchain/x/staking/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
+	sim "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/simulation"
+	"github.com/fibonacci-chain/fbc-social/x/slashing/client/cli"
+	"github.com/fibonacci-chain/fbc-social/x/slashing/client/rest"
+	"github.com/fibonacci-chain/fbc-social/x/slashing/internal/types"
+	"github.com/fibonacci-chain/fbc-social/x/slashing/simulation"
+	stakingkeeper "github.com/fibonacci-chain/fbc-social/x/staking/keeper"
 )
 
 var (

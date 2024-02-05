@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/dex/types"
-	ordertypes "github.com/okex/exchain/x/order/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/dex/types"
+	ordertypes "github.com/fibonacci-chain/fbc-social/x/order/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -27,7 +27,7 @@ func TestInitGenesis(t *testing.T) {
 	operators = append(operators, types.DEXOperator{
 		Address:            tokenPair.Owner,
 		HandlingFeeAddress: tokenPair.Owner,
-		Website:            "http://www.okexchain.com/operator.json",
+		Website:            "http://www.fbchain.org/operator.json",
 		InitHeight:         100,
 	})
 

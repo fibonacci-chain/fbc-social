@@ -4,11 +4,11 @@ import (
 	"context"
 	"fmt"
 
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
+	codectypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/types/tx"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/tx"
 
 	"github.com/gogo/protobuf/proto"
 	"google.golang.org/grpc"

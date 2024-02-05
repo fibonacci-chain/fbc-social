@@ -1,10 +1,10 @@
 package types
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	cdctypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	txmsg "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/msgservice"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	cdctypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	txmsg "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/ibc-adapter"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/msgservice"
 )
 
 var (

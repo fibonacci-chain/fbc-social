@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/controller/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/27-interchain-accounts/controller/types"
 )
 
 // IsControllerEnabled retrieves the controller enabled boolean from the paramstore.

@@ -3,9 +3,9 @@ package distribution
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/x/distribution/types"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/types"
 )
 
 // InitGenesis sets distribution information for genesis

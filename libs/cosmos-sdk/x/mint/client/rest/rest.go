@@ -1,10 +1,10 @@
 package rest
 
 import (
+	govRest "github.com/fibonacci-chain/fbc-social/x/gov/client/rest"
 	"github.com/gorilla/mux"
-	govRest "github.com/okex/exchain/x/gov/client/rest"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
 )
 
 // RegisterRoutes registers minting module REST handlers on the provided router.

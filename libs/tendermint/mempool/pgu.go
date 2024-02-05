@@ -2,13 +2,13 @@ package mempool
 
 import (
 	"encoding/binary"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
 	"path/filepath"
 	"sync"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	db "github.com/okex/exchain/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	db "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 	"github.com/spf13/viper"
 )
 

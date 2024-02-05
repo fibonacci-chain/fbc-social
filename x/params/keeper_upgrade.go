@@ -3,8 +3,8 @@ package params
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/params/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/params/types"
 )
 
 // ClaimReadyForUpgrade tells Keeper that someone has get ready for the upgrade.

@@ -6,11 +6,11 @@ import (
 	"path/filepath"
 
 	ethcmn "github.com/ethereum/go-ethereum/common"
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/app"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -113,7 +113,7 @@ func displayContractState(ctx *server.Context) {
 	})
 }
 
-func newDisplayApp(ctx *server.Context) *app.OKExChainApp {
+func newDisplayApp(ctx *server.Context) *app.FBChainApp {
 	rootDir := ctx.Config.RootDir
 	dataDir := filepath.Join(rootDir, "data")
 	db, err := sdk.NewDB(applicationDB, dataDir)
@@ -121,7 +121,7 @@ func newDisplayApp(ctx *server.Context) *app.OKExChainApp {
 		panic("fail to open application db: " + err.Error())
 	}
 
-	return app.NewOKExChainApp(
+	return app.NewFBChainApp(
 		ctx.Logger,
 		db,
 		nil,

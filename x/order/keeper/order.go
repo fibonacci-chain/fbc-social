@@ -3,11 +3,11 @@ package keeper
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 
-	"github.com/okex/exchain/x/order/types"
-	token "github.com/okex/exchain/x/token/types"
+	"github.com/fibonacci-chain/fbc-social/x/order/types"
+	token "github.com/fibonacci-chain/fbc-social/x/token/types"
 )
 
 // TryPlaceOrder tries to charge fee & lock coins for a new order

@@ -1,12 +1,12 @@
 package types_test
 
 import (
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	commitmenttypes "github.com/okex/exchain/libs/ibc-go/modules/core/23-commitment/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
-	"github.com/okex/exchain/libs/ibc-go/modules/light-clients/07-tendermint/types"
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
-	upgradetypes "github.com/okex/exchain/libs/ibc-go/testing/simapp/types"
+	clienttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	commitmenttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/23-commitment/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/light-clients/07-tendermint/types"
+	ibctesting "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing"
+	upgradetypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing/simapp/types"
 )
 
 var (

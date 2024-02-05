@@ -3,9 +3,9 @@ package keeper
 import (
 	"math/big"
 
-	"github.com/okex/exchain/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
 	ethcmn "github.com/ethereum/go-ethereum/common"
 )

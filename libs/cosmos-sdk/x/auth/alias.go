@@ -7,9 +7,9 @@
 package auth
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/ante"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/ante"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
 )
 
 const (

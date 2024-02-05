@@ -1,8 +1,8 @@
 package farm
 
 import (
-	"github.com/okex/exchain/x/farm/keeper"
-	"github.com/okex/exchain/x/farm/types"
+	"github.com/fibonacci-chain/fbc-social/x/farm/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/farm/types"
 )
 
 const (

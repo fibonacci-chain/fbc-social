@@ -3,8 +3,8 @@ package indexer
 import (
 	"context"
 
-	"github.com/okex/exchain/libs/tendermint/libs/pubsub/query"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/pubsub/query"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 // BlockIndexer defines an interface contract for indexing block events.

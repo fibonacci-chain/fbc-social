@@ -1,14 +1,14 @@
 package sanity
 
 import (
-	apptype "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	"github.com/okex/exchain/libs/tendermint/consensus"
-	"github.com/okex/exchain/libs/tendermint/state"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	ttypes "github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/evm/watcher"
+	apptype "github.com/fibonacci-chain/fbc-social/app/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/consensus"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/state"
+	sm "github.com/fibonacci-chain/fbc-social/libs/tendermint/state"
+	ttypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/watcher"
 	"github.com/spf13/cobra"
 	"testing"
 )

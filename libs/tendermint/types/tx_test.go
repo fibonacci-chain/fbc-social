@@ -7,14 +7,14 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/etherhash"
-	"github.com/okex/exchain/libs/tendermint/crypto/tmhash"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	ctest "github.com/okex/exchain/libs/tendermint/libs/test"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/etherhash"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/tmhash"
+	tmrand "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
+	ctest "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/test"
 )
 
 func makeTxs(cnt, size int) Txs {

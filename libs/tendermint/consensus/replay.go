@@ -11,16 +11,16 @@ import (
 	//"strings"
 	"time"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	//auto "github.com/okex/exchain/libs/tendermint/libs/autofile"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	//auto "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/autofile"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/mock"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/libs/tendermint/version"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/mock"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/proxy"
+	sm "github.com/fibonacci-chain/fbc-social/libs/tendermint/state"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/version"
 )
 
 var crc32c = crc32.MakeTable(crc32.Castagnoli)

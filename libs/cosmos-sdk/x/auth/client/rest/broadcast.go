@@ -1,13 +1,13 @@
 package rest
 
 import (
-	ttypes "github.com/okex/exchain/libs/tendermint/types"
+	ttypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"io/ioutil"
 	"net/http"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/rest"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
 )
 
 // BroadcastReq defines a tx broadcasting request.

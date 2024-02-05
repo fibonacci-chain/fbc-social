@@ -3,8 +3,8 @@ package keeper
 import (
 	"context"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/27-interchain-accounts/host/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/27-interchain-accounts/host/types"
 )
 
 var _ types.QueryServer = Keeper{}

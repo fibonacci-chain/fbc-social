@@ -7,15 +7,15 @@ import (
 	"strings"
 	"time"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/staking/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking/exported"
 )
 
 // nolint
@@ -490,7 +490,8 @@ func (v Validator) RemoveTokens(tokens sdk.Int) Validator {
 
 // RemoveDelShares removes delegator shares from a validator.
 // NOTE: because token fractions are left in the valiadator,
-//       the exchange rate of future shares of this validator can increase.
+//
+//	the exchange rate of future shares of this validator can increase.
 func (v Validator) RemoveDelShares(delShares sdk.Dec) (Validator, sdk.Int) {
 
 	remainingShares := v.DelegatorShares.Sub(delShares)

@@ -3,35 +3,35 @@ package main
 import (
 	"fmt"
 
-	interfacetypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
+	interfacetypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
 
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	authtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
 
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/app/codec"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	okexchain "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/cmd/client"
-	sdkclient "github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	clientkeys "github.com/okex/exchain/libs/cosmos-sdk/client/keys"
-	clientrpc "github.com/okex/exchain/libs/cosmos-sdk/client/rpc"
-	sdkcodec "github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	authcmd "github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/cli"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	tmamino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
-	"github.com/okex/exchain/x/dex"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/order"
-	tokencmd "github.com/okex/exchain/x/token/client/cli"
+	"github.com/fibonacci-chain/fbc-social/app"
+	"github.com/fibonacci-chain/fbc-social/app/codec"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
+	fbchain "github.com/fibonacci-chain/fbc-social/app/types"
+	"github.com/fibonacci-chain/fbc-social/cmd/client"
+	sdkclient "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
+	clientkeys "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/keys"
+	clientrpc "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/rpc"
+	sdkcodec "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/keys"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/version"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	authcmd "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/client/cli"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank"
+	tmamino "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/encoding/amino"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/multisig"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/cli"
+	"github.com/fibonacci-chain/fbc-social/x/dex"
+	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/x/order"
+	tokencmd "github.com/fibonacci-chain/fbc-social/x/token/client/cli"
 	"github.com/spf13/cobra"
 )
 
@@ -53,12 +53,12 @@ func main() {
 
 	// Read in the configuration file for the sdk
 	config := sdk.GetConfig()
-	okexchain.SetBech32Prefixes(config)
-	okexchain.SetBip44CoinType(config)
+	fbchain.SetBech32Prefixes(config)
+	fbchain.SetBip44CoinType(config)
 	config.Seal()
 
 	rootCmd := &cobra.Command{
-		Use:   "exchaincli",
+		Use:   "fbchaincli",
 		Short: "Command line interface for interacting with exchaind",
 	}
 
@@ -84,8 +84,8 @@ func main() {
 		flags.NewCompletionCmd(rootCmd, true),
 	)
 
-	// Add flags and prefix all env exposed with OKEXCHAIN
-	executor := cli.PrepareMainCmd(rootCmd, "OKEXCHAIN", app.DefaultCLIHome)
+	// Add flags and prefix all env exposed with FBCHAIN
+	executor := cli.PrepareMainCmd(rootCmd, "FBCHAIN", app.DefaultCLIHome)
 
 	err := executor.Execute()
 	if err != nil {

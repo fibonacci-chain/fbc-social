@@ -4,12 +4,12 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	tmkv "github.com/okex/exchain/libs/tendermint/libs/kv"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	tmkv "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/kv"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/slashing/internal/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/slashing/internal/types"
 )
 
 // DecodeStore unmarshals the KVPair's Value to the corresponding slashing type

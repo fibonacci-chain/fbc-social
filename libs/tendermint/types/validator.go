@@ -6,14 +6,14 @@ import (
 	"fmt"
 	"strings"
 
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
 
-	"github.com/okex/exchain/libs/tendermint/global"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/global"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	ce "github.com/okex/exchain/libs/tendermint/crypto/encoding"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	tmproto "github.com/okex/exchain/libs/tendermint/proto/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	ce "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/encoding"
+	tmrand "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
+	tmproto "github.com/fibonacci-chain/fbc-social/libs/tendermint/proto/types"
 )
 
 // Volatile state for each Validator

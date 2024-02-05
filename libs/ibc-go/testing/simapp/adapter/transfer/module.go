@@ -4,17 +4,17 @@ import (
 	"encoding/json"
 	"fmt"
 
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	porttypes "github.com/okex/exchain/libs/ibc-go/modules/core/05-port/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	capabilitytypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/types"
+	porttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/05-port/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/transfer"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/keeper"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	"github.com/okex/exchain/libs/ibc-go/testing/simapp/adapter"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing/simapp/adapter"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 )
 
 var (

@@ -6,28 +6,28 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/mpt"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/mpt"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 
-	"github.com/okex/exchain/x/common/monitor"
+	"github.com/fibonacci-chain/fbc-social/x/common/monitor"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/store"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	"github.com/okex/exchain/x/params"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/x/params"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/dex"
-	"github.com/okex/exchain/x/order/types"
-	"github.com/okex/exchain/x/token"
+	"github.com/fibonacci-chain/fbc-social/x/dex"
+	"github.com/fibonacci-chain/fbc-social/x/order/types"
+	"github.com/fibonacci-chain/fbc-social/x/token"
 )
 
 var mockOrder = types.MockOrder

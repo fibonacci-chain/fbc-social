@@ -2,9 +2,9 @@ package consensus
 
 import (
 	"fmt"
-	cstypes "github.com/okex/exchain/libs/tendermint/consensus/types"
-	"github.com/okex/exchain/libs/tendermint/types"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	cstypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/consensus/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	tmtime "github.com/fibonacci-chain/fbc-social/libs/tendermint/types/time"
 )
 
 //-----------------------------------------------------------------------------

@@ -3,13 +3,13 @@ package fee
 import (
 	"encoding/json"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/29-fee/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	fee "github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/keeper"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	fee "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/29-fee"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/29-fee/keeper"
 )
 
 type TestFeeAppModuleBaisc struct {

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkgovtypes "github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkgovtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/gov/types"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 type UpgradeStatus uint32

@@ -3,11 +3,11 @@ package keeper
 import (
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
-	"github.com/okex/exchain/x/dex/types"
-	ordertypes "github.com/okex/exchain/x/order/types"
-	"github.com/okex/exchain/x/params"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/exported"
+	"github.com/fibonacci-chain/fbc-social/x/dex/types"
+	ordertypes "github.com/fibonacci-chain/fbc-social/x/order/types"
+	"github.com/fibonacci-chain/fbc-social/x/params"
 )
 
 // SupplyKeeper defines the expected supply Keeper

@@ -4,13 +4,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/x/gov/keeper"
-	"github.com/okex/exchain/x/gov/types"
-	"github.com/okex/exchain/x/params"
-	paramsTypes "github.com/okex/exchain/x/params/types"
-	"github.com/okex/exchain/x/staking"
+	"github.com/fibonacci-chain/fbc-social/x/gov/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/x/params"
+	paramsTypes "github.com/fibonacci-chain/fbc-social/x/params/types"
+	"github.com/fibonacci-chain/fbc-social/x/staking"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 )
 

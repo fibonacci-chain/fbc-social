@@ -3,13 +3,13 @@ package rest
 import (
 	"net/http"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/rest"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	"github.com/okex/exchain/x/gov"
-	govrest "github.com/okex/exchain/x/gov/client/rest"
-	"github.com/okex/exchain/x/params/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/rest"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/fibonacci-chain/fbc-social/x/gov"
+	govrest "github.com/fibonacci-chain/fbc-social/x/gov/client/rest"
+	"github.com/fibonacci-chain/fbc-social/x/params/types"
 )
 
 // UpgradeProposalReq defines a upgrade proposal request body

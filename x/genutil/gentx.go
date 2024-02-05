@@ -6,13 +6,13 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/genutil/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	stakingtypes "github.com/okex/exchain/x/staking/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	authexported "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/exported"
+	authtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/genutil/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	stakingtypes "github.com/fibonacci-chain/fbc-social/x/staking/types"
 )
 
 // ValidateAccountInGenesis checks that the provided key has sufficient coins in the genesis accounts

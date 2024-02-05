@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	params "github.com/okex/exchain/libs/cosmos-sdk/x/params/subspace"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	params "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params/subspace"
 )
 
 // Default period for deposits & voting

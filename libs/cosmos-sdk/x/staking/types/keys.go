@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 const (
@@ -25,7 +25,7 @@ const (
 	RouterKey = ModuleName
 )
 
-//nolint
+// nolint
 var (
 	// Keys for store prefixes
 	// Last* values are constant during a block.

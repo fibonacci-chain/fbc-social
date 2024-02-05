@@ -1,8 +1,8 @@
 package v0_11
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/order/legacy/v0_10"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/order/legacy/v0_10"
 )
 
 const (

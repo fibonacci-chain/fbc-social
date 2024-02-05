@@ -1,9 +1,9 @@
 package types
 
 import (
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	cryptotypes "github.com/okex/exchain/libs/cosmos-sdk/crypto/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	codectypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	cryptotypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
 )
 
 // Interface implementation checks.

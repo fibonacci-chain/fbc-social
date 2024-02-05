@@ -4,12 +4,12 @@ import (
 	"time"
 
 	ethcmn "github.com/ethereum/go-ethereum/common"
-	ethermint "github.com/okex/exchain/app/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/x/evm/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
-	staking_types "github.com/okex/exchain/x/staking/types"
+	ethermint "github.com/fibonacci-chain/fbc-social/app/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
+	staking_types "github.com/fibonacci-chain/fbc-social/x/staking/types"
 	"github.com/stretchr/testify/require"
 )
 

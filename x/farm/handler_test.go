@@ -10,15 +10,15 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	swap "github.com/okex/exchain/x/ammswap"
-	swaptypes "github.com/okex/exchain/x/ammswap/types"
-	"github.com/okex/exchain/x/farm/keeper"
-	"github.com/okex/exchain/x/farm/types"
-	"github.com/okex/exchain/x/token"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	swap "github.com/fibonacci-chain/fbc-social/x/ammswap"
+	swaptypes "github.com/fibonacci-chain/fbc-social/x/ammswap/types"
+	"github.com/fibonacci-chain/fbc-social/x/farm/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/farm/types"
+	"github.com/fibonacci-chain/fbc-social/x/token"
 	"github.com/stretchr/testify/require"
 )
 
@@ -30,7 +30,7 @@ type testContext struct {
 	tokenOwner        sdk.AccAddress
 	nonPairTokenName  []string
 	nonExistTokenName []string
-	addrList          []sdk.AccAddress // 1000 okt per address
+	addrList          []sdk.AccAddress // 1000 fibo per address
 	handler           sdk.Handler
 }
 
@@ -308,7 +308,7 @@ func TestHandlerMsgCreatePool(t *testing.T) {
 			getMsg:       normalGetCreatePoolMsg,
 			verification: verification,
 			expectedErr: errors.New(
-				"insufficient coins: insufficient funds: insufficient account funds; 89900.000000000000000000aab,101.000000000000000000ammswap_aab_ccb,89900.000000000000000000ccb,100000.000000000000000000ddb,1000.000000000000000000okt < 1.000000000000000000fff",
+				"insufficient coins: insufficient funds: insufficient account funds; 89900.000000000000000000aab,101.000000000000000000ammswap_aab_ccb,89900.000000000000000000ccb,100000.000000000000000000ddb,1000.000000000000000000fibo < 1.000000000000000000fff",
 			),
 		},
 		{
@@ -322,7 +322,7 @@ func TestHandlerMsgCreatePool(t *testing.T) {
 			getMsg:       normalGetCreatePoolMsg,
 			verification: verification,
 			expectedErr: errors.New(
-				"insufficient coins: insufficient funds: insufficient account funds; 89900.000000000000000000aab,101.000000000000000000ammswap_aab_ccb,89900.000000000000000000ccb,100000.000000000000000000ddb,1000.000000000000000000okt < 1.000000000000000000fff",
+				"insufficient coins: insufficient funds: insufficient account funds; 89900.000000000000000000aab,101.000000000000000000ammswap_aab_ccb,89900.000000000000000000ccb,100000.000000000000000000ddb,1000.000000000000000000fibo < 1.000000000000000000fff",
 			),
 		},
 	}
@@ -380,7 +380,7 @@ func TestHandlerMsgDestroyPool(t *testing.T) {
 			},
 			getMsg:       normalGetDestroyPoolMsg,
 			verification: verification,
-			expectedErr:  errors.New("insufficient coins: insufficient funds: insufficient account funds; 10.000000000000000000okt < 1.000000000000000000fff"),
+			expectedErr:  errors.New("insufficient coins: insufficient funds: insufficient account funds; 10.000000000000000000fibo < 1.000000000000000000fff"),
 		},
 		{
 			caseName: "failed. the pool is not finished and can not be destroyed",

@@ -2,7 +2,7 @@ package query
 
 import (
 	"fmt"
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 // FilteredPaginate does pagination of all the results in the PrefixStore based on the

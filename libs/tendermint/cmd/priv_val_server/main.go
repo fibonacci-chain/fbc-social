@@ -5,12 +5,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmnet "github.com/okex/exchain/libs/tendermint/libs/net"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	tmnet "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/net"
+	tmos "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/os"
 
-	"github.com/okex/exchain/libs/tendermint/privval"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/privval"
 )
 
 func main() {

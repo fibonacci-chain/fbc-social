@@ -10,10 +10,10 @@ import (
 	"sync"
 	"testing"
 
+	"github.com/fibonacci-chain/fbc-social/libs/iavl/mock"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
+	db "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 	"github.com/golang/mock/gomock"
-	"github.com/okex/exchain/libs/iavl/mock"
-	"github.com/okex/exchain/libs/tendermint/libs/rand"
-	db "github.com/okex/exchain/libs/tm-db"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/go-amino"

@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	tmmath "github.com/okex/exchain/libs/tendermint/libs/math"
-	lite "github.com/okex/exchain/libs/tendermint/lite2"
-	"github.com/okex/exchain/libs/tendermint/types"
+	tmmath "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/math"
+	lite "github.com/fibonacci-chain/fbc-social/libs/tendermint/lite2"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 const (

@@ -1,8 +1,8 @@
 package mock
 
 import (
-	"github.com/okex/exchain/libs/tendermint/rpc/client"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/client"
+	ctypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/core/types"
 )
 
 // StatusMock returns the result specified by the Call

@@ -12,21 +12,21 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/libs/clist"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/clist"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
 	amino "github.com/tendermint/go-amino"
 
-	"github.com/okex/exchain/libs/tendermint/abci/example/counter"
-	"github.com/okex/exchain/libs/tendermint/abci/example/kvstore"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/example/counter"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/example/kvstore"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	tmrand "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/proxy"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 const (

@@ -1,8 +1,8 @@
 package p2p
 
 import (
-	"github.com/okex/exchain/libs/tendermint/libs/service"
-	"github.com/okex/exchain/libs/tendermint/p2p/conn"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/service"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p/conn"
 )
 
 // Reactor is responsible for handling incoming messages on one or more

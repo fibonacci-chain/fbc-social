@@ -7,24 +7,24 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	ethermint "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
-	distr "github.com/okex/exchain/x/distribution"
-	"github.com/okex/exchain/x/distribution/keeper"
-	"github.com/okex/exchain/x/evm"
-	evm_types "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/gov"
-	"github.com/okex/exchain/x/gov/types"
-	"github.com/okex/exchain/x/staking"
-	staking_keeper "github.com/okex/exchain/x/staking/keeper"
-	staking_types "github.com/okex/exchain/x/staking/types"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
+	ethermint "github.com/fibonacci-chain/fbc-social/app/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/secp256k1"
+	distr "github.com/fibonacci-chain/fbc-social/x/distribution"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/evm"
+	evm_types "github.com/fibonacci-chain/fbc-social/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/x/gov"
+	"github.com/fibonacci-chain/fbc-social/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/x/staking"
+	staking_keeper "github.com/fibonacci-chain/fbc-social/x/staking/keeper"
+	staking_types "github.com/fibonacci-chain/fbc-social/x/staking/types"
 
 	"github.com/stretchr/testify/suite"
 )
@@ -47,7 +47,7 @@ type InnerTxTestSuite struct {
 	suite.Suite
 
 	ctx     sdk.Context
-	app     *OKExChainApp
+	app     *FBChainApp
 	stateDB *evm_types.CommitStateDB
 	codec   *codec.Codec
 

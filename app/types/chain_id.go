@@ -7,8 +7,8 @@ import (
 	"strings"
 	"sync"
 
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	tendermintTypes "github.com/okex/exchain/libs/tendermint/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	tendermintTypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 var (
@@ -18,8 +18,10 @@ var (
 	ethermintChainID = regexp.MustCompile(fmt.Sprintf(`^(%s)%s(%s)$`, regexChainID, regexSeparator, regexEpoch))
 )
 
-const mainnetChainId = "exchain-66"
-const testnetChainId = "exchain-65"
+const mainnetChainId = "fbc-77777"
+const testnetChainId = "fbc-66666"
+
+
 
 var (
 	chainIdSetOnce    sync.Once

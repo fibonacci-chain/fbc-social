@@ -3,8 +3,8 @@ package distribution
 import (
 	"testing"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/distribution/keeper"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/keeper"
 	"github.com/stretchr/testify/require"
 )
 

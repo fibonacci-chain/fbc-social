@@ -1,14 +1,14 @@
 package evm
 
 import (
-	bam "github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/x/evm/txs"
-	"github.com/okex/exchain/x/evm/txs/base"
-	"github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/evm/watcher"
+	bam "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/x/evm/txs"
+	"github.com/fibonacci-chain/fbc-social/x/evm/txs/base"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/watcher"
 )
 
 // NewHandler returns a handler for Ethermint type messages.

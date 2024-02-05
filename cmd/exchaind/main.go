@@ -7,44 +7,44 @@ import (
 	"os"
 	"strings"
 
-	"github.com/okex/exchain/app/logevents"
-	"github.com/okex/exchain/cmd/exchaind/fss"
-	"github.com/okex/exchain/cmd/exchaind/mpt"
+	"github.com/fibonacci-chain/fbc-social/app/logevents"
+	"github.com/fibonacci-chain/fbc-social/cmd/exchaind/fss"
+	"github.com/fibonacci-chain/fbc-social/cmd/exchaind/mpt"
 
-	"github.com/okex/exchain/app/rpc"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/app/rpc"
+	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmamino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	tmamino "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/encoding/amino"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/multisig"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/cli"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	clientkeys "github.com/okex/exchain/libs/cosmos-sdk/client/keys"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
+	clientkeys "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/keys"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/keys"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
 
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/app/codec"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	okexchain "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/cmd/client"
-	"github.com/okex/exchain/x/genutil"
-	genutilcli "github.com/okex/exchain/x/genutil/client/cli"
-	genutiltypes "github.com/okex/exchain/x/genutil/types"
-	"github.com/okex/exchain/x/staking"
+	"github.com/fibonacci-chain/fbc-social/app"
+	"github.com/fibonacci-chain/fbc-social/app/codec"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
+	fbchain "github.com/fibonacci-chain/fbc-social/app/types"
+	"github.com/fibonacci-chain/fbc-social/cmd/client"
+	"github.com/fibonacci-chain/fbc-social/x/genutil"
+	genutilcli "github.com/fibonacci-chain/fbc-social/x/genutil/client/cli"
+	genutiltypes "github.com/fibonacci-chain/fbc-social/x/genutil/types"
+	"github.com/fibonacci-chain/fbc-social/x/staking"
 )
 
 const flagInvCheckPeriod = "inv-check-period"
-const OkcEnvPrefix = "OKEXCHAIN"
+const FbcEnvPrefix = "FBCHAIN"
 
 var invCheckPeriod uint
 
@@ -63,15 +63,15 @@ func main() {
 	clientkeys.KeysCdc = codecProxy.GetCdc()
 
 	config := sdk.GetConfig()
-	okexchain.SetBech32Prefixes(config)
-	okexchain.SetBip44CoinType(config)
+	fbchain.SetBech32Prefixes(config)
+	fbchain.SetBip44CoinType(config)
 	config.Seal()
 
 	ctx := server.NewDefaultContext()
 
 	rootCmd := &cobra.Command{
-		Use:               "exchaind",
-		Short:             "ExChain App Daemon (server)",
+		Use:               "fbchain",
+		Short:             "FbChain App Daemon (server)",
 		PersistentPreRunE: preRun(ctx),
 	}
 	// CLI commands to initialize the chain
@@ -112,7 +112,7 @@ func main() {
 	preCheckLongFlagSyntax()
 
 	// prepare and add flags
-	executor := cli.PrepareBaseCmd(rootCmd, OkcEnvPrefix, app.DefaultNodeHome)
+	executor := cli.PrepareBaseCmd(rootCmd, FbcEnvPrefix, app.DefaultNodeHome)
 	rootCmd.PersistentFlags().UintVar(&invCheckPeriod, flagInvCheckPeriod,
 		0, "Assert registered invariants every N blocks")
 	rootCmd.PersistentFlags().Bool(server.FlagGops, false, "Enable gops metrics collection")
@@ -133,7 +133,7 @@ func initEnv() {
 }
 
 func checkSetEnv(envName string, value string) {
-	realEnvName := OkcEnvPrefix + "_" + strings.ToUpper(envName)
+	realEnvName := FbcEnvPrefix + "_" + strings.ToUpper(envName)
 	_, ok := os.LookupEnv(realEnvName)
 	if !ok {
 		_ = os.Setenv(realEnvName, value)
@@ -142,7 +142,7 @@ func checkSetEnv(envName string, value string) {
 
 func closeApp(iApp abci.Application) {
 	fmt.Println("Close App")
-	app := iApp.(*app.OKExChainApp)
+	app := iApp.(*app.FBChainApp)
 	app.StopBaseApp()
 	evmtypes.CloseIndexer()
 	rpc.CloseEthBackend()
@@ -155,7 +155,7 @@ func newApp(logger log.Logger, db dbm.DB, traceStore io.Writer) abci.Application
 		panic(err)
 	}
 
-	return app.NewOKExChainApp(
+	return app.NewFBChainApp(
 		logger,
 		db,
 		traceStore,
@@ -171,15 +171,15 @@ func newApp(logger log.Logger, db dbm.DB, traceStore io.Writer) abci.Application
 func exportAppStateAndTMValidators(
 	logger log.Logger, db dbm.DB, traceStore io.Writer, height int64, forZeroHeight bool, jailWhiteList []string,
 ) (json.RawMessage, []tmtypes.GenesisValidator, error) {
-	var ethermintApp *app.OKExChainApp
+	var ethermintApp *app.FBChainApp
 	if height != -1 {
-		ethermintApp = app.NewOKExChainApp(logger, db, traceStore, false, map[int64]bool{}, 0)
+		ethermintApp = app.NewFBChainApp(logger, db, traceStore, false, map[int64]bool{}, 0)
 
 		if err := ethermintApp.LoadHeight(height); err != nil {
 			return nil, nil, err
 		}
 	} else {
-		ethermintApp = app.NewOKExChainApp(logger, db, traceStore, true, map[int64]bool{}, 0)
+		ethermintApp = app.NewFBChainApp(logger, db, traceStore, true, map[int64]bool{}, 0)
 	}
 
 	return ethermintApp.ExportAppStateAndValidators(forZeroHeight, jailWhiteList)

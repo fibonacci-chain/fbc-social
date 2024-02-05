@@ -2,13 +2,13 @@ package cachemulti
 
 import (
 	"fmt"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/cachekv"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/dbadapter"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/cachekv"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/dbadapter"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 	"strconv"
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -8,13 +8,13 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/config"
-	mempl "github.com/okex/exchain/libs/tendermint/mempool"
-	ctypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	rpctypes "github.com/okex/exchain/libs/tendermint/rpc/jsonrpc/types"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	mempl "github.com/fibonacci-chain/fbc-social/libs/tendermint/mempool"
+	ctypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/core/types"
+	rpctypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/jsonrpc/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 //-----------------------------------------------------------------------------

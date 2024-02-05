@@ -5,7 +5,7 @@ import (
 	"compress/gzip"
 	"errors"
 	"fmt"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
 	"io/ioutil"
 	"reflect"
 	"strings"

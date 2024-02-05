@@ -9,14 +9,14 @@ import (
 	"github.com/spf13/viper"
 	yaml "gopkg.in/yaml.v2"
 
-	tcmd "github.com/okex/exchain/libs/tendermint/cmd/tendermint/commands"
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	pvm "github.com/okex/exchain/libs/tendermint/privval"
-	tversion "github.com/okex/exchain/libs/tendermint/version"
+	tcmd "github.com/fibonacci-chain/fbc-social/libs/tendermint/cmd/tendermint/commands"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/cli"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p"
+	pvm "github.com/fibonacci-chain/fbc-social/libs/tendermint/privval"
+	tversion "github.com/fibonacci-chain/fbc-social/libs/tendermint/version"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 // ShowNodeIDCmd - ported from Tendermint, dump node ID to stdout

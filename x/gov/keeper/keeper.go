@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"time"
 
-	supplyexported "github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/gov/types"
-	"github.com/okex/exchain/x/staking/exported"
+	supplyexported "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/exported"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/x/staking/exported"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/x/params"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/x/params"
 )
 
 // Keeper defines governance keeper

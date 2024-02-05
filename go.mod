@@ -1,4 +1,4 @@
-module github.com/okex/exchain
+module github.com/fibonacci-chain/fbc-social
 
 go 1.20
 

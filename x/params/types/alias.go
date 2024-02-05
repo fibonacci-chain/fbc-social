@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params/types"
 )
 
 type (

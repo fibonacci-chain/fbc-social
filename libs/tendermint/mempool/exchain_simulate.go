@@ -1,6 +1,6 @@
 package mempool
 
-import abci "github.com/okex/exchain/libs/tendermint/abci/types"
+import abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 
 // SimulationResponse defines the response generated when a transaction is successfully
 // simulated by the Baseapp.

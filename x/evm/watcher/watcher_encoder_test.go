@@ -6,9 +6,9 @@ import (
 	"math"
 	"testing"
 
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
 	jsoniter "github.com/json-iterator/go"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/evm/types"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/go-amino"
 )

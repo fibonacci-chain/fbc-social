@@ -5,12 +5,12 @@ package dex
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/dex/types"
-	govTypes "github.com/okex/exchain/x/gov/types"
-	ordertypes "github.com/okex/exchain/x/order/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/x/dex/types"
+	govTypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
+	ordertypes "github.com/fibonacci-chain/fbc-social/x/order/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -50,7 +50,7 @@ func TestProposal_NewProposalHandler(t *testing.T) {
 	saveErr := mApp.dexKeeper.SaveTokenPair(ctx, tokenPair)
 	require.Nil(t, saveErr)
 
-	// error case : fail to withdraw deposits because deposits is not okt
+	// error case : fail to withdraw deposits because deposits is not fibo
 	err = proposalHandler(ctx, &proposal)
 	require.Error(t, err)
 

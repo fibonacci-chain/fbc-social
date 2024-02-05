@@ -6,13 +6,13 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/version"
 
-	"github.com/okex/exchain/x/distribution/client/common"
-	"github.com/okex/exchain/x/distribution/types"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/client/common"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/types"
 )
 
 // GetCmdQueryDelegatorRewards implements the query delegator rewards command.
@@ -26,7 +26,7 @@ func GetCmdQueryDelegatorRewards(queryRoute string, cdc *codec.Codec) *cobra.Com
 
 Example:
 $ %s query distr rewards ex1j5mr2jhr9pf20e7yhln5zkcsgqtdt7cydr8x3y
-$ %s query distr rewards ex1j5mr2jhr9pf20e7yhln5zkcsgqtdt7cydr8x3y exvaloper1pt7xrmxul7sx54ml44lvv403r06clrdkehd8z7
+$ %s query distr rewards ex1j5mr2jhr9pf20e7yhln5zkcsgqtdt7cydr8x3y fbvaloper1pt7xrmxul7sx54ml44lvv403r06clrdkehd8z7
 `,
 				version.ClientName, version.ClientName,
 			),
@@ -88,7 +88,7 @@ func GetCmdQueryValidatorOutstandingRewards(queryRoute string, cdc *codec.Codec)
 for a validator and all their delegations.
 
 Example:
-$ %s query distr outstanding-rewards exvaloper1pt7xrmxul7sx54ml44lvv403r06clrdkehd8z7
+$ %s query distr outstanding-rewards fbvaloper1pt7xrmxul7sx54ml44lvv403r06clrdkehd8z7
 `,
 				version.ClientName,
 			),

@@ -1,6 +1,6 @@
 package iavl
 
-import dbm "github.com/okex/exchain/libs/tm-db"
+import dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
 type FastIteratorWithCache struct {
 	*UnsavedFastIterator

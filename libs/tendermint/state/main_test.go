@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 func TestMain(m *testing.M) {

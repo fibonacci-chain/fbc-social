@@ -1,9 +1,9 @@
 package mempool
 
 import (
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/fastmetrics"
 	"github.com/go-kit/kit/metrics"
 	"github.com/go-kit/kit/metrics/discard"
-	"github.com/okex/exchain/libs/tendermint/libs/fastmetrics"
 	stdprometheus "github.com/prometheus/client_golang/prometheus"
 )
 

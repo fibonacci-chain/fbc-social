@@ -3,7 +3,7 @@ package eth
 import (
 	"testing"
 
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
 
 	"github.com/stretchr/testify/require"
 )

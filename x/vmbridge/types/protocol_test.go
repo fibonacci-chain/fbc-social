@@ -2,7 +2,7 @@ package types
 
 import (
 	"github.com/ethereum/go-ethereum/common"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 	"math/big"
 	"testing"

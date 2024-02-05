@@ -1,6 +1,6 @@
 package v0_11
 
-import "github.com/okex/exchain/x/staking/legacy/v0_10"
+import "github.com/fibonacci-chain/fbc-social/x/staking/legacy/v0_10"
 
 func Migrate(oldGenState v0_10.GenesisState) GenesisState {
 	params := Params{

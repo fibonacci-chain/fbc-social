@@ -1,21 +1,21 @@
 package gov
 
 import (
-	okexchaincodec "github.com/okex/exchain/app/codec"
-	interfacetypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	ibctransfer "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer"
-	ibc "github.com/okex/exchain/libs/ibc-go/modules/core"
+	okexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	interfacetypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
+	ibctransfer "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer"
+	ibc "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core"
 	"testing"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	cliLcd "github.com/okex/exchain/libs/cosmos-sdk/client/lcd"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/gov/client"
-	"github.com/okex/exchain/x/gov/client/rest"
-	"github.com/okex/exchain/x/gov/keeper"
-	"github.com/okex/exchain/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	cliLcd "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/lcd"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/x/gov/client"
+	"github.com/fibonacci-chain/fbc-social/x/gov/client/rest"
+	"github.com/fibonacci-chain/fbc-social/x/gov/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/gov/types"
 	"github.com/spf13/cobra"
 	"github.com/stretchr/testify/require"
 )
@@ -47,8 +47,8 @@ func TestNewAppModuleBasic(t *testing.T) {
 		ibc.AppModuleBasic{},
 		ibctransfer.AppModuleBasic{},
 	)
-	//cdc := okexchaincodec.MakeCodec(ModuleBasics)
-	interfaceReg := okexchaincodec.MakeIBC(ModuleBasics)
+	//cdc := fbexchaincodec.MakeCodec(ModuleBasics)
+	interfaceReg := fbexchaincodec.MakeIBC(ModuleBasics)
 	protoCodec := codec.NewProtoCodec(interfaceReg)
 	codecProxy := codec.NewCodecProxy(protoCodec, cdc)
 

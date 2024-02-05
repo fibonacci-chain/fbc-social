@@ -1,12 +1,12 @@
 package distribution
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
-	"github.com/okex/exchain/x/distribution/keeper"
-	"github.com/okex/exchain/x/distribution/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/types"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 // NewHandler manages all distribution tx

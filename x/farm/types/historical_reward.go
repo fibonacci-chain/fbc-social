@@ -1,6 +1,6 @@
 package types
 
-import sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+import sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
 // PoolHistoricalRewards records the reward ratio of one user in a pool
 type PoolHistoricalRewards struct {

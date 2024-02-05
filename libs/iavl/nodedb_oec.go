@@ -10,9 +10,9 @@ import (
 
 	"time"
 
+	"github.com/fibonacci-chain/fbc-social/libs/system/trace"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 	"github.com/go-errors/errors"
-	"github.com/okex/exchain/libs/system/trace"
-	dbm "github.com/okex/exchain/libs/tm-db"
 	"github.com/tendermint/go-amino"
 )
 

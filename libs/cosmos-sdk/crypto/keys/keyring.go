@@ -14,14 +14,14 @@ import (
 	"github.com/99designs/keyring"
 	"github.com/pkg/errors"
 
-	tmcrypto "github.com/okex/exchain/libs/tendermint/crypto"
-	cryptoAmino "github.com/okex/exchain/libs/tendermint/crypto/encoding/amino"
+	tmcrypto "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	cryptoAmino "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/encoding/amino"
 	"github.com/tendermint/crypto/bcrypt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/input"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys/keyerror"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys/mintkey"
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/input"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/keys/keyerror"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/keys/mintkey"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 const (
@@ -497,7 +497,7 @@ func (kb keyringKeybase) writeInfo(name string, info Info) {
 	}
 }
 
-//FileDir show keyringKeybase absolute position
+// FileDir show keyringKeybase absolute position
 func (kb keyringKeybase) FileDir() (string, error) {
 	return resolvePath(kb.fileDir)
 }

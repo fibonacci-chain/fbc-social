@@ -6,8 +6,8 @@ import (
 	"testing"
 
 	ethcmn "github.com/ethereum/go-ethereum/common"
-	"github.com/okex/exchain/libs/tendermint/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 	"github.com/stretchr/testify/suite"
 )
 

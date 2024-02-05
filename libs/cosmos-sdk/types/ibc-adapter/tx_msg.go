@@ -3,9 +3,9 @@ package types
 import (
 	"github.com/gogo/protobuf/proto"
 
-	cryptotypes "github.com/okex/exchain/libs/cosmos-sdk/crypto/types"
-	costypes "github.com/okex/exchain/libs/cosmos-sdk/types"
-	stdtx "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	cryptotypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/types"
+	costypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	stdtx "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
 )
 
 type (
@@ -72,7 +72,7 @@ type (
 )
 
 // TxDecoder unmarshals transaction bytes
-//type TxDecoder func(txBytes []byte) (costypes.Tx, error)
+// type TxDecoder func(txBytes []byte) (costypes.Tx, error)
 type IbcTxDecoder func(txBytes []byte) (*stdtx.IbcTx, error)
 
 // TxEncoder marshals transaction to bytes

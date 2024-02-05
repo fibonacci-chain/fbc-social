@@ -10,18 +10,18 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
 
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/example/kvstore"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	rrand "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p/mock"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/proxy"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"github.com/fortytw2/leaktest"
 	"github.com/go-kit/kit/log/term"
-	"github.com/okex/exchain/libs/tendermint/abci/example/kvstore"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	rrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/p2p/mock"
-	"github.com/okex/exchain/libs/tendermint/proxy"
-	"github.com/okex/exchain/libs/tendermint/types"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 )

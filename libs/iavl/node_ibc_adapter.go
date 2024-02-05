@@ -2,7 +2,7 @@ package iavl
 
 import (
 	"bytes"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
 )
 
 type traversal struct {

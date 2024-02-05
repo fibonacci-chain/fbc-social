@@ -10,27 +10,27 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	cosmossdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	authclient "github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/upgrade"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	abcitypes "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/global"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tendertypes "github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	"github.com/okex/exchain/x/dex"
-	distr "github.com/okex/exchain/x/distribution"
-	"github.com/okex/exchain/x/distribution/keeper"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/farm"
-	"github.com/okex/exchain/x/gov"
-	"github.com/okex/exchain/x/params"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	cosmossdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	authclient "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/client/utils"
+	authtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/upgrade"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	abcitypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/global"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	tendertypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/x/dex"
+	distr "github.com/fibonacci-chain/fbc-social/x/distribution"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/keeper"
+	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/x/farm"
+	"github.com/fibonacci-chain/fbc-social/x/gov"
+	"github.com/fibonacci-chain/fbc-social/x/params"
 )
 
 var (
@@ -63,9 +63,9 @@ var (
 	govProposalID2 = uint64(2)
 )
 
-func TestOKExChainAppExport(t *testing.T) {
+func TestFBChainAppExport(t *testing.T) {
 	db := dbm.NewMemDB()
-	app := NewOKExChainApp(log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, nil, true, map[int64]bool{}, 0)
+	app := NewFBChainApp(log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, nil, true, map[int64]bool{}, 0)
 
 	genesisState := ModuleBasics.DefaultGenesis()
 	stateBytes, err := codec.MarshalJSONIndent(app.Codec(), genesisState)
@@ -81,14 +81,14 @@ func TestOKExChainAppExport(t *testing.T) {
 	app.Commit(abci.RequestCommit{})
 
 	// Making a new app object with the db, so that initchain hasn't been called
-	app2 := NewOKExChainApp(log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, nil, true, map[int64]bool{}, 0)
+	app2 := NewFBChainApp(log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, nil, true, map[int64]bool{}, 0)
 	_, _, err = app2.ExportAppStateAndValidators(false, []string{})
 	require.NoError(t, err, "ExportAppStateAndValidators should not have an error")
 }
 
 func TestModuleManager(t *testing.T) {
 	db := dbm.NewMemDB()
-	app := NewOKExChainApp(log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, nil, true, map[int64]bool{}, 0)
+	app := NewFBChainApp(log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, nil, true, map[int64]bool{}, 0)
 
 	for moduleName, _ := range ModuleBasics {
 		if moduleName == upgrade.ModuleName {
@@ -101,7 +101,7 @@ func TestModuleManager(t *testing.T) {
 
 func TestProposalManager(t *testing.T) {
 	db := dbm.NewMemDB()
-	app := NewOKExChainApp(log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, nil, true, map[int64]bool{}, 0)
+	app := NewFBChainApp(log.NewTMLogger(log.NewSyncWriter(os.Stdout)), db, nil, true, map[int64]bool{}, 0)
 
 	require.True(t, app.GovKeeper.Router().HasRoute(params.RouterKey))
 	require.True(t, app.GovKeeper.Router().HasRoute(dex.RouterKey))
@@ -119,7 +119,7 @@ func TestFakeBlockTxSuite(t *testing.T) {
 
 type FakeBlockTxTestSuite struct {
 	suite.Suite
-	app   *OKExChainApp
+	app   *FBChainApp
 	codec *codec.Codec
 
 	evmSenderPrivKey   ethsecp256k1.PrivKey

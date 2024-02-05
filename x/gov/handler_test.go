@@ -3,13 +3,13 @@ package gov
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/libs/cli/flags"
-	"github.com/okex/exchain/x/staking"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/cli/flags"
+	"github.com/fibonacci-chain/fbc-social/x/staking"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/gov/keeper"
-	"github.com/okex/exchain/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/x/gov/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 func TestNewHandler(t *testing.T) {

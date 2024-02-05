@@ -4,33 +4,33 @@ import (
 	"testing"
 
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
-	okexchain "github.com/okex/exchain/app"
-	app "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/mock"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/common/version"
-	"github.com/okex/exchain/x/token"
-	"github.com/okex/exchain/x/token/types"
+	okexchain "github.com/fibonacci-chain/fbc-social/app"
+	app "github.com/fibonacci-chain/fbc-social/app/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/mock"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/secp256k1"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common/version"
+	"github.com/fibonacci-chain/fbc-social/x/token"
+	"github.com/fibonacci-chain/fbc-social/x/token/types"
 	"github.com/stretchr/testify/require"
 )
 
 func TestHandlerBlockedContractAddrSend(t *testing.T) {
-	okexapp := initApp(true)
-	ctx := okexapp.BaseApp.NewContext(true, abci.Header{Height: 1})
+	fbexapp := initApp(true)
+	ctx := fbexapp.BaseApp.NewContext(true, abci.Header{Height: 1})
 	gAcc := CreateEthAccounts(3, sdk.SysCoins{
 		sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(10000)),
 	})
-	okexapp.AccountKeeper.SetAccount(ctx, gAcc[0])
-	okexapp.AccountKeeper.SetAccount(ctx, gAcc[1])
+	fbexapp.AccountKeeper.SetAccount(ctx, gAcc[0])
+	fbexapp.AccountKeeper.SetAccount(ctx, gAcc[1])
 	gAcc[2].CodeHash = []byte("contract code hash")
-	okexapp.AccountKeeper.SetAccount(ctx, gAcc[2])
+	fbexapp.AccountKeeper.SetAccount(ctx, gAcc[2])
 
 	// multi send
 	multiSendStr := `[{"to":"` + gAcc[1].Address.String() + `","amount":" 10` + common.NativeToken + `"}]`
@@ -44,42 +44,42 @@ func TestHandlerBlockedContractAddrSend(t *testing.T) {
 	sendToContractMsg := types.NewMsgTokenSend(gAcc[0].Address, gAcc[2].Address, sdk.SysCoins{sdk.NewDecCoinFromDec(common.NativeToken, sdk.NewDec(1))})
 	successfulMultiSendMsg := types.NewMsgMultiSend(gAcc[0].Address, transfers)
 	multiSendToContractMsg := types.NewMsgMultiSend(gAcc[0].Address, transfers2)
-	handler := token.NewTokenHandler(okexapp.TokenKeeper, version.CurrentProtocolVersion)
-	okexapp.BankKeeper.SetSendEnabled(ctx, true)
+	handler := token.NewTokenHandler(fbexapp.TokenKeeper, version.CurrentProtocolVersion)
+	fbexapp.BankKeeper.SetSendEnabled(ctx, true)
 	TestSets := []struct {
 		description string
 		balance     string
 		msg         sdk.Msg
 		account     app.EthAccount
 	}{
-		// 0.01okt as fixed fee in each stdTx
-		{"success to send", "9999.000000000000000000okt", successfulSendMsg, gAcc[0]},
-		{"success to multi-send", "9989.000000000000000000okt", successfulMultiSendMsg, gAcc[0]},
-		{"success to send", "9988.000000000000000000okt", successfulSendMsg, gAcc[0]},
-		{"success to multi-send", "9978.000000000000000000okt", successfulMultiSendMsg, gAcc[0]},
-		//{"fail to send to contract", "9978.000000000000000000okt", failedSendMsg, gAcc[0]},
-		//{"fail to multi-send to contract", "9978.000000000000000000okt", failedMultiSendMsg, gAcc[0]},
-		{"fail to send to contract", "9978.000000000000000000okt", sendToContractMsg, gAcc[0]},
-		{"fail to multi-send to contract", "9978.000000000000000000okt", multiSendToContractMsg, gAcc[0]},
+		// 0.01fibo as fixed fee in each stdTx
+		{"success to send", "9999.000000000000000000fibo", successfulSendMsg, gAcc[0]},
+		{"success to multi-send", "9989.000000000000000000fibo", successfulMultiSendMsg, gAcc[0]},
+		{"success to send", "9988.000000000000000000fibo", successfulSendMsg, gAcc[0]},
+		{"success to multi-send", "9978.000000000000000000fibo", successfulMultiSendMsg, gAcc[0]},
+		//{"fail to send to contract", "9978.000000000000000000fibo", failedSendMsg, gAcc[0]},
+		//{"fail to multi-send to contract", "9978.000000000000000000fibo", failedMultiSendMsg, gAcc[0]},
+		{"fail to send to contract", "9978.000000000000000000fibo", sendToContractMsg, gAcc[0]},
+		{"fail to multi-send to contract", "9978.000000000000000000fibo", multiSendToContractMsg, gAcc[0]},
 	}
 	for i, tt := range TestSets {
 		t.Run(tt.description, func(t *testing.T) {
 			handler(ctx, TestSets[i].msg)
-			acc := okexapp.AccountKeeper.GetAccount(ctx, tt.account.Address)
+			acc := fbexapp.AccountKeeper.GetAccount(ctx, tt.account.Address)
 			acc.GetCoins().String()
 			require.Equal(t, acc.GetCoins().String(), tt.balance)
 		})
 	}
 }
 
-// Setup initializes a new OKExChainApp. A Nop logger is set in OKExChainApp.
-func initApp(isCheckTx bool) *okexchain.OKExChainApp {
+// Setup initializes a new FBChainApp. A Nop logger is set in FBChainApp.
+func initApp(isCheckTx bool) *fbchain.FBChainApp {
 	db := dbm.NewMemDB()
-	app := okexchain.NewOKExChainApp(log.NewNopLogger(), db, nil, true, map[int64]bool{}, 0)
+	app := fbchain.NewFBChainApp(log.NewNopLogger(), db, nil, true, map[int64]bool{}, 0)
 
 	if !isCheckTx {
 		// init chain must be called to stop deliverState from being nil
-		genesisState := okexchain.NewDefaultGenesisState()
+		genesisState := fbchain.NewDefaultGenesisState()
 		stateBytes, err := codec.MarshalJSONIndent(app.Codec(), genesisState)
 		if err != nil {
 			panic(err)

@@ -1,10 +1,10 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/x/distribution/types"
-	stakingtypes "github.com/okex/exchain/x/staking/types"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/types"
+	stakingtypes "github.com/fibonacci-chain/fbc-social/x/staking/types"
 )
 
 // Hooks is struct of keepers from other module

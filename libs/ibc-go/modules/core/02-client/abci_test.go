@@ -1,18 +1,18 @@
 package client_test
 
 import (
-	client "github.com/okex/exchain/libs/ibc-go/modules/core/02-client"
-	types2 "github.com/okex/exchain/libs/tendermint/types"
+	client "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client"
+	types2 "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"testing"
 
 	"github.com/stretchr/testify/suite"
 	// abci "github.com/tendermint/tendermint/abci/types"
 	// tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
-	"github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
-	localhosttypes "github.com/okex/exchain/libs/ibc-go/modules/light-clients/09-localhost/types"
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
+	localhosttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/light-clients/09-localhost/types"
+	ibctesting "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing"
 )
 
 type ClientTestSuite struct {

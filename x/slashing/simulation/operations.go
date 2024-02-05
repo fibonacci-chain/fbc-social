@@ -3,12 +3,12 @@ package simulation
 import (
 	"math/rand"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	simappparams "github.com/okex/exchain/libs/cosmos-sdk/simapp/params"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
-	"github.com/okex/exchain/x/slashing/internal/keeper"
-	"github.com/okex/exchain/x/slashing/internal/types"
-	stakingkeeper "github.com/okex/exchain/x/staking/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	simappparams "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/simapp/params"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/simulation"
+	"github.com/fibonacci-chain/fbc-social/x/slashing/internal/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/slashing/internal/types"
+	stakingkeeper "github.com/fibonacci-chain/fbc-social/x/staking/keeper"
 )
 
 // Simulation operation weights constants

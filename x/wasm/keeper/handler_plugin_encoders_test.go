@@ -1,24 +1,24 @@
 package keeper
 
 import (
-	ibcadapter "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
+	ibcadapter "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/ibc-adapter"
 	"testing"
 
 	"github.com/golang/protobuf/proto"
-	//ibctransfertypes "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	//clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	//channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
+	//ibctransfertypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer/types"
+	//clienttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	//channeltypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel/types"
 	"github.com/stretchr/testify/assert"
 
 	wasmvmtypes "github.com/CosmWasm/wasmvm/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	banktypes "github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	//distributiontypes "github.com/okex/exchain/libs/cosmos-sdk/x/distribution/types"
-	//stakingtypes "github.com/okex/exchain/libs/cosmos-sdk/x/staking/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	banktypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank"
+	//distributiontypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/distribution/types"
+	//stakingtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking/types"
 	"github.com/stretchr/testify/require"
 
-	//"github.com/okex/exchain/x/wasm/keeper/wasmtesting"
-	"github.com/okex/exchain/x/wasm/types"
+	//"github.com/fibonacci-chain/fbc-social/x/wasm/keeper/wasmtesting"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
 )
 
 func TestEncoding(t *testing.T) {

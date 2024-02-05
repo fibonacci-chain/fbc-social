@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
 )
 
 // module codec
@@ -12,12 +12,12 @@ var ModuleCdc = codec.New()
 func RegisterCodec(cdc *codec.Codec) {
 	cdc.RegisterInterface((*Content)(nil), nil)
 
-	cdc.RegisterConcrete(MsgSubmitProposal{}, "okexchain/gov/MsgSubmitProposal", nil)
-	cdc.RegisterConcrete(MsgDeposit{}, "okexchain/gov/MsgDeposit", nil)
-	cdc.RegisterConcrete(MsgVote{}, "okexchain/gov/MsgVote", nil)
+	cdc.RegisterConcrete(MsgSubmitProposal{}, "fbexchain/gov/MsgSubmitProposal", nil)
+	cdc.RegisterConcrete(MsgDeposit{}, "fbexchain/gov/MsgDeposit", nil)
+	cdc.RegisterConcrete(MsgVote{}, "fbexchain/gov/MsgVote", nil)
 
-	cdc.RegisterConcrete(TextProposal{}, "okexchain/gov/TextProposal", nil)
-	cdc.RegisterConcrete(SoftwareUpgradeProposal{}, "okexchain/gov/SoftwareUpgradeProposal", nil)
+	cdc.RegisterConcrete(TextProposal{}, "fbexchain/gov/TextProposal", nil)
+	cdc.RegisterConcrete(SoftwareUpgradeProposal{}, "fbexchain/gov/SoftwareUpgradeProposal", nil)
 }
 
 // RegisterProposalTypeCodec registers an external proposal content type defined

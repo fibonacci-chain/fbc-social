@@ -3,12 +3,12 @@ package mock
 import (
 	"testing"
 
-	appconfig "github.com/okex/exchain/app/config"
-	"github.com/okex/exchain/libs/tendermint/types"
+	appconfig "github.com/fibonacci-chain/fbc-social/app/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 )
 
 // TestInitApp makes sure we can initialize this thing without an error

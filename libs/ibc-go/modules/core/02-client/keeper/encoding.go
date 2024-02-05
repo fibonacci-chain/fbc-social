@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	"github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
 )
 
 // MustUnmarshalClientState attempts to decode and return an ClientState object from

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/libs/bits"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bits"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 //-----------------------------------------------------------------------------

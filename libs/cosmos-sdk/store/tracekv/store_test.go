@@ -8,12 +8,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/dbadapter"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/prefix"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/tracekv"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/dbadapter"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/prefix"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/tracekv"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
 )
 
 func bz(s string) []byte { return []byte(s) }

@@ -3,18 +3,18 @@ package fee_test
 import (
 	"fmt"
 
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
+	ibctesting "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	transfertypes "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	transfertypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer/types"
+	channeltypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel/types"
 
-	capabilitytypes "github.com/okex/exchain/libs/cosmos-sdk/x/capability/types"
-	fee "github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee"
-	"github.com/okex/exchain/libs/ibc-go/modules/apps/29-fee/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
-	ibcmock "github.com/okex/exchain/libs/ibc-go/testing/mock"
+	capabilitytypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/capability/types"
+	fee "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/29-fee"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/29-fee/types"
+	host "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/24-host"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
+	ibcmock "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing/mock"
 )
 
 var (

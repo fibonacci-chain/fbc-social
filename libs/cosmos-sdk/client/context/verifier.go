@@ -3,10 +3,10 @@ package context
 import (
 	"path/filepath"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmlite "github.com/okex/exchain/libs/tendermint/lite"
-	tmliteproxy "github.com/okex/exchain/libs/tendermint/lite/proxy"
-	rpchttp "github.com/okex/exchain/libs/tendermint/rpc/client/http"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	tmlite "github.com/fibonacci-chain/fbc-social/libs/tendermint/lite"
+	tmliteproxy "github.com/fibonacci-chain/fbc-social/libs/tendermint/lite/proxy"
+	rpchttp "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/client/http"
 	"github.com/pkg/errors"
 )
 

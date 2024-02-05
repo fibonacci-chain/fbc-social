@@ -5,31 +5,31 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/types/upgrade"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	ibcclient "github.com/okex/exchain/libs/ibc-go/modules/core/02-client"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/upgrade"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params"
+	ibcclient "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client"
 
 	"math/rand"
 
+	clientCtx "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	codectypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
+	simulation2 "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/simulation"
+	clienttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	connectiontypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/03-connection/types"
+	channeltypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel/types"
+	host "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/24-host"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/base"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/client/cli"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/simulation"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"github.com/gorilla/mux"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
-	clientCtx "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	simulation2 "github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	connectiontypes "github.com/okex/exchain/libs/ibc-go/modules/core/03-connection/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/base"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/client/cli"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/keeper"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/simulation"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
 	"github.com/spf13/cobra"
 )
 
@@ -152,7 +152,7 @@ func (am AppModule) RegisterServices(cfg module.Configurator) {
 
 // InitGenesis performs genesis initialization for the ibc module. It returns
 // no validator updates.
-//func (am AppModule) InitGenesis(ctx sdk.Context, cdc codec.JSONMarshaler, bz json.RawMessage) []abci.ValidatorUpdate {
+// func (am AppModule) InitGenesis(ctx sdk.Context, cdc codec.JSONMarshaler, bz json.RawMessage) []abci.ValidatorUpdate {
 func (am AppModule) InitGenesis(ctx sdk.Context, data json.RawMessage) []abci.ValidatorUpdate {
 	return nil
 }

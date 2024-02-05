@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/okex/exchain/x/evidence/exported"
+	"github.com/fibonacci-chain/fbc-social/x/evidence/exported"
 )
 
 // DONTCOVER

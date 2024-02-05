@@ -6,8 +6,8 @@
 package supply
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/internal/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/internal/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/internal/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/internal/types"
 )
 
 const (

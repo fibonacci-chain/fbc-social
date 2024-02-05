@@ -2,10 +2,10 @@ package evidence
 
 import (
 	"fmt"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
-	"github.com/okex/exchain/libs/tendermint/consensus"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/consensus"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 /*

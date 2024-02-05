@@ -1,7 +1,7 @@
 package state
 
 import (
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 //------------------------------------------------------

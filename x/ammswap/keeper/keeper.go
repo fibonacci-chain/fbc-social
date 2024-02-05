@@ -3,14 +3,14 @@ package keeper
 import (
 	"fmt"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/ammswap/types"
-	tokentypes "github.com/okex/exchain/x/token/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/ammswap/types"
+	tokentypes "github.com/fibonacci-chain/fbc-social/x/token/types"
 )
 
 // Keeper of the swap store
@@ -174,7 +174,7 @@ func (k Keeper) GetRedeemableAssets(ctx sdk.Context, baseAmountName, quoteAmount
 	return baseAmount, quoteAmount, nil
 }
 
-//CalculateTokenToBuy calculates the amount to buy
+// CalculateTokenToBuy calculates the amount to buy
 func CalculateTokenToBuy(swapTokenPair types.SwapTokenPair, sellToken sdk.SysCoin, buyTokenDenom string, params types.Params) sdk.SysCoin {
 	var inputReserve, outputReserve sdk.Dec
 	if buyTokenDenom < sellToken.Denom {

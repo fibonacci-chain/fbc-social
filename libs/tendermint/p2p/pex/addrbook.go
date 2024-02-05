@@ -14,12 +14,12 @@ import (
 	"sync"
 	"time"
 
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	tmmath "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/math"
+	tmrand "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/service"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p"
 	"github.com/minio/highwayhash"
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	tmmath "github.com/okex/exchain/libs/tendermint/libs/math"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	"github.com/okex/exchain/libs/tendermint/libs/service"
-	"github.com/okex/exchain/libs/tendermint/p2p"
 )
 
 const (

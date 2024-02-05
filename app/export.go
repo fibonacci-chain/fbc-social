@@ -4,17 +4,17 @@ import (
 	"encoding/json"
 	"log"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/slashing"
-	"github.com/okex/exchain/x/staking"
-	"github.com/okex/exchain/x/staking/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/simapp"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/slashing"
+	"github.com/fibonacci-chain/fbc-social/x/staking"
+	"github.com/fibonacci-chain/fbc-social/x/staking/exported"
 
-	ethcdc "github.com/okex/exchain/app/codec"
+	ethcdc "github.com/fibonacci-chain/fbc-social/app/codec"
 )
 
 // NewDefaultGenesisState generates the default state for the application.
@@ -25,7 +25,7 @@ func NewDefaultGenesisState() simapp.GenesisState {
 
 // ExportAppStateAndValidators exports the state of the application for a genesis
 // file.
-func (app *OKExChainApp) ExportAppStateAndValidators(
+func (app *FBChainApp) ExportAppStateAndValidators(
 	forZeroHeight bool, jailWhiteList []string,
 ) (appState json.RawMessage, validators []tmtypes.GenesisValidator, err error) {
 
@@ -51,8 +51,9 @@ func (app *OKExChainApp) ExportAppStateAndValidators(
 
 // prepare for fresh start at zero height
 // NOTE zero height genesis is a temporary feature which will be deprecated
-//      in favour of export at a block height
-func (app *OKExChainApp) prepForZeroHeightGenesis(ctx sdk.Context, jailWhiteList []string) {
+//
+//	in favour of export at a block height
+func (app *FBChainApp) prepForZeroHeightGenesis(ctx sdk.Context, jailWhiteList []string) {
 	applyWhiteList := false
 
 	//Check if there is a whitelist

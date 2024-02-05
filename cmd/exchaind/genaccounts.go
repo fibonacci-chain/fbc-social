@@ -8,20 +8,20 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/cli"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	authvesting "github.com/okex/exchain/libs/cosmos-sdk/x/auth/vesting"
-	"github.com/okex/exchain/x/genutil"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/keys"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	authexported "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/exported"
+	authvesting "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/vesting"
+	"github.com/fibonacci-chain/fbc-social/x/genutil"
 
-	"github.com/okex/exchain/app/crypto/hd"
-	okexchain "github.com/okex/exchain/app/types"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/hd"
+	fbchain "github.com/fibonacci-chain/fbc-social/app/types"
 
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 )
@@ -114,7 +114,7 @@ contain valid denominations. Accounts may optionally be supplied with vesting pa
 					return errors.New("invalid vesting parameters; must supply start and end time or end time")
 				}
 			} else {
-				genAccount = okexchain.EthAccount{
+				genAccount = fbchain.EthAccount{
 					BaseAccount: baseAccount,
 					CodeHash:    ethcrypto.Keccak256(nil),
 				}

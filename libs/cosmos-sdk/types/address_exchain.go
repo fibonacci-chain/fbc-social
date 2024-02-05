@@ -3,8 +3,8 @@ package types
 import (
 	"crypto/sha256"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
 )
 
 // MustBech32ifyAccPub returns the result of Bech32ifyAccPub panicing on failure.

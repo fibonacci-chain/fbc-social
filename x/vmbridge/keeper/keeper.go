@@ -1,10 +1,10 @@
 package keeper
 
 import (
-	"github.com/okex/exchain/x/vmbridge/types"
+	"github.com/fibonacci-chain/fbc-social/x/vmbridge/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 )
 
 type Keeper struct {

@@ -1,9 +1,9 @@
 package proofs
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/store/internal/maps"
-	"github.com/okex/exchain/libs/tendermint/libs/rand"
-	"github.com/okex/exchain/libs/tendermint/proto/crypto/merkle"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/internal/maps"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/proto/crypto/merkle"
 	"sort"
 )
 

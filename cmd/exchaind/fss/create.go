@@ -5,11 +5,11 @@ import (
 	"log"
 	"path/filepath"
 
-	"github.com/okex/exchain/app/utils/appstatus"
-	"github.com/okex/exchain/cmd/exchaind/base"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/iavl"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/app/utils/appstatus"
+	"github.com/fibonacci-chain/fbc-social/cmd/exchaind/base"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/iavl"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

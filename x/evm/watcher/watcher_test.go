@@ -4,8 +4,8 @@ import (
 	"encoding/hex"
 	"fmt"
 	ethcommon "github.com/ethereum/go-ethereum/common"
-	okexchaincodec "github.com/okex/exchain/app/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
+	okexchaincodec "github.com/fibonacci-chain/fbc-social/app/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
 	"math/big"
 	"os"
 	"strings"
@@ -14,23 +14,23 @@ import (
 
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 
 	"github.com/ethereum/go-ethereum/common"
 	ethcmn "github.com/ethereum/go-ethereum/common"
+	"github.com/fibonacci-chain/fbc-social/app"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
+	ethermint "github.com/fibonacci-chain/fbc-social/app/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/secp256k1"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/tmhash"
+	"github.com/fibonacci-chain/fbc-social/x/evm"
+	"github.com/fibonacci-chain/fbc-social/x/evm/types"
+	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/watcher"
 	jsoniter "github.com/json-iterator/go"
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	ethermint "github.com/okex/exchain/app/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
-	"github.com/okex/exchain/libs/tendermint/crypto/tmhash"
-	"github.com/okex/exchain/x/evm"
-	"github.com/okex/exchain/x/evm/types"
-	evmtypes "github.com/okex/exchain/x/evm/types"
-	"github.com/okex/exchain/x/evm/watcher"
 	"github.com/spf13/viper"
 	"github.com/status-im/keycard-go/hexutils"
 	"github.com/stretchr/testify/require"
@@ -55,7 +55,7 @@ func calcHash(kvs []KV) []byte {
 
 type WatcherTestSt struct {
 	ctx     sdk.Context
-	app     *app.OKExChainApp
+	app     *app.FBChainApp
 	handler sdk.Handler
 }
 
@@ -471,7 +471,7 @@ func TestDeliverRealTx(t *testing.T) {
 	privKey, _ := ethsecp256k1.GenerateKey()
 	err := tx.Sign(big.NewInt(3), privKey.ToECDSA())
 	require.NoError(t, err)
-	codecProxy, _ := okexchaincodec.MakeCodecSuit(module.NewBasicManager())
+	codecProxy, _ := fbexchaincodec.MakeCodecSuit(module.NewBasicManager())
 	w.app.EvmKeeper.Watcher.RecordTxAndFailedReceipt(tx, nil, evm.TxDecoder(codecProxy))
 }
 

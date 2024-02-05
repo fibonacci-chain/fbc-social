@@ -1,8 +1,8 @@
 package multisig
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/tx/signing"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/tx/signing"
 )
 
 // PubKey defines a type which supports multi-signature verification via MultiSignatureData

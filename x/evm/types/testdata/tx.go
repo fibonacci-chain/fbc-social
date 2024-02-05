@@ -2,9 +2,9 @@ package testdata
 
 import (
 	"encoding/json"
-	ibcmsg "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
+	ibcmsg "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/ibc-adapter"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 // KeyTestPubAddr generates a new secp256k1 keypair.
@@ -23,7 +23,6 @@ import (
 //	addr := sdk.AccAddress(pub.Address())
 //	return key, pub, addr
 //}
-
 
 var _ sdk.Msg = (*TestMsg)(nil)
 

@@ -1,9 +1,9 @@
 package simapp
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	ibc_tx "github.com/okex/exchain/libs/cosmos-sdk/x/auth/ibc-tx"
-	simappparams "github.com/okex/exchain/libs/ibc-go/testing/simapp/params"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	ibc_tx "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/ibc-tx"
+	simappparams "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing/simapp/params"
 )
 
 // MakeTestEncodingConfig creates an EncodingConfig for testing. This function

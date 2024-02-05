@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/dex/types"
-	"github.com/okex/exchain/x/gov"
-	govTypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/dex/types"
+	"github.com/fibonacci-chain/fbc-social/x/gov"
+	govTypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 // GetMinDeposit returns min deposit

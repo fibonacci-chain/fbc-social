@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
-	"github.com/okex/exchain/libs/tendermint/p2p/conn"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p/conn"
 )
 
 var defaultNodeName = "host_peer"

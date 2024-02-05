@@ -3,8 +3,8 @@ package mock
 import (
 	"errors"
 
-	"github.com/okex/exchain/libs/tendermint/lite2/provider"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/lite2/provider"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 type deadMock struct {

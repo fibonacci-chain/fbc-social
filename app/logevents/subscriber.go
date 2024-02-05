@@ -2,7 +2,7 @@ package logevents
 
 import (
 	"fmt"
-	"github.com/okex/exchain/libs/system"
+	"github.com/fibonacci-chain/fbc-social/libs/system"
 	"os"
 	"time"
 )
@@ -25,7 +25,7 @@ type subscriber struct {
 }
 
 func (s *subscriber) Init(urls string, logdir string) {
-	s.kafka = newLogClient(urls, HeartbeatTopic, OECLogTopic, LogConsumerGroup)
+	s.kafka = newLogClient(urls, HeartbeatTopic, FBCLogTopic, LogConsumerGroup)
 	s.logdir = logdir
 
 	_, err := os.Stat(logdir)

@@ -10,13 +10,13 @@ import (
 
 	"github.com/tendermint/go-amino"
 
-	"github.com/okex/exchain/libs/tendermint/libs/cmap"
-	tmmath "github.com/okex/exchain/libs/tendermint/libs/math"
-	"github.com/okex/exchain/libs/tendermint/libs/rand"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	"github.com/okex/exchain/libs/tendermint/libs/service"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/p2p/conn"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/cmap"
+	tmmath "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/math"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
+	tmrand "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/service"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p/conn"
 )
 
 type Peer = p2p.Peer

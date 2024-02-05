@@ -3,10 +3,10 @@ package types
 import (
 	"time"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	stakingexported "github.com/okex/exchain/libs/cosmos-sdk/x/staking/exported"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	stakingexported "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking/exported"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
 )
 
 type (

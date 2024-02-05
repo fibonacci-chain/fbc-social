@@ -2,10 +2,10 @@ package txs
 
 import (
 	"fmt"
-	"github.com/okex/exchain/x/evm/txs/base"
-	"github.com/okex/exchain/x/evm/txs/check"
-	"github.com/okex/exchain/x/evm/txs/deliver"
-	"github.com/okex/exchain/x/evm/txs/tracetxlog"
+	"github.com/fibonacci-chain/fbc-social/x/evm/txs/base"
+	"github.com/fibonacci-chain/fbc-social/x/evm/txs/check"
+	"github.com/fibonacci-chain/fbc-social/x/evm/txs/deliver"
+	"github.com/fibonacci-chain/fbc-social/x/evm/txs/tracetxlog"
 )
 
 type factory struct {

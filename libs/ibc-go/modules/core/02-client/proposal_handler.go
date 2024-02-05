@@ -1,11 +1,11 @@
 package client
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/02-client/keeper"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	govtypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 // NewClientUpdateProposalHandler defines the client update proposal handler

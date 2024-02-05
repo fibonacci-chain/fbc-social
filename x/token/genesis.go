@@ -4,13 +4,13 @@ import (
 	"errors"
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/token/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/token/types"
 )
 
-// default owner of okt
-const DefaultTokenOwner = "ex10q0rk5qnyag7wfvvt7rtphlw589m7frs3hvqmf"
+// default owner of fibo
+const DefaultTokenOwner = "fb18rrc500xu2haw7vyksqlj2lfp9xex2hczv3jkx"
 
 // all state that must be provided in genesis file
 type GenesisState struct {
@@ -24,14 +24,14 @@ type GenesisState struct {
 func defaultGenesisState() GenesisState {
 	return GenesisState{
 		Params:       types.DefaultParams(),
-		Tokens:       []types.Token{defaultGenesisStateOKT()},
+		Tokens:       []types.Token{defaultGenesisStatefibo()},
 		LockedAssets: nil,
 		LockedFees:   nil,
 	}
 }
 
-// default okt information
-func defaultGenesisStateOKT() types.Token {
+// default fibo information
+func defaultGenesisStatefibo() types.Token {
 	addr, err := sdk.AccAddressFromBech32(DefaultTokenOwner)
 	if err != nil {
 		panic(err)
@@ -39,10 +39,10 @@ func defaultGenesisStateOKT() types.Token {
 
 	totalSupply := sdk.NewDec(1000000000)
 	return types.Token{
-		Description:         "OK Group Global Utility Token",
+		Description:         "FB Group Global Utility Token",
 		Symbol:              common.NativeToken,
 		OriginalSymbol:      common.NativeToken,
-		WholeName:           "OKT",
+		WholeName:           "FIBO",
 		OriginalTotalSupply: totalSupply,
 		Owner:               addr,
 		Mintable:            true,

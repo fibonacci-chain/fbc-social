@@ -5,7 +5,7 @@
 package genutil
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/x/genutil/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/genutil/types"
 )
 
 const (

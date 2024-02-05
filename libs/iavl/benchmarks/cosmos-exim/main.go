@@ -6,8 +6,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/okex/exchain/libs/iavl"
-	tmdb "github.com/okex/exchain/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/libs/iavl"
+	tmdb "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 )
 
 // stores is the list of stores in the CosmosHub database

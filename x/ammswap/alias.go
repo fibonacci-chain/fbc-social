@@ -1,8 +1,8 @@
 package ammswap
 
 import (
-	"github.com/okex/exchain/x/ammswap/keeper"
-	"github.com/okex/exchain/x/ammswap/types"
+	"github.com/fibonacci-chain/fbc-social/x/ammswap/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/ammswap/types"
 )
 
 const (

@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	//clientkeeper "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/keeper"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	//clientkeeper "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/keeper"
 )
 
 // Migrator is a struct for handling in-place store migrations.

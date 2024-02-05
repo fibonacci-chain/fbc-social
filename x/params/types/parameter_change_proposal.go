@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params/types"
 
-	govtypes "github.com/okex/exchain/x/gov/types"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkparams "github.com/okex/exchain/libs/cosmos-sdk/x/params"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkparams "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params"
 )
 
 // Assert ParameterChangeProposal implements govtypes.Content at compile-time

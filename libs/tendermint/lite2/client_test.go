@@ -8,14 +8,14 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	lite "github.com/okex/exchain/libs/tendermint/lite2"
-	"github.com/okex/exchain/libs/tendermint/lite2/provider"
-	mockp "github.com/okex/exchain/libs/tendermint/lite2/provider/mock"
-	dbs "github.com/okex/exchain/libs/tendermint/lite2/store/db"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	lite "github.com/fibonacci-chain/fbc-social/libs/tendermint/lite2"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/lite2/provider"
+	mockp "github.com/fibonacci-chain/fbc-social/libs/tendermint/lite2/provider/mock"
+	dbs "github.com/fibonacci-chain/fbc-social/libs/tendermint/lite2/store/db"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 const (

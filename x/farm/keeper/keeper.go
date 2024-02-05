@@ -1,14 +1,14 @@
 package keeper
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	swap "github.com/okex/exchain/x/ammswap/keeper"
-	evm "github.com/okex/exchain/x/evm/keeper"
-	"github.com/okex/exchain/x/farm/types"
-	"github.com/okex/exchain/x/token"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	swap "github.com/fibonacci-chain/fbc-social/x/ammswap/keeper"
+	evm "github.com/fibonacci-chain/fbc-social/x/evm/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/farm/types"
+	"github.com/fibonacci-chain/fbc-social/x/token"
 )
 
 // Keeper of the farm store

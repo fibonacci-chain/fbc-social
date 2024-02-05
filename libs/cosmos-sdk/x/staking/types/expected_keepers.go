@@ -1,10 +1,10 @@
 package types
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	stakingexported "github.com/okex/exchain/libs/cosmos-sdk/x/staking/exported"
-	supplyexported "github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	authexported "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/exported"
+	stakingexported "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/staking/exported"
+	supplyexported "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/exported"
 )
 
 // DistributionKeeper expected distribution keeper (noalias)

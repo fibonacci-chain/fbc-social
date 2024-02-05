@@ -5,12 +5,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/x/distribution/types"
-	"github.com/okex/exchain/x/staking"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/types"
+	"github.com/fibonacci-chain/fbc-social/x/staking"
 )
 
 func TestAllocateTokensToValidatorWithCommission(t *testing.T) {

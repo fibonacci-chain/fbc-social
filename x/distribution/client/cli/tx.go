@@ -7,18 +7,18 @@ import (
 	"os"
 	"strings"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	interfacetypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/client/utils"
-	"github.com/okex/exchain/x/distribution/client/common"
-	"github.com/okex/exchain/x/distribution/types"
-	"github.com/okex/exchain/x/gov"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	interfacetypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/version"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/client/utils"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/client/common"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/types"
+	"github.com/fibonacci-chain/fbc-social/x/gov"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -51,7 +51,7 @@ func GetCmdSetWithdrawAddr(cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`Set the withdraw address for rewards associated with a delegator address.
 
 Example:
-$ %s tx distr set-withdraw-addr ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02 --from mykey
+$ %s tx distr set-withdraw-addr fb1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02 --from mykey
 `,
 				version.ClientName,
 			),
@@ -84,15 +84,15 @@ func GetCmdWithdrawRewards(cdc *codec.Codec) *cobra.Command {
 and optionally withdraw validator commission if the delegation address given is a validator operator
 
 Example:
-$ %s tx distr withdraw-rewards exvaloper1alq9na49n9yycysh889rl90g9nhe58lcqkfpfg --from mykey 
-$ %s tx distr withdraw-rewards exvaloper1alq9na49n9yycysh889rl90g9nhe58lcqkfpfg --from mykey --commission
+$ %s tx distr withdraw-rewards fbvaloper1alq9na49n9yycysh889rl90g9nhe58lcqkfpfg --from mykey 
+$ %s tx distr withdraw-rewards fbvaloper1alq9na49n9yycysh889rl90g9nhe58lcqkfpfg --from mykey --commission
 
 If this command is used without "--commission", and the address you want to withdraw rewards is both validator and delegator, 
-only the delegator's rewards can be withdrew. However, if the address you want to withdraw rewards is only the validator, 
-the validator commissions will be withdrew.
+only the delegator's rewards can be withdrqw. However, if the address you want to withdraw rewards is only the validator, 
+the validator commissions will be withdrqw.
 Example:
-$ %s tx distr withdraw-rewards exvaloper1alq9na49n9yycysh889rl90g9nhe58lcqkfpfg --from mykey(validator)			# withdraw mykey's commission only
-$ %s tx distr withdraw-rewards exvaloper1alq9na49n9yycysh889rl90g9nhe58lcqkfpfg --from mykey(validator&delegator)	# withdraw mykey's reward only
+$ %s tx distr withdraw-rewards fbvaloper1alq9na49n9yycysh889rl90g9nhe58lcqkfpfg --from mykey(validator)	--commission    # withdraw mykey's commission only
+$ %s tx distr withdraw-rewards fbvaloper1alq9na49n9yycysh889rl90g9nhe58lcqkfpfg --from mykey(validator&delegator)	    # withdraw mykey's reward only
 `,
 				version.ClientName, version.ClientName, version.ClientName, version.ClientName,
 			),
@@ -169,7 +169,7 @@ Where proposal.json contains:
 {
   "title": "Community Pool Spend",
   "description": "Pay me some %s!",
-  "recipient": "ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02",
+  "recipient": "fb1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02",
   "amount": [
     {
       "denom": "%s",

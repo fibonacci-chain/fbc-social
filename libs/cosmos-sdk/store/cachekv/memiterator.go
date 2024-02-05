@@ -2,8 +2,8 @@ package cachekv
 
 import (
 	"errors"
-	kv "github.com/okex/exchain/libs/cosmos-sdk/types/kv"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	kv "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/kv"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 )
 
 // Iterates over iterKVCache items.

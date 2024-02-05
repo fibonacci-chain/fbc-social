@@ -3,14 +3,14 @@ package keeper_test
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	connectiontypes "github.com/okex/exchain/libs/ibc-go/modules/core/03-connection/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	clienttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	connectiontypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/03-connection/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/types/query"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/query"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
+	ibctesting "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing"
 )
 
 func (suite *KeeperTestSuite) TestQueryChannel() {

@@ -4,10 +4,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/ed25519"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/ed25519"
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 var addr = sdk.AccAddress(ed25519.GenPrivKey().PubKey().Address())

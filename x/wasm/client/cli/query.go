@@ -13,19 +13,19 @@ import (
 
 	wasmvm "github.com/CosmWasm/wasmvm"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
-	"github.com/okex/exchain/x/wasm/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/keeper"
 
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	clientCtx "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	codectypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	"github.com/okex/exchain/x/wasm/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client"
+	clientCtx "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	codectypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
 )
 
 // NewQueryCmd returns the query commands for wasm

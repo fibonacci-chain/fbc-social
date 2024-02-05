@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/okex/exchain/libs/tendermint/libs/service"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/service"
 )
 
 //---------------------------------------------------------------------------------------

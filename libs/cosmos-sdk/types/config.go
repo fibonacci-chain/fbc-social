@@ -5,11 +5,11 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/version"
 )
 
 // DefaultKeyringServiceName defines a default service name for the keyring.
-const DefaultKeyringServiceName = "exchain"
+const DefaultKeyringServiceName = "fibochain"
 
 // Config is the structure that holds the SDK configuration parameters.
 // This could be used to initialize certain configuration parameters for the SDK.

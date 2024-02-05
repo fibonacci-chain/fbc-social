@@ -7,11 +7,11 @@ import (
 	"sort"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	tmbytes "github.com/okex/exchain/libs/tendermint/libs/bytes"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	host "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/24-host"
+	tmbytes "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bytes"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 // ParseDenomTrace parses a string with the ibc prefix (denom trace) and the base denomination
@@ -19,8 +19,8 @@ import (
 //
 // Examples:
 //
-// 	- "portidone/channelidone/okt" => DenomTrace{Path: "portidone/channelidone", BaseDenom: "okt"}
-// 	- "okt" => DenomTrace{Path: "", BaseDenom: "okt"}
+//   - "portidone/channelidone/okt" => DenomTrace{Path: "portidone/channelidone", BaseDenom: "okt"}
+//   - "okt" => DenomTrace{Path: "", BaseDenom: "okt"}
 func ParseDenomTrace(rawDenom string) DenomTrace {
 	denomSplit := strings.Split(rawDenom, "/")
 
@@ -142,8 +142,8 @@ func (t Traces) Sort() Traces {
 // ValidatePrefixedDenom checks that the denomination for an IBC fungible token packet denom is correctly prefixed.
 // The function will return no error if the given string follows one of the two formats:
 //
-//  - Prefixed denomination: '{portIDN}/{channelIDN}/.../{portID0}/{channelID0}/baseDenom'
-//  - Unprefixed denomination: 'baseDenom'
+//   - Prefixed denomination: '{portIDN}/{channelIDN}/.../{portID0}/{channelID0}/baseDenom'
+//   - Unprefixed denomination: 'baseDenom'
 func ValidatePrefixedDenom(denom string) error {
 	denomSplit := strings.Split(denom, "/")
 	if denomSplit[0] == denom && strings.TrimSpace(denom) != "" {
@@ -161,8 +161,8 @@ func ValidatePrefixedDenom(denom string) error {
 
 // ValidateIBCDenom validates that the given denomination is either:
 //
-//  - A valid base denomination (eg: 'okt')
-//  - A valid fungible token representation (i.e 'ibc/{hash}') per ADR 001 https://github.com/cosmos/cosmos-sdk/blob/master/docs/architecture/adr-001-coin-source-tracing.md
+//   - A valid base denomination (eg: 'okt')
+//   - A valid fungible token representation (i.e 'ibc/{hash}') per ADR 001 https://github.com/cosmos/cosmos-sdk/blob/master/docs/architecture/adr-001-coin-source-tracing.md
 func ValidateIBCDenom(denom string) error {
 	if err := sdk.ValidateDenom(denom); err != nil {
 		return err

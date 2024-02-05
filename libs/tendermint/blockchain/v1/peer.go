@@ -5,10 +5,10 @@ import (
 	"math"
 	"time"
 
-	flow "github.com/okex/exchain/libs/tendermint/libs/flowrate"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/types"
+	flow "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/flowrate"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 //--------

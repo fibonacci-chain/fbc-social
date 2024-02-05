@@ -3,16 +3,16 @@ package sanity
 import (
 	"github.com/spf13/viper"
 
-	"github.com/okex/exchain/app/config"
-	apptype "github.com/okex/exchain/app/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	cosmost "github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/tendermint/consensus"
-	"github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/types"
-	"github.com/okex/exchain/x/evm/watcher"
-	"github.com/okex/exchain/x/infura"
+	"github.com/fibonacci-chain/fbc-social/app/config"
+	apptype "github.com/fibonacci-chain/fbc-social/app/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	cosmost "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/consensus"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/state"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/x/evm/watcher"
+	"github.com/fibonacci-chain/fbc-social/x/infura"
 )
 
 // CheckStart check start command's flags. if user set conflict flags return error.

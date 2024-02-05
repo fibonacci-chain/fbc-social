@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"fmt"
 
-	tmkv "github.com/okex/exchain/libs/tendermint/libs/kv"
+	tmkv "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/kv"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
 )
 
 // DecodeStore unmarshals the KVPair's Value to the corresponding auth type

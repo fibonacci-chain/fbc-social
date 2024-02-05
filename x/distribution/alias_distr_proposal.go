@@ -1,12 +1,12 @@
 // nolint
 // aliases generated for the following subdirectories:
-// ALIASGEN: github.com/okex/exchain/x/distribution/types
-// ALIASGEN: github.com/okex/exchain/x/distribution/client
+// ALIASGEN: github.com/fibonacci-chain/fbc-social/x/distribution/types
+// ALIASGEN: github.com/fibonacci-chain/fbc-social/x/distribution/client
 package distribution
 
 import (
-	"github.com/okex/exchain/x/distribution/client"
-	"github.com/okex/exchain/x/distribution/types"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/client"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/types"
 )
 
 var (

@@ -5,14 +5,14 @@ package keeper
 import (
 	"testing"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/dex"
-	"github.com/okex/exchain/x/order/types"
-	token "github.com/okex/exchain/x/token/types"
+	"github.com/fibonacci-chain/fbc-social/x/dex"
+	"github.com/fibonacci-chain/fbc-social/x/order/types"
+	token "github.com/fibonacci-chain/fbc-social/x/token/types"
 )
 
 func TestKeeper_Cache2Disk(t *testing.T) {
@@ -282,7 +282,7 @@ func TestKeeper_UpdateOrder(t *testing.T) {
 	err = keeper.PlaceOrder(ctx, order)
 	require.Nil(t, err)
 
-	//xxb_okt:10.00000000:BUY
+	//xxb_fibo:10.00000000:BUY
 	require.EqualValues(t, "ID0000000010-1", keeper.diskCache.orderIDsMap.Data["xxb_"+common.NativeToken+":10.000000000000000000:BUY"][0])
 
 	order.Price = sdk.MustNewDecFromStr("11.0")

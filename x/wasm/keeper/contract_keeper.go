@@ -2,8 +2,8 @@ package keeper
 
 import (
 	wasmvmtypes "github.com/CosmWasm/wasmvm/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/wasm/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
 )
 
 var _ types.ContractOpsKeeper = PermissionedKeeper{}

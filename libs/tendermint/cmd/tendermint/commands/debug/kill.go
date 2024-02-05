@@ -14,9 +14,9 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
-	rpchttp "github.com/okex/exchain/libs/tendermint/rpc/client/http"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/cli"
+	rpchttp "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/client/http"
 )
 
 var killCmd = &cobra.Command{

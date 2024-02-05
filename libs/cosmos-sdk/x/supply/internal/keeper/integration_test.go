@@ -1,13 +1,13 @@
 package keeper_test
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/simapp"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	keep "github.com/okex/exchain/libs/cosmos-sdk/x/supply/internal/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/supply/internal/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/simapp"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	keep "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/internal/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/internal/types"
 )
 
 var (

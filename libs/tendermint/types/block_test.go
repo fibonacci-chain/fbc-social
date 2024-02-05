@@ -17,14 +17,14 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/merkle"
-	"github.com/okex/exchain/libs/tendermint/crypto/tmhash"
-	"github.com/okex/exchain/libs/tendermint/libs/bits"
-	"github.com/okex/exchain/libs/tendermint/libs/bytes"
-	tmrand "github.com/okex/exchain/libs/tendermint/libs/rand"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
-	"github.com/okex/exchain/libs/tendermint/version"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/merkle"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/tmhash"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bits"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bytes"
+	tmrand "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
+	tmtime "github.com/fibonacci-chain/fbc-social/libs/tendermint/types/time"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/version"
 )
 
 func TestMain(m *testing.M) {

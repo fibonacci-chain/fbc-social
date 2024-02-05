@@ -12,21 +12,21 @@ import (
 	"testing"
 	"time"
 
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/prefix"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	authkeeper "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/keeper"
+	paramskeeper "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
+	paramtypes "github.com/fibonacci-chain/fbc-social/x/params"
 	fuzz "github.com/google/gofuzz"
-	"github.com/okex/exchain/libs/cosmos-sdk/store"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/prefix"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authkeeper "github.com/okex/exchain/libs/cosmos-sdk/x/auth/keeper"
-	paramskeeper "github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	dbm "github.com/okex/exchain/libs/tm-db"
-	paramtypes "github.com/okex/exchain/x/params"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/x/wasm/types"
-	wasmTypes "github.com/okex/exchain/x/wasm/types"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
+	wasmTypes "github.com/fibonacci-chain/fbc-social/x/wasm/types"
 )
 
 const firstCodeID = 1

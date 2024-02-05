@@ -2,24 +2,24 @@ package types_test
 
 import (
 	"fmt"
-	types2 "github.com/okex/exchain/libs/tendermint/types"
+	types2 "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"testing"
 	"time"
 
 	"github.com/stretchr/testify/suite"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/iavl"
-	"github.com/okex/exchain/libs/cosmos-sdk/store/rootmulti"
-	storetypes "github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/03-connection/types"
-	commitmenttypes "github.com/okex/exchain/libs/ibc-go/modules/core/23-commitment/types"
-	ibctmtypes "github.com/okex/exchain/libs/ibc-go/modules/light-clients/07-tendermint/types"
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
-	"github.com/okex/exchain/libs/ibc-go/testing/simapp"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/iavl"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/rootmulti"
+	storetypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
+	clienttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/03-connection/types"
+	commitmenttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/23-commitment/types"
+	ibctmtypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/light-clients/07-tendermint/types"
+	ibctesting "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing/simapp"
 )
 
 var (

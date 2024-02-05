@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/staking/exported"
-	"github.com/okex/exchain/x/staking/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/staking/exported"
+	"github.com/fibonacci-chain/fbc-social/x/staking/types"
 )
 
 // RegisterInvariantsCustom registers all staking invariants for okexchain

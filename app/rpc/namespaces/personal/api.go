@@ -9,23 +9,23 @@ import (
 
 	"github.com/spf13/viper"
 
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 	"github.com/google/uuid"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys/mintkey"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/keys"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/keys/mintkey"
 
 	"github.com/ethereum/go-ethereum/accounts"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/okex/exchain/app/crypto/ethkeystore"
-	"github.com/okex/exchain/app/crypto/ethsecp256k1"
-	"github.com/okex/exchain/app/crypto/hd"
-	"github.com/okex/exchain/app/rpc/namespaces/eth"
-	rpctypes "github.com/okex/exchain/app/rpc/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/ethkeystore"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/ethsecp256k1"
+	"github.com/fibonacci-chain/fbc-social/app/crypto/hd"
+	"github.com/fibonacci-chain/fbc-social/app/rpc/namespaces/eth"
+	rpctypes "github.com/fibonacci-chain/fbc-social/app/rpc/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
 )
 
 // PrivateAccountAPI is the personal_ prefixed set of APIs in the Web3 JSON-RPC spec.
@@ -158,7 +158,7 @@ func (api *PrivateAccountAPI) NewAccount(password string) (common.Address, error
 	}
 
 	api.logger.Info("Your new key was generated", "address", addr.String())
-	api.logger.Info("Please backup your key file!", "path", os.Getenv("HOME")+"/.exchaind/"+name)
+	api.logger.Info("Please backup your key file!", "path", os.Getenv("HOME")+"/.fbchaind/"+name)
 	api.logger.Info("Please remember your password!")
 	return addr, nil
 }

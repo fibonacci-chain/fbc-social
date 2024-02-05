@@ -3,12 +3,12 @@ package keeper
 import (
 	"fmt"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
 
-	"github.com/okex/exchain/x/distribution/types"
-	"github.com/okex/exchain/x/staking/exported"
-	stakingexported "github.com/okex/exchain/x/staking/exported"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/types"
+	"github.com/fibonacci-chain/fbc-social/x/staking/exported"
+	stakingexported "github.com/fibonacci-chain/fbc-social/x/staking/exported"
 )
 
 var (
@@ -17,8 +17,8 @@ var (
 )
 
 // AllocateTokens allocates fees from fee_collector
-//1. 25% rewards to validators, equally.
-//2. 75% rewards to validators and candidates, by shares' weight
+// 1. 25% rewards to validators, equally.
+// 2. 75% rewards to validators and candidates, by shares' weight
 func (k Keeper) AllocateTokens(ctx sdk.Context, totalPreviousPower int64,
 	previousProposer sdk.ConsAddress, previousVotes []abci.VoteInfo) {
 	logger := k.Logger(ctx)

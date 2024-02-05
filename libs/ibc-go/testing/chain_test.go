@@ -3,11 +3,11 @@ package ibctesting_test
 import (
 	"testing"
 
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"github.com/stretchr/testify/require"
 
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
-	"github.com/okex/exchain/libs/ibc-go/testing/mock"
+	ibctesting "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing/mock"
 )
 
 func TestCreateSortedSignerArray(t *testing.T) {

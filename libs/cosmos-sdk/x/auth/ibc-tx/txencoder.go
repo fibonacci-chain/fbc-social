@@ -2,9 +2,9 @@ package ibc_tx
 
 import (
 	"fmt"
+	ibctx "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/ibc-adapter"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
 	"github.com/gogo/protobuf/proto"
-	ibctx "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
 )
 
 func IbcTxEncoder() ibctx.IBCTxEncoder {

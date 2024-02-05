@@ -3,9 +3,9 @@ package distribution
 import (
 	"testing"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/distribution/keeper"
-	"github.com/okex/exchain/x/distribution/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/distribution/types"
 	"github.com/stretchr/testify/require"
 )
 

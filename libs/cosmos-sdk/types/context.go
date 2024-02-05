@@ -8,11 +8,11 @@ import (
 	"github.com/ethereum/go-ethereum/core/vm"
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/store/gaskv"
-	stypes "github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	"github.com/okex/exchain/libs/system/trace"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/gaskv"
+	stypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
+	"github.com/fibonacci-chain/fbc-social/libs/system/trace"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 )
 
 /*

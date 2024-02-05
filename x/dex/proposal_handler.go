@@ -2,11 +2,11 @@ package dex
 
 import (
 	"fmt"
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/dex/types"
-	govTypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/dex/types"
+	govTypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 // NewProposalHandler handles "gov" type message in "dex"

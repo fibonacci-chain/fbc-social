@@ -1,14 +1,14 @@
 package config
 
 import (
-	"github.com/okex/exchain/libs/system/trace"
+	"github.com/fibonacci-chain/fbc-social/libs/system/trace"
 	"path"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
 
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/cli"
+	tmos "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/os"
 	"github.com/mosn/holmes"
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
 	"github.com/spf13/viper"
 )
 

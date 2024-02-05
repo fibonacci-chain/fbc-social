@@ -3,7 +3,7 @@ package watcher
 import (
 	"log"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 func NewHeight() {

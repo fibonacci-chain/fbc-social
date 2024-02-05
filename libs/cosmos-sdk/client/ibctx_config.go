@@ -1,10 +1,10 @@
 package client
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	ibcmsg "github.com/okex/exchain/libs/cosmos-sdk/types/ibc-adapter"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/tx/signing"
-	signingtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/ibcsigning"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	ibcmsg "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/ibc-adapter"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/tx/signing"
+	signingtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/ibcsigning"
 )
 
 type (

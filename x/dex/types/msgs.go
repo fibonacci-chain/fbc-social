@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"strings"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 const (
@@ -199,7 +199,7 @@ func (msg MsgTransferOwnership) GetSigners() []sdk.AccAddress {
 	return []sdk.AccAddress{msg.FromAddress}
 }
 
-//MsgConfirmOwnership - high level transaction of the coin module
+// MsgConfirmOwnership - high level transaction of the coin module
 type MsgConfirmOwnership struct {
 	Product string         `json:"product"`
 	Address sdk.AccAddress `json:"new_owner"`

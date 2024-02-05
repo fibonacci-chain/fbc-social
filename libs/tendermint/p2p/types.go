@@ -1,7 +1,7 @@
 package p2p
 
 import (
-	"github.com/okex/exchain/libs/tendermint/p2p/conn"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p/conn"
 )
 
 type ChannelDescriptor = conn.ChannelDescriptor

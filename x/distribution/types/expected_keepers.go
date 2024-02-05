@@ -1,10 +1,10 @@
 package types
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	supplyexported "github.com/okex/exchain/libs/cosmos-sdk/x/supply/exported"
-	govtypes "github.com/okex/exchain/x/gov/types"
-	stakingexported "github.com/okex/exchain/x/staking/exported"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	supplyexported "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/supply/exported"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
+	stakingexported "github.com/fibonacci-chain/fbc-social/x/staking/exported"
 )
 
 // StakingKeeper expected staking keeper (noalias)

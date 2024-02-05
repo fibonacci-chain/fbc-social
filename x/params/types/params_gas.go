@@ -2,10 +2,10 @@ package types
 
 import (
 	"fmt"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params/subspace"
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params/subspace"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 
-	stypes "github.com/okex/exchain/libs/cosmos-sdk/store/types"
+	stypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
 )
 
 const (

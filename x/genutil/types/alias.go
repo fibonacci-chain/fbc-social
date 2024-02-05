@@ -1,7 +1,7 @@
 package types
 
 import (
-	sdkgenutiltypes "github.com/okex/exchain/libs/cosmos-sdk/x/genutil/types"
+	sdkgenutiltypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/genutil/types"
 )
 
 // const

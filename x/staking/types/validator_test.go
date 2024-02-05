@@ -4,16 +4,16 @@ import (
 	"math"
 	"testing"
 
-	"github.com/okex/exchain/libs/tendermint/crypto/multisig"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/multisig"
 
-	"github.com/okex/exchain/libs/tendermint/types/time"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types/time"
 
-	"github.com/okex/exchain/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/common"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -137,7 +137,7 @@ func TestValidatorMarshalUnmarshalJSON(t *testing.T) {
 	js, err := codec.Cdc.MarshalJSON(validator)
 	require.NoError(t, err)
 	require.NotEmpty(t, js)
-	require.Contains(t, string(js), "\"consensus_pubkey\":\"exvalconspub")
+	require.Contains(t, string(js), "\"consensus_pubkey\":\"fbvalconspub")
 	got := &Validator{}
 	err = codec.Cdc.UnmarshalJSON(js, got)
 	assert.NoError(t, err)

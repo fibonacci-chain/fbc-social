@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/okex/exchain/libs/tendermint/abci/types"
-	tmnet "github.com/okex/exchain/libs/tendermint/libs/net"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	tmnet "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/net"
 )
 
 func main() {

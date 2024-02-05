@@ -1,7 +1,7 @@
 package signing
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/types"
 )
 
 // SignatureData represents either a *SingleSignatureData or *MultiSignatureData.

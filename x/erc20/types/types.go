@@ -3,7 +3,7 @@ package types
 import (
 	"strings"
 
-	ibctransferType "github.com/okex/exchain/libs/ibc-go/modules/apps/transfer/types"
+	ibctransferType "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/apps/transfer/types"
 )
 
 const (

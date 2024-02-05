@@ -1,16 +1,16 @@
 package wasm
 
 import (
-	"github.com/okex/exchain/app/rpc/simulator"
-	"github.com/okex/exchain/libs/cosmos-sdk/baseapp"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	types2 "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/bank"
-	"github.com/okex/exchain/x/wasm/keeper"
-	"github.com/okex/exchain/x/wasm/proxy"
-	"github.com/okex/exchain/x/wasm/types"
-	"github.com/okex/exchain/x/wasm/watcher"
+	"github.com/fibonacci-chain/fbc-social/app/rpc/simulator"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/baseapp"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	types2 "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/bank"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/proxy"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/types"
+	"github.com/fibonacci-chain/fbc-social/x/wasm/watcher"
 	"sync"
 )
 

@@ -1,12 +1,12 @@
 package types
 
 import (
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	clienttypes"github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	commitmenttypes "github.com/okex/exchain/libs/ibc-go/modules/core/23-commitment/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
-	tmbytes "github.com/okex/exchain/libs/tendermint/libs/bytes"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	clienttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	commitmenttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/23-commitment/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
+	tmbytes "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bytes"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"time"
 )
 
@@ -23,7 +23,6 @@ func NewConsensusState(
 		NextValidatorsHash: nextValsHash,
 	}
 }
-
 
 // ClientType returns Tendermint
 func (ConsensusState) ClientType() string {

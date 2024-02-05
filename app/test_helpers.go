@@ -5,15 +5,15 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth"
-	authexported "github.com/okex/exchain/libs/cosmos-sdk/x/auth/exported"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	abcitypes "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/types"
-	dbm "github.com/okex/exchain/libs/tm-db"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	authtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth"
+	authexported "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/exported"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	abcitypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 )
 
 type Option func(option *SetupOption)
@@ -28,12 +28,12 @@ func WithChainId(chainId string) Option {
 	}
 }
 
-// Setup initializes a new OKExChainApp. A Nop logger is set in OKExChainApp.
-func Setup(isCheckTx bool, options ...Option) *OKExChainApp {
+// Setup initializes a new FBChainApp. A Nop logger is set in FBChainApp.
+func Setup(isCheckTx bool, options ...Option) *FBChainApp {
 	viper.Set(sdk.FlagDBBackend, string(dbm.MemDBBackend))
 	types.DBBackend = string(dbm.MemDBBackend)
 	db := dbm.NewMemDB()
-	app := NewOKExChainApp(log.NewNopLogger(), db, nil, true, map[int64]bool{}, 0)
+	app := NewFBChainApp(log.NewNopLogger(), db, nil, true, map[int64]bool{}, 0)
 
 	if !isCheckTx {
 		setupOption := &SetupOption{chainId: ""}
@@ -60,11 +60,11 @@ func Setup(isCheckTx bool, options ...Option) *OKExChainApp {
 	return app
 }
 
-func SetupWithGenesisAccounts(isCheckTx bool, genAccs []authexported.GenesisAccount, options ...Option) *OKExChainApp {
+func SetupWithGenesisAccounts(isCheckTx bool, genAccs []authexported.GenesisAccount, options ...Option) *FBChainApp {
 	viper.Set(sdk.FlagDBBackend, string(dbm.MemDBBackend))
 	types.DBBackend = string(dbm.MemDBBackend)
 	db := dbm.NewMemDB()
-	app := NewOKExChainApp(log.NewNopLogger(), db, nil, true, map[int64]bool{}, 0)
+	app := NewFBChainApp(log.NewNopLogger(), db, nil, true, map[int64]bool{}, 0)
 
 	if !isCheckTx {
 		setupOption := &SetupOption{chainId: ""}

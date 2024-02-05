@@ -8,15 +8,15 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/version"
-	"github.com/okex/exchain/x/gov/client/utils"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/version"
+	"github.com/fibonacci-chain/fbc-social/x/gov/client/utils"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/flags"
-	"github.com/okex/exchain/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/flags"
+	"github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module
@@ -304,7 +304,7 @@ func getCmdQueryVote(queryRoute string, cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`Query details for a single vote on a proposal given its identifier.
 
 Example:
-$ %s query gov vote 1 ex1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02
+$ %s query gov vote 1 fb1cftp8q8g4aa65nw9s5trwexe77d9t6cr8ndu02
 `,
 				version.ClientName,
 			),

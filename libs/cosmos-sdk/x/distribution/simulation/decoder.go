@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"fmt"
 
-	tmkv "github.com/okex/exchain/libs/tendermint/libs/kv"
+	tmkv "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/kv"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/distribution/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/distribution/types"
 )
 
 // DecodeStore unmarshals the KVPair's Value to the corresponding distribution type

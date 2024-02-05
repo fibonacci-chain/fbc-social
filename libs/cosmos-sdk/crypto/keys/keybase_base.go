@@ -3,18 +3,16 @@ package keys
 import (
 	"bufio"
 	"fmt"
-	"github.com/mitchellh/go-homedir"
 	"os"
 	"strings"
 
-	"github.com/cosmos/go-bip39"
-	tmcrypto "github.com/okex/exchain/libs/tendermint/crypto"
-	"github.com/okex/exchain/libs/tendermint/crypto/secp256k1"
+	tmcrypto "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/secp256k1"
 	"github.com/pkg/errors"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto"
-	"github.com/okex/exchain/libs/cosmos-sdk/crypto/keys/hd"
-	"github.com/okex/exchain/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto/keys/hd"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 type (

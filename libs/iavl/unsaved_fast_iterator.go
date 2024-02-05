@@ -5,7 +5,7 @@ import (
 	"errors"
 	"sort"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 )
 
 var (

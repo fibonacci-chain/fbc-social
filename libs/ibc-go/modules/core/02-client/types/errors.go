@@ -1,6 +1,6 @@
 package types
 
-import sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
+import sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
 
 // IBC client sentinel errors
 var (

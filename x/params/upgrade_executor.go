@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"math"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/common"
-	govtypes "github.com/okex/exchain/x/gov/types"
-	"github.com/okex/exchain/x/params/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	govtypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/x/params/types"
 )
 
 func NewUpgradeProposalHandler(k *Keeper) govtypes.Handler {

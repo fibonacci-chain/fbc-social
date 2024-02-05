@@ -3,8 +3,8 @@ package state
 import (
 	"fmt"
 
-	"github.com/okex/exchain/libs/iavl"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/iavl"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 )
 
 func unmarshalTreeDeltaMap(input []byte) (interface{}, error) {

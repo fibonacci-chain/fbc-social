@@ -6,11 +6,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	tmquery "github.com/okex/exchain/libs/tendermint/libs/pubsub/query"
-	rpcclient "github.com/okex/exchain/libs/tendermint/rpc/client"
-	coretypes "github.com/okex/exchain/libs/tendermint/rpc/core/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	tmquery "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/pubsub/query"
+	rpcclient "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/client"
+	coretypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/core/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"github.com/spf13/viper"
 
 	"github.com/ethereum/go-ethereum/common"
@@ -18,10 +18,10 @@ import (
 	"github.com/ethereum/go-ethereum/eth/filters"
 	"github.com/ethereum/go-ethereum/rpc"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 
-	rpctypes "github.com/okex/exchain/app/rpc/types"
-	evmtypes "github.com/okex/exchain/x/evm/types"
+	rpctypes "github.com/fibonacci-chain/fbc-social/app/rpc/types"
+	evmtypes "github.com/fibonacci-chain/fbc-social/x/evm/types"
 )
 
 var (

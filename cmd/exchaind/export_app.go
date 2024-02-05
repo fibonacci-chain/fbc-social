@@ -4,10 +4,10 @@ import (
 	"log"
 	"path/filepath"
 
-	"github.com/okex/exchain/app"
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/app"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"github.com/spf13/cobra"
 )
 
@@ -39,11 +39,11 @@ func export(ctx *server.Context) {
 	}
 }
 
-func createApp(ctx *server.Context, dataPath string) *app.OKExChainApp {
+func createApp(ctx *server.Context, dataPath string) *app.FBChainApp {
 	rootDir := ctx.Config.RootDir
 	dataDir := filepath.Join(rootDir, dataPath)
 	db, err := sdk.NewDB(applicationDB, dataDir)
 	panicError(err)
 	exapp := newApp(ctx.Logger, db, nil)
-	return exapp.(*app.OKExChainApp)
+	return exapp.(*app.FBChainApp)
 }

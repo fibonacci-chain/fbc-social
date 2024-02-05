@@ -1,7 +1,7 @@
 package types
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 // MsgVerifyInvariant - message struct to verify a particular invariance
@@ -25,7 +25,7 @@ func NewMsgVerifyInvariant(sender sdk.AccAddress, invariantModuleName,
 	}
 }
 
-//nolint
+// nolint
 func (msg MsgVerifyInvariant) Route() string { return ModuleName }
 func (msg MsgVerifyInvariant) Type() string  { return "verify_invariant" }
 

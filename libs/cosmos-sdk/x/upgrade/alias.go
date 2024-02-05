@@ -3,8 +3,8 @@ package upgrade
 // nolint
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/x/upgrade/internal/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/upgrade/internal/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/upgrade/internal/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/upgrade/internal/types"
 )
 
 const (

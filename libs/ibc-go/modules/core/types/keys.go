@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	sdkerrors "github.com/okex/exchain/libs/cosmos-sdk/types/errors"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
+	sdkerrors "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/errors"
+	host "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/24-host"
 )
 
 const (

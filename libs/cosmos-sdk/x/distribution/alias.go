@@ -1,9 +1,9 @@
 package distribution
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/x/distribution/client"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/distribution/keeper"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/distribution/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/distribution/client"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/distribution/keeper"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/distribution/types"
 )
 
 // nolint

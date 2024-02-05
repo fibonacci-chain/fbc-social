@@ -7,10 +7,10 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/cli"
-	tmflags "github.com/okex/exchain/libs/tendermint/libs/cli/flags"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/cli"
+	tmflags "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/cli/flags"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
 )
 
 var (

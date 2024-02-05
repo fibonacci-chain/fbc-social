@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/okex/exchain/libs/ibc-go/modules/core/02-client/keeper"
-	host "github.com/okex/exchain/libs/ibc-go/modules/core/24-host"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
-	"github.com/okex/exchain/libs/tendermint/libs/kv"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/keeper"
+	host "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/24-host"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/kv"
 )
 
 var _ ClientUnmarshaler = (*keeper.Keeper)(nil)

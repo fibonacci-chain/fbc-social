@@ -3,10 +3,10 @@ package simulation
 import (
 	"math/rand"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	govtypes "github.com/okex/exchain/libs/cosmos-sdk/x/gov/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/params/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	govtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/gov/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/simulation"
 )
 
 // SimulateParamChangeProposalContent returns random parameter change content.

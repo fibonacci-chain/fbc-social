@@ -8,11 +8,11 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/libs/cmap"
-	"github.com/okex/exchain/libs/tendermint/libs/rand"
-	"github.com/okex/exchain/libs/tendermint/libs/service"
-	"github.com/okex/exchain/libs/tendermint/p2p/conn"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/cmap"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/rand"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/service"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p/conn"
 )
 
 const (
@@ -375,8 +375,8 @@ func (sw *Switch) stopAndRemovePeer(peer Peer, reason interface{}) {
 // to the PEX/Addrbook to find the peer with the addr again
 // NOTE: this will keep trying even if the handshake or auth fails.
 // TODO: be more explicit with error types so we only retry on certain failures
-//  - ie. if we're getting ErrDuplicatePeer we can stop
-//  	because the addrbook got us the peer back already
+//   - ie. if we're getting ErrDuplicatePeer we can stop
+//     because the addrbook got us the peer back already
 func (sw *Switch) reconnectToPeer(addr *NetAddress) {
 	if sw.reconnecting.Has(string(addr.ID)) {
 		return

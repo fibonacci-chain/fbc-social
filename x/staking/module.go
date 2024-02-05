@@ -4,27 +4,27 @@ import (
 	"encoding/json"
 	"math/rand"
 
-	sim "github.com/okex/exchain/libs/cosmos-sdk/x/simulation"
-	"github.com/okex/exchain/x/staking/simulation"
+	sim "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/simulation"
+	"github.com/fibonacci-chain/fbc-social/x/staking/simulation"
 
-	"github.com/okex/exchain/x/staking/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/staking/keeper"
 
 	"github.com/gorilla/mux"
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	"github.com/okex/exchain/libs/tendermint/crypto"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
-	authtypes "github.com/okex/exchain/libs/cosmos-sdk/x/auth/types"
-	"github.com/okex/exchain/x/staking/client/cli"
-	"github.com/okex/exchain/x/staking/client/rest"
-	"github.com/okex/exchain/x/staking/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
+	authtypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/auth/types"
+	"github.com/fibonacci-chain/fbc-social/x/staking/client/cli"
+	"github.com/fibonacci-chain/fbc-social/x/staking/client/rest"
+	"github.com/fibonacci-chain/fbc-social/x/staking/types"
 )
 
 var (
@@ -118,7 +118,7 @@ func NewAppModule(keeper Keeper, accKeeper types.AccountKeeper,
 
 // RegisterInvariants registers invariants
 func (am AppModule) RegisterInvariants(ir sdk.InvariantRegistry) {
-	// required by okexchain
+	// required by fbchain
 	keeper.RegisterInvariantsCustom(ir, am.keeper)
 }
 

@@ -3,23 +3,23 @@ package ibc_test
 import (
 	"testing"
 
-	tmproto "github.com/okex/exchain/libs/tendermint/abci/types"
-	types2 "github.com/okex/exchain/libs/tendermint/types"
+	tmproto "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	types2 "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
-	// tmproto "github.com/okex/exchain/libs/tendermint/proto/tendermint/types"
+	// tmproto "github.com/fibonacci-chain/fbc-social/libs/tendermint/proto/tendermint/types"
 	"github.com/stretchr/testify/suite"
 
-	ibc "github.com/okex/exchain/libs/ibc-go/modules/core"
-	clienttypes "github.com/okex/exchain/libs/ibc-go/modules/core/02-client/types"
-	connectiontypes "github.com/okex/exchain/libs/ibc-go/modules/core/03-connection/types"
-	channeltypes "github.com/okex/exchain/libs/ibc-go/modules/core/04-channel/types"
-	commitmenttypes "github.com/okex/exchain/libs/ibc-go/modules/core/23-commitment/types"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/exported"
-	"github.com/okex/exchain/libs/ibc-go/modules/core/types"
-	ibctmtypes "github.com/okex/exchain/libs/ibc-go/modules/light-clients/07-tendermint/types"
-	localhosttypes "github.com/okex/exchain/libs/ibc-go/modules/light-clients/09-localhost/types"
-	ibctesting "github.com/okex/exchain/libs/ibc-go/testing"
-	"github.com/okex/exchain/libs/ibc-go/testing/simapp"
+	ibc "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core"
+	clienttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/02-client/types"
+	connectiontypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/03-connection/types"
+	channeltypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/04-channel/types"
+	commitmenttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/23-commitment/types"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/exported"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/core/types"
+	ibctmtypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/light-clients/07-tendermint/types"
+	localhosttypes "github.com/fibonacci-chain/fbc-social/libs/ibc-go/modules/light-clients/09-localhost/types"
+	ibctesting "github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing"
+	"github.com/fibonacci-chain/fbc-social/libs/ibc-go/testing/simapp"
 )
 
 const (

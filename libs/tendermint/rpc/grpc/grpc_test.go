@@ -7,10 +7,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/okex/exchain/libs/tendermint/abci/example/kvstore"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	core_grpc "github.com/okex/exchain/libs/tendermint/rpc/grpc"
-	rpctest "github.com/okex/exchain/libs/tendermint/rpc/test"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/example/kvstore"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	core_grpc "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/grpc"
+	rpctest "github.com/fibonacci-chain/fbc-social/libs/tendermint/rpc/test"
 )
 
 func TestMain(m *testing.M) {

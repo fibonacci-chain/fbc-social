@@ -3,24 +3,24 @@ package staking
 import (
 	"context"
 
-	"github.com/okex/exchain/x/staking/keeper"
+	"github.com/fibonacci-chain/fbc-social/x/staking/keeper"
 
-	cosmost "github.com/okex/exchain/libs/cosmos-sdk/store/types"
-	"github.com/okex/exchain/x/staking/typesadapter"
+	cosmost "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/store/types"
+	"github.com/fibonacci-chain/fbc-social/x/staking/typesadapter"
 
+	clictx "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/client/context"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	anytypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/module"
 	"github.com/gorilla/mux"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
-	clictx "github.com/okex/exchain/libs/cosmos-sdk/client/context"
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	anytypes "github.com/okex/exchain/libs/cosmos-sdk/codec/types"
-	"github.com/okex/exchain/libs/cosmos-sdk/types/module"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/types/upgrade"
-	params2 "github.com/okex/exchain/libs/cosmos-sdk/x/params"
-	"github.com/okex/exchain/x/params"
-	"github.com/okex/exchain/x/staking/client/rest"
-	"github.com/okex/exchain/x/staking/types"
-	_ "github.com/okex/exchain/x/staking/typesadapter"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types/upgrade"
+	params2 "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/x/params"
+	"github.com/fibonacci-chain/fbc-social/x/params"
+	"github.com/fibonacci-chain/fbc-social/x/staking/client/rest"
+	"github.com/fibonacci-chain/fbc-social/x/staking/types"
+	_ "github.com/fibonacci-chain/fbc-social/x/staking/typesadapter"
 	"github.com/spf13/cobra"
 )
 
@@ -49,7 +49,7 @@ func (am AppModuleBasic) GetQueryCmdV2(cdc *codec.CodecProxy, reg anytypes.Inter
 	return nil
 }
 
-/// appmodule
+// / appmodule
 func (am AppModule) RegisterServices(cfg module.Configurator) {
 	typesadapter.RegisterQueryServer(cfg.QueryServer(), keeper.NewGrpcQuerier(am.keeper))
 }

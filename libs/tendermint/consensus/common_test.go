@@ -17,25 +17,25 @@ import (
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/require"
 
-	dbm "github.com/okex/exchain/libs/tm-db"
+	dbm "github.com/fibonacci-chain/fbc-social/libs/tm-db"
 
-	abcicli "github.com/okex/exchain/libs/tendermint/abci/client"
-	"github.com/okex/exchain/libs/tendermint/abci/example/counter"
-	"github.com/okex/exchain/libs/tendermint/abci/example/kvstore"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	cfg "github.com/okex/exchain/libs/tendermint/config"
-	cstypes "github.com/okex/exchain/libs/tendermint/consensus/types"
-	tmbytes "github.com/okex/exchain/libs/tendermint/libs/bytes"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	tmos "github.com/okex/exchain/libs/tendermint/libs/os"
-	tmpubsub "github.com/okex/exchain/libs/tendermint/libs/pubsub"
-	mempl "github.com/okex/exchain/libs/tendermint/mempool"
-	"github.com/okex/exchain/libs/tendermint/p2p"
-	"github.com/okex/exchain/libs/tendermint/privval"
-	sm "github.com/okex/exchain/libs/tendermint/state"
-	"github.com/okex/exchain/libs/tendermint/store"
-	"github.com/okex/exchain/libs/tendermint/types"
-	tmtime "github.com/okex/exchain/libs/tendermint/types/time"
+	abcicli "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/client"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/example/counter"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/example/kvstore"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	cfg "github.com/fibonacci-chain/fbc-social/libs/tendermint/config"
+	cstypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/consensus/types"
+	tmbytes "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/bytes"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	tmos "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/os"
+	tmpubsub "github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/pubsub"
+	mempl "github.com/fibonacci-chain/fbc-social/libs/tendermint/mempool"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/p2p"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/privval"
+	sm "github.com/fibonacci-chain/fbc-social/libs/tendermint/state"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/store"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
+	tmtime "github.com/fibonacci-chain/fbc-social/libs/tendermint/types/time"
 )
 
 const (
@@ -193,7 +193,7 @@ func (vss ValidatorStubsByAddress) Swap(i, j int) {
 	vss[j].Index = j
 }
 
-//-------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
 // Functions for transitioning the consensus state
 // timeoutRoutine: receive requests for timeouts on tickChan and fire timeouts on tockChan
 // receiveRoutine: serializes processing of proposoals, block parts, votes; coordinates state transitions
@@ -839,8 +839,8 @@ func (m *mockTicker) Stop() error {
 	return nil
 }
 
-//add noop Reset function for TimeoutTicker interface
-//need to implement when used
+// add noop Reset function for TimeoutTicker interface
+// need to implement when used
 func (m *mockTicker) Reset() error {
 	return nil
 }

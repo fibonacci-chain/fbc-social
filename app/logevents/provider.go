@@ -1,10 +1,10 @@
 package logevents
 
 import (
-	"github.com/okex/exchain/libs/cosmos-sdk/server"
-	"github.com/okex/exchain/libs/system"
-	"github.com/okex/exchain/libs/tendermint/libs/log"
-	"github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/server"
+	"github.com/fibonacci-chain/fbc-social/libs/system"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"
+	"github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 	"github.com/spf13/viper"
 	"sync"
 	"time"
@@ -57,7 +57,7 @@ func (p *provider) init() {
 		p.identity = role
 	}
 
-	p.kafka = newLogClient(p.logServerUrl, OECLogTopic, HeartbeatTopic, p.identity)
+	p.kafka = newLogClient(p.logServerUrl, FBCLogTopic, HeartbeatTopic, p.identity)
 
 	p.logger.Info("Provider init", "url", p.logServerUrl, "id", p.identity)
 

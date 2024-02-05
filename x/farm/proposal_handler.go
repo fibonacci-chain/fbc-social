@@ -1,10 +1,10 @@
 package farm
 
 import (
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	"github.com/okex/exchain/x/common"
-	"github.com/okex/exchain/x/farm/types"
-	govTypes "github.com/okex/exchain/x/gov/types"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	"github.com/fibonacci-chain/fbc-social/x/common"
+	"github.com/fibonacci-chain/fbc-social/x/farm/types"
+	govTypes "github.com/fibonacci-chain/fbc-social/x/gov/types"
 )
 
 // NewManageWhiteListProposalHandler handles "gov" type message in "farm"

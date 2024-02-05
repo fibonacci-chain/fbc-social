@@ -3,7 +3,7 @@ package types
 import (
 	"time"
 
-	sdktypes "github.com/okex/exchain/libs/cosmos-sdk/types"
+	sdktypes "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
 )
 
 // PubkeyType is to be compatible with the response format of the standard cosmos REST API.

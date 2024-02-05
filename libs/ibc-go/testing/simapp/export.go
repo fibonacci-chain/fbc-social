@@ -4,14 +4,14 @@ import (
 	"encoding/json"
 	"log"
 
-	"github.com/okex/exchain/libs/cosmos-sdk/codec"
-	tmtypes "github.com/okex/exchain/libs/tendermint/types"
+	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/codec"
+	tmtypes "github.com/fibonacci-chain/fbc-social/libs/tendermint/types"
 
-	sdk "github.com/okex/exchain/libs/cosmos-sdk/types"
-	abci "github.com/okex/exchain/libs/tendermint/abci/types"
-	"github.com/okex/exchain/x/slashing"
-	"github.com/okex/exchain/x/staking"
-	"github.com/okex/exchain/x/staking/exported"
+	sdk "github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/types"
+	abci "github.com/fibonacci-chain/fbc-social/libs/tendermint/abci/types"
+	"github.com/fibonacci-chain/fbc-social/x/slashing"
+	"github.com/fibonacci-chain/fbc-social/x/staking"
+	"github.com/fibonacci-chain/fbc-social/x/staking/exported"
 	//slashingtypes "github.com/cosmos/cosmos-sdk/x/slashing/types"
 	//stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 )
@@ -44,7 +44,8 @@ func (app *SimApp) ExportAppStateAndValidators(
 
 // prepare for fresh start at zero height
 // NOTE zero height genesis is a temporary feature which will be deprecated
-//      in favour of export at a block height
+//
+//	in favour of export at a block height
 func (app *SimApp) prepForZeroHeightGenesis(ctx sdk.Context, jailWhiteList []string) {
 	applyWhiteList := false
 
