@@ -1,9 +1,10 @@
-# OKTChain
-The Infrastructure of Decentralized Exchange
+# fbc-social
+A leading fully decentralized social network
+
 
 ![banner](docs/images/chain.png)
 
-[![version](https://img.shields.io/github/tag/fibonacci-chain/fbc-social.svg)](https://github.com/okx/fbchain/releases/latest)
+[![version](https://img.shields.io/github/tag/fibonacci-chain/fbc-social.svg)](https://github.com/fibonacci-chain/fbc-social/releases/latest)
 [![CircleCI](https://circleci.com/gh/fibonacci-chain/fbc-social/tree/dev.svg?style=shield)](https://circleci.com/gh/fibonacci-chain/fbc-social/tree/dev)
 [![codecov](https://codecov.io/gh/okex/fbchain/branch/master/graph/badge.svg)](https://codecov.io/gh/okex/fbchain)
 [![Go Report Card](https://goreportcard.com/badge/github.com/okx/exchain)](https://goreportcard.com/report/github.com/okx/exchain)
@@ -11,7 +12,7 @@ The Infrastructure of Decentralized Exchange
 [![LoC](https://tokei.rs/b1/github/fibonacci-chain/fbc-social)](https://github.com/okx/exchain)
 [![GolangCI](https://golangci.com/badges/github.com/okx/exchain.svg)](https://golangci.com/r/github.com/okx/exchain)
 
-This repository hosts `fbc-social`, the implementation of the OKTC based on the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk).
+This repository hosts `fbc-social`, the implementation of the decentralized social based on the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk).
 
 **Note**: Requires [Go 1.20](https://golang.org/dl/)
 
