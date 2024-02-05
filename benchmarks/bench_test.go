@@ -213,20 +213,20 @@ func cw20TransferMsg(info *AppInfo) ([]sdk.Msg, error) {
 	return []sdk.Msg{sendMsg}, nil
 }
 
-func cw20StoreMsg(info *AppInfo) ([]sdk.Msg, error) {
-	cw20Code, err := os.ReadFile("./testdata/cw20_base.wasm")
-	if err != nil {
-		return nil, err
-	}
-
-	perm := wasmtypes.AccessTypeOnlyAddress.With(info.MinterAddr)
-	storeMsg := wasmtypes.MsgStoreCode{
-		Sender:                info.MinterAddr.String(),
-		WASMByteCode:          cw20Code,
-		InstantiatePermission: &perm,
-	}
-	return []sdk.Msg{storeMsg}, nil
-}
+//func cw20StoreMsg(info *AppInfo) ([]sdk.Msg, error) {
+//	cw20Code, err := os.ReadFile("./testdata/cw20_base.wasm")
+//	if err != nil {
+//		return nil, err
+//	}
+//
+//	perm := wasmtypes.AccessTypeOnlyAddress.With(info.MinterAddr)
+//	storeMsg := wasmtypes.MsgStoreCode{
+//		Sender:                info.MinterAddr.String(),
+//		WASMByteCode:          cw20Code,
+//		InstantiatePermission: &perm,
+//	}
+//	return []sdk.Msg{storeMsg}, nil
+//}
 
 func cw20InstantiateMsg(info *AppInfo) ([]sdk.Msg, error) {
 	codeID := uint64(1)

@@ -25,7 +25,7 @@ func (app *FBChainApp) grpcSimulate(txBytes []byte) (sdk.GasInfo, *sdk.Result, e
 	return app.Simulate(txBytes, tx, 0, nil)
 }
 
-func (app *FBChainApp) setupUpgradeModules() {
+func (app *FBChainApp) setupUpgradeModules(onlyTask bool) {
 	heightTasks, paramMap, cf, pf, vf := app.CollectUpgradeModules(app.mm)
 
 	app.heightTasks = heightTasks

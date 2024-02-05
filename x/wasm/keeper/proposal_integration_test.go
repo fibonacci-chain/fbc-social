@@ -876,7 +876,7 @@ type ProposalTestSuite struct {
 
 	ctx         sdk.Context
 	wasmHandler govtypes.Handler
-	app         *app.fbchainApp
+	app         *app.FBChainApp
 	codec       *codec.Codec
 }
 

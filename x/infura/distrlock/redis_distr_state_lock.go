@@ -2,6 +2,7 @@ package distrlock
 
 import (
 	"context"
+	"github.com/go-redis/redis/v8"
 	"time"
 
 	"github.com/fibonacci-chain/fbc-social/libs/tendermint/libs/log"

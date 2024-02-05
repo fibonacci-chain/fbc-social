@@ -799,7 +799,7 @@ func NewFBChainApp(
 	return app
 }
 
-func (app *fbchainApp) InitUpgrade(ctx sdk.Context) {
+func (app *FBChainApp) InitUpgrade(ctx sdk.Context) {
 	// Claim before ApplyEffectiveUpgrade
 	app.ParamsKeeper.ClaimReadyForUpgrade(tmtypes.MILESTONE_VENUS6_NAME, func(info paramstypes.UpgradeInfo) {
 		tmtypes.InitMilestoneVenus6Height(int64(info.EffectiveHeight))

@@ -55,7 +55,7 @@ var (
 
 type TxTestSuite struct {
 	suite.Suite
-	app                *app.fbchainApp
+	app                *app.FBChainApp
 	codec              *codec.Codec
 	Watcher            watcher.Watcher
 	evmSenderPrivKey   ethsecp256k1.PrivKey

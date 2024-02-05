@@ -32,7 +32,7 @@ type KeeperTestSuite struct {
 	suite.Suite
 
 	ctx sdk.Context
-	app *app.fbchainApp
+	app *app.FBChainApp
 
 	keeper *keeper.Keeper
 
