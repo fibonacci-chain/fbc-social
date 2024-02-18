@@ -6,8 +6,10 @@ import (
 	"os"
 	"strings"
 
+	"github.com/cosmos/go-bip39"
 	tmcrypto "github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto"
 	"github.com/fibonacci-chain/fbc-social/libs/tendermint/crypto/secp256k1"
+	"github.com/mitchellh/go-homedir"
 	"github.com/pkg/errors"
 
 	"github.com/fibonacci-chain/fbc-social/libs/cosmos-sdk/crypto"
