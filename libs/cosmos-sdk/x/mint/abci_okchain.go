@@ -50,8 +50,8 @@ func beginBlocker(ctx sdk.Context, k Keeper) {
 		"total supply <%v>, "+
 			"\nparams <%v>, "+
 			"\nminted amount<%v>, "+
-			"staking amount <%v>, "+
-			"yield farming amount <%v>, "+
+			"\nstaking amount <%v>, "+
+			"\nyield farming amount <%v>, "+
 			"\nnext block to update minted per block <%v>, ",
 		sdk.NewDecCoinFromDec(params.MintDenom, k.StakingTokenSupply(ctx)),
 		params,

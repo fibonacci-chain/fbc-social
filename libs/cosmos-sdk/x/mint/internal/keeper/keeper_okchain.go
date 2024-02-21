@@ -44,6 +44,8 @@ func (k Keeper) UpdateMinterCustom(ctx sdk.Context, minter *types.MinterCustom, 
 	// update new MinterCustom
 	minter.MintedPerBlock = sdk.NewDecCoinsFromDec(params.MintDenom, provisionAmtPerBlock)
 
+	//Adjustment of production reduction cycle. We don't need to reduce production every month here. We can change it
+	//to a testing item and change the cycle to a minute level to test the production reduction logic
 	if tmtypes.HigherThanVenus5(ctx.BlockHeight()) {
 		minter.NextBlockToUpdate += params.DeflationEpoch * params.BlocksPerYear / 12
 	} else {

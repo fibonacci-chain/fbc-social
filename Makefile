@@ -13,7 +13,7 @@ IGNORE_CHECK_GO=false
 install_rocksdb_version:=$(ROCKSDB_VERSION)
 
 
-Version=v1.8.0
+Version=v1.0.0
 CosmosSDK=v0.39.2
 Tendermint=v0.33.9
 Iavl=v0.14.3
@@ -45,26 +45,26 @@ ifeq ($(VERSION),)
 endif
 
 ifeq ($(MAKECMDGOALS),mainnet)
-   GenesisHeight=2322600
-   MercuryHeight=5150000
-   VenusHeight=8200000
-   Venus1Height=12988000
-   Venus2Height=14738000
-   Venus3Height=15277000
-   Venus5Height=17849000
-   EarthHeight=18735000
+   GenesisHeight=0
+   MercuryHeight=0
+   VenusHeight=0
+   Venus1Height=0
+   Venus2Height=0
+   Venus3Height=0
+   Venus5Height=0
+   EarthHeight=0
 	
    WITH_ROCKSDB=true
 else ifeq ($(MAKECMDGOALS),testnet)
-   GenesisHeight=1121818
-   MercuryHeight=5300000
-   VenusHeight=8510000
-   Venus1Height=12067000
-   Venus2Height=14781000
-   Venus3Height=15540000
-   EarthHeight=17364500
-   Venus4Height=17531500
-   Venus5Height=18861500
+   GenesisHeight=0
+   MercuryHeight=0
+   VenusHeight=0
+   Venus1Height=0
+   Venus2Height=0
+   Venus3Height=0
+   EarthHeight=0
+   Venus4Height=0
+   Venus5Height=0
 
    WITH_ROCKSDB=true
 endif

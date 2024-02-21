@@ -37,7 +37,7 @@ func defaultGenesisStatefibo() types.Token {
 		panic(err)
 	}
 
-	totalSupply := sdk.NewDec(1000000000)
+	totalSupply := sdk.NewDec(777777777)
 	return types.Token{
 		Description:         "FB Group Global Utility Token",
 		Symbol:              common.NativeToken,
